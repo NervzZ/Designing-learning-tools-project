@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4jeyoaiqgjqu"]
+
+[ext_resource type="Script" path="res://Scrips/MovingObstacle.gd" id="1_af3tk"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_m8tet"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0alk"]
+size = Vector2(82, 82)
+
+[node name="MovingSquare" type="AnimatableBody2D"]
+script = ExtResource("1_af3tk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0.929412, 0.266667, 1)
+scale = Vector2(81.5, 81.5)
+texture = SubResource("CanvasTexture_m8tet")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_j0alk")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+remote_path = NodePath("..")

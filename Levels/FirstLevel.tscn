@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4mhn0xuq0qvm"]
+
+[ext_resource type="PackedScene" uid="uid://06kaxfqyqf67" path="res://Actors/Player.tscn" id="1_tei0q"]
+[ext_resource type="PackedScene" uid="uid://c8gtnk64i215a" path="res://Obstacles/Square.tscn" id="2_6uorv"]
+[ext_resource type="PackedScene" uid="uid://c4jeyoaiqgjqu" path="res://Obstacles/MovingSquare.tscn" id="3_q7h5g"]
+
+[node name="FirstLevel" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_tei0q")]
+position = Vector2(282, 156)
+
+[node name="Square" parent="." instance=ExtResource("2_6uorv")]
+position = Vector2(851, 189)
+
+[node name="Square2" parent="." instance=ExtResource("2_6uorv")]
+position = Vector2(316, 484)
+
+[node name="Square3" parent="." instance=ExtResource("2_6uorv")]
+position = Vector2(85, 49)
+
+[node name="Square4" parent="." instance=ExtResource("2_6uorv")]
+position = Vector2(635, 559)
+
+[node name="Square5" parent="." instance=ExtResource("3_q7h5g")]
+position = Vector2(774, 383)
