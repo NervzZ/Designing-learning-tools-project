@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="M-Project"
-run/main_scene="res://Levels/FirstLevel.tscn"
+run/main_scene="res://UI/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+LevelLoader="*res://Scripts/Global/LevelLoader.gd"
 
 [input]
 
