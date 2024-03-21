@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GamerManager="*res://Scripts/Global/GamerManager.gd"
+GameManager="*res://Scripts/Global/GameManager.gd"
+Dialogues="*res://Scripts/Global/Dialogues.gd"
 LevelLoader="*res://Scripts/Global/LevelLoader.gd"
 
 [input]
