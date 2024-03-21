@@ -7,6 +7,8 @@ var direction = 1
 var timer = 2
 var count = 0.
 
+signal player_touched
+
 func _physics_process(delta):
 	count += delta
 	if count >= timer:
