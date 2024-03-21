@@ -17,3 +17,14 @@ func greenObstacleHit_a():
 func greenObstacleHit_b():
 	print("Quit the game")
 	GameManager.quit()
+
+var welcomePrompt = Prompt.new(
+	"Hello and welcome to the M-Project! This is an example prompt for testing purposes but saying
+	hello world is way too boring at this point.",
+	[
+		{"text": "Ok!", "method": self.welcomePrompt_a}
+	]
+)
+
+func welcomePrompt_a():
+	GameManager.closePrompt()
