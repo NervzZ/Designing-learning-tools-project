@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8gtnk64i215a"]
+[gd_scene load_steps=5 format=3 uid="uid://c8gtnk64i215a"]
+
+[ext_resource type="Script" path="res://Scripts/Square.gd" id="1_epy50"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_m8tet"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j0alk"]
 size = Vector2(82, 82)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4t02"]
+size = Vector2(84, 84)
+
 [node name="Square" type="AnimatableBody2D"]
+script = ExtResource("1_epy50")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.913725, 0.756863, 0, 1)
@@ -15,3 +21,8 @@ texture = SubResource("CanvasTexture_m8tet")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("RectangleShape2D_j0alk")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_k4t02")

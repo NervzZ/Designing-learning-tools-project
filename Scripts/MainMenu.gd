@@ -11,4 +11,4 @@ func _start_pressed():
 	LevelLoader.changeLevel(LevelLoader.firstLevel)
 
 func _exit_pressed():
-	get_tree().quit()
+	GameManager.quit()
