@@ -2,10 +2,13 @@ extends CharacterBody2D
 
 var speed = 15000
 var canMove = true
+var isMoving = false
 var touchHolding = false
 var dragStart : Vector2
 var moveDir : Vector2 = Vector2(0, 0)
 var deadzone = 85 #base for 1440p resolution
+var footstepSound = preload("res://Assets/Sounds/SFX/footstep_concrete.ogg")
+
 
 #Called when first loaded in memory
 func _init():
@@ -24,12 +27,13 @@ func _input(event):
 					touchHolding = true
 					dragStart = get_viewport().get_mouse_position()
 					print("Left mouse button pressed")
+					
 			if event.is_released():
 				touchHolding = false
 				moveDir = Vector2(0, 0)
 				print("Left mouse button released")
 
-	
+
 	if event is InputEventMouseMotion:
 		if touchHolding:
 			var pos = get_viewport().get_mouse_position()
@@ -50,3 +54,12 @@ func _physics_process(delta):
 	if canMove:
 		set_velocity(velocity * delta)
 		move_and_slide()
+	
+	if !velocity.is_zero_approx():
+		
+		# Time loop for footstep
+		if $Timer.is_stopped():
+			SoundManager.play_character_sound(footstepSound, 
+											randf_range(0.8, 1.2), 
+											-20) # footstep needs to be low in volume
+			$Timer.start(0.3)
