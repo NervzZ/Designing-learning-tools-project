@@ -2,6 +2,7 @@ extends Node
 
 var dialogueScene: PackedScene = preload("res://UI/Dialogue.tscn")
 var currentPrompt: Control
+var click = preload("res://Assets/Sounds/SFX/click.wav")
 
 @onready var root = get_tree().get_root()
 
@@ -31,10 +32,14 @@ func displayPrompt(prompt: Prompt):
 		var btn: Button = button.duplicate()
 		btn.text = choice["text"]
 		btn.connect("pressed", choice["method"])
+		btn.connect("pressed", _playClick)
 		choiceBox.add_child(btn)
 		
 	root.add_child(currentPrompt)
 	
+func _playClick():
+	SoundManager.play_ui(click)
+
 func closePrompt():
 	if currentPrompt != null:
 		currentPrompt.queue_free()
