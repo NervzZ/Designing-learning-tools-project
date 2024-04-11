@@ -5,11 +5,12 @@ var canMove = true
 var touchHolding = false
 var dragStart : Vector2
 var moveDir : Vector2 = Vector2(0, 0)
-var deadzone = 170
+var deadzone = 85 #base for 1440p resolution
 
 #Called when first loaded in memory
 func _init():
-	pass
+	var width = DisplayServer.window_get_size().x
+	deadzone = deadzone * (float(width) / 2560)
 
 #Called when the object has been added to the scene
 func _ready():
