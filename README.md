@@ -6,7 +6,7 @@ A teaching story based game about science and engineering ethics.<br>
 Dominik Helbing [@Neroxsis](https://github.com/Neroxsis)<br>
 Jehan Joachim Daniel Piaget [@Fantaisient](https://github.com/Fantaisient)<br>
 Julien Jordan [@NervzZ](https://github.com/NervzZ)<br>
-Quang Long Ho Ng [@Lipefree](https://github.com/Lipefree)<br>
+Quang Long Ho Ngo [@Lipefree](https://github.com/Lipefree)<br>
 Simon Josef Thür [@simi48](https://github.com/simi48)
 
 ## **Useful links**
