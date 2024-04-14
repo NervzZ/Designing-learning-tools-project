@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm4f82dbeg7g1"]
+
+[ext_resource type="Script" path="res://Scripts/Mechanics/portal.gd" id="1_w3ydo"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_l48pw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6fgm"]
+size = Vector2(90, 92)
+
+[node name="Portal" type="Area2D"]
+modulate = Color(0.266667, 1, 1, 1)
+script = ExtResource("1_w3ydo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(44, 45)
+scale = Vector2(90, 92)
+texture = SubResource("CanvasTexture_l48pw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(44, 45)
+shape = SubResource("RectangleShape2D_e6fgm")
