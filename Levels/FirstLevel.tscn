@@ -54,3 +54,6 @@ destination_coords = Vector2(1500, 1200)
 position = Vector2(1618, 908)
 teleport_mode = 1
 destination_scene = ExtResource("6_askgp")
+
+[node name="Square12" parent="." instance=ExtResource("3_q7h5g")]
+position = Vector2(1423, 903)

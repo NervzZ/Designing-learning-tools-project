@@ -42,12 +42,9 @@ func teleportToCoordinates(body:Node2D):
 
 func teleportToNewScene(body:Node2D):
 	if destination_scene:
-		var scene = destination_scene.get_instance_id()
-		if scene:
-			get_tree().get_root().add_child(scene)
-			scene.global_transform.origin = destination_coords
-			body.queue_free()
-
+		var id = destination_scene.instantiate()
+		id.add_child(body)
+		body.queue_free()
 
 #not sure about the levelloader stuff,
 #also, can i use the levelloader to
