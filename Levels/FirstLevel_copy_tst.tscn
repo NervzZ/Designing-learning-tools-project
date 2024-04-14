@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfrq0af0aeww8"]
+
+[ext_resource type="Script" path="res://Scripts/Levels/FirstLevel.gd" id="1_mttox"]
+[ext_resource type="PackedScene" uid="uid://06kaxfqyqf67" path="res://Actors/Player.tscn" id="2_sderd"]
+[ext_resource type="PackedScene" uid="uid://b4mhn0xuq0qvm" path="res://Levels/FirstLevel.tscn" id="4_is5rc"]
+[ext_resource type="PackedScene" uid="uid://c2bykmyl23muc" path="res://portals/portal.tscn" id="5_xcu0l"]
+
+[node name="FirstLevel" type="Node2D"]
+script = ExtResource("1_mttox")
+
+[node name="Player" parent="." instance=ExtResource("2_sderd")]
+position = Vector2(656, 230)
+
+[node name="Portal" parent="." instance=ExtResource("5_xcu0l")]
+position = Vector2(2143, 848)
+teleport_mode = 1
+destination_coords = Vector2(10, 10)
+destination_scene = ExtResource("4_is5rc")
+
+[node name="Portal2" parent="." instance=ExtResource("5_xcu0l")]
+position = Vector2(1017, 548)
+destination_coords = Vector2(1897, 1084)
+destination_scene = ExtResource("4_is5rc")
