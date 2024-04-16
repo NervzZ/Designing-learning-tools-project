@@ -52,6 +52,3 @@ destination_coords = Vector2(1655, 1022)
 [node name="Portal2" parent="." instance=ExtResource("5_hm2u4")]
 position = Vector2(1938, 952)
 destination_coords = Vector2(500, 200)
-
-[node name="Square12" parent="." instance=ExtResource("3_q7h5g")]
-position = Vector2(1833, 891)

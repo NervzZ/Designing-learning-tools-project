@@ -13,7 +13,9 @@ position = Vector2(656, 230)
 
 [node name="Portal" parent="." instance=ExtResource("5_xcu0l")]
 position = Vector2(2143, 848)
+teleport_mode = 1
 destination_coords = Vector2(10, 10)
+destination_scene = ExtResource("4_is5rc")
 
 [node name="Portal2" parent="." instance=ExtResource("5_xcu0l")]
 position = Vector2(1017, 548)
