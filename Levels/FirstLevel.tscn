@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://06kaxfqyqf67" path="res://Actors/Player.tscn" id="1_tei0q"]
 [ext_resource type="PackedScene" uid="uid://c8gtnk64i215a" path="res://Obstacles/Square.tscn" id="2_6uorv"]
 [ext_resource type="PackedScene" uid="uid://c4jeyoaiqgjqu" path="res://Obstacles/MovingSquare.tscn" id="3_q7h5g"]
-[ext_resource type="PackedScene" uid="uid://bm4f82dbeg7g1" path="res://portals/portal.tscn" id="5_hm2u4"]
+[ext_resource type="PackedScene" uid="uid://c2bykmyl23muc" path="res://portals/portal.tscn" id="5_hm2u4"]
 
 [node name="FirstLevel" type="Node2D"]
 script = ExtResource("1_lxgl7")
@@ -47,4 +47,8 @@ position = Vector2(2330, 1282)
 
 [node name="Portal" parent="." instance=ExtResource("5_hm2u4")]
 position = Vector2(168, 179)
-destination_coords = Vector2(10, 10)
+destination_coords = Vector2(1655, 1022)
+
+[node name="Portal2" parent="." instance=ExtResource("5_hm2u4")]
+position = Vector2(1938, 952)
+destination_coords = Vector2(500, 200)
