@@ -25,7 +25,9 @@ var destination_coords = Vector2(0,0)
 @export
 var destination_scene:PackedScene
 
-signal enter_portal
+@export 
+var destination_node:NodePath
+
 
 
 
@@ -41,9 +43,9 @@ func teleportToCoordinates(body:Node2D):
 	body.global_transform.origin = destination_coords
 
 func teleportToNewScene(body:Node2D):
-	if destination_scene:
-		var id = destination_scene.instantiate()
-		id.add_child(body)
+	if destination_node:
+		var nd = get_tree().root.get_node(destination_node)
+		nd.add_child(body)
 		body.queue_free()
 
 #not sure about the levelloader stuff,
