@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfrq0af0aeww8"]
+[gd_scene load_steps=4 format=3 uid="uid://dfrq0af0aeww8"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/FirstLevel.gd" id="1_mttox"]
 [ext_resource type="PackedScene" uid="uid://06kaxfqyqf67" path="res://Actors/Player.tscn" id="2_sderd"]
+[ext_resource type="PackedScene" uid="uid://c2bykmyl23muc" path="res://portals/portal.tscn" id="3_2tu7c"]
 
 [node name="FirstLevel" type="Node2D"]
 script = ExtResource("1_mttox")
 
 [node name="Player" parent="." instance=ExtResource("2_sderd")]
 position = Vector2(656, 230)
+
+[node name="Portal" parent="." instance=ExtResource("3_2tu7c")]
+position = Vector2(1004, 328)
