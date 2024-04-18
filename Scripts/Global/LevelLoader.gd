@@ -6,5 +6,8 @@ var firstLevel = preload("res://Levels/FirstLevel.tscn");
 var testLevel = preload("res://Levels/TestLevel.tscn");
 
 func changeLevel(level: PackedScene):
-	get_tree().change_scene_to_packed(level)
+	get_tree().change_scene_to_packed.call_deferred(level)
 
+#Only use this in specific cases such as cyclic dependencies with PackedScene
+func changeLevelFromPath(path):
+	get_tree().change_scene_to_file.call_deferred(path)
