@@ -28,11 +28,8 @@ Simon Josef Thür [@simi48](https://github.com/simi48)
     * Once you're done adding what you wanted for your next commit, use `git commit -m {message}` where `{message}` is simply a short description of what has changed with this commit.
     * To push your commits to the branch (both locally and remote) you can now do `git push`.
 5. Once you pushed all your changes and you're done with the branch, head over to the repo and make the pull request to merge your changes to `main`. Also consider deleting the branch (also locally) before it gets annoying to nagivate when using `git branch`.
-<<<<<<< HEAD
 
 NOTE: Use `git restore {path to file}` to roll-back the changes you made to a file and restore it back to the latest unchanged state known to your branch.<br><br>
-=======
->>>>>>> 9e394bf9e73a79079700b7becbcfb82b353c82a5
    
 **Important:**<br>
 If the remote branch is more up to date than your local one, you simply do `git pull` to update your local branch. Always do so when needed.<br><br>
