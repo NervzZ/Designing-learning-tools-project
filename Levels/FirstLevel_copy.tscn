@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckqlxppcx8hgu"]
+
+[ext_resource type="Script" path="res://Scripts/Levels/FirstLevel.gd" id="1_em2ur"]
+[ext_resource type="PackedScene" uid="uid://06kaxfqyqf67" path="res://Actors/Player.tscn" id="2_s84m2"]
+[ext_resource type="PackedScene" uid="uid://c8gtnk64i215a" path="res://Obstacles/Square.tscn" id="3_ac5ln"]
+[ext_resource type="PackedScene" uid="uid://c4jeyoaiqgjqu" path="res://Obstacles/MovingSquare.tscn" id="4_1m1fd"]
+[ext_resource type="PackedScene" uid="uid://c2bykmyl23muc" path="res://portals/portal.tscn" id="5_pk0k4"]
+
+[node name="FirstLevel" type="Node2D"]
+script = ExtResource("1_em2ur")
+
+[node name="Player" parent="." instance=ExtResource("2_s84m2")]
+position = Vector2(656, 230)
+
+[node name="Square" parent="." instance=ExtResource("3_ac5ln")]
+position = Vector2(1354, 137)
+
+[node name="Square7" parent="." instance=ExtResource("3_ac5ln")]
+position = Vector2(1823, 1001)
+
+[node name="Square10" parent="." instance=ExtResource("3_ac5ln")]
+position = Vector2(2502, 60)
+
+[node name="Square9" parent="." instance=ExtResource("4_1m1fd")]
+position = Vector2(2330, 1282)
+
+[node name="Portal" parent="." instance=ExtResource("5_pk0k4")]
+position = Vector2(168, 179)
+destination_coords = Vector2(1655, 1022)
+
+[node name="Portal2" parent="." instance=ExtResource("5_pk0k4")]
+position = Vector2(1438, 1030)
+teleport_mode = 1
+destination_coords = Vector2(500, 200)
+destination_scene_path = "res://Levels/FirstLevel.tscn"
+
+[node name="Square12" parent="." instance=ExtResource("4_1m1fd")]
+position = Vector2(1779, 905)
