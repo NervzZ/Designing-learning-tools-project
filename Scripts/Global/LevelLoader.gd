@@ -1,6 +1,7 @@
 extends Node
 
 #Levels global variables
+var mainMenu = preload("res://UI/MainMenu.tscn")
 var firstLevel = preload("res://Levels/FirstLevel.tscn");
 var testLevel = preload("res://Levels/TestLevel.tscn");
 

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://du2ypvars5jtp"]
+
+[ext_resource type="Script" path="res://Scripts/UI/HUD.gd" id="1_hp53h"]
+[ext_resource type="Texture2D" uid="uid://b5k4yr7xmaop7" path="res://Assets/Icons/pause.svg" id="2_4s0yp"]
+
+[node name="Hud" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_hp53h")
+
+[node name="PauseButton" type="Button" parent="."]
+offset_left = 2407.0
+offset_top = 25.0
+offset_right = 2517.0
+offset_bottom = 135.0
+icon = ExtResource("2_4s0yp")
