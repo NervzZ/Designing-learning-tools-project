@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3xy156tud8rr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u1dcq"]
+bg_color = Color(0.498039, 0.498039, 0.498039, 0.866667)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.854902, 0.854902, 0.854902, 0.905882)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7cqoi"]
+bg_color = Color(0.721569, 0.721569, 0.721569, 0.956863)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.92549, 0.92549, 0.92549, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="Joystick" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_vertical = 4
+
+[node name="Outer" type="Panel" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u1dcq")
+
+[node name="Inner" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(40, 40)
+theme_override_styles/panel = SubResource("StyleBoxFlat_7cqoi")
