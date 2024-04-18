@@ -1,10 +1,18 @@
 extends Node
 
-var dialogueScene: PackedScene = preload("res://UI/Dialogue.tscn")
-var currentPrompt: Control
+var dialogueScene : PackedScene = preload("res://UI/Dialogue.tscn")
+var currentPrompt : Control
 var click = preload("res://Assets/Sounds/SFX/click.wav")
+var muted = false
+@onready var hud : CanvasLayer = preload("res://UI/HUD.tscn").instantiate()
+@onready var pauseMenu : Control = preload("res://UI/PauseMenu.tscn").instantiate()
 
 @onready var root = get_tree().get_root()
+
+func _ready():
+	root.add_child.call_deferred(hud)
+	hud.add_child(pauseMenu)
+	hud.visible = false
 
 func on_player_touched():
 	displayPrompt(Dialogues.greenObstacleHit)
@@ -14,6 +22,7 @@ func displayPrompt(prompt: Prompt):
 	#overrides current prompt if present
 	closePrompt()
 	
+	hud.visible = false
 	currentPrompt = dialogueScene.instantiate()
 	var choiceBox: VBoxContainer = currentPrompt.get_node("OuterMargin/Panel/InnerMargin/VBoxContainer") 
 	var text: RichTextLabel = choiceBox.get_node("Text") 
@@ -37,12 +46,28 @@ func displayPrompt(prompt: Prompt):
 		
 	root.add_child(currentPrompt)
 	
-func _playClick():
-	SoundManager.play_ui(click)
-
 func closePrompt():
 	if currentPrompt != null:
 		currentPrompt.queue_free()
+		hud.visible = true
+	
+func _playClick():
+	SoundManager.play_ui(click)
+
+#used to pause runtime of the game (stops frames and physical simulation)
+func pause():
+	get_tree().paused = true
+	
+func unPause():
+	get_tree().paused = false
+
+func openMenu():
+	pauseMenu.visible = true
+	pause()
+
+func toggleSound():
+	#TODO implement sound toggling (used in menu to mute/unmute sounds)
+	muted = !muted
 
 #closes the game
 func quit():
