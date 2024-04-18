@@ -9,7 +9,6 @@ var moveDir : Vector2 = Vector2(0, 0)
 var deadzone = 75 #base for 1440p resolution
 var footstepSound = preload("res://Assets/Sounds/SFX/footstep_concrete.ogg")
 
-
 #Called when first loaded in memory
 func _init():
 	var width = DisplayServer.window_get_size().x
@@ -26,7 +25,7 @@ func _input(event):
 				if !touchHolding:
 					touchHolding = true
 					dragStart = get_viewport().get_mouse_position()
-					GameManager.joyStick.position = dragStart
+					GameManager.joystick.position = dragStart
 					print("Left mouse button pressed")
 					
 			if event.is_released():
@@ -40,12 +39,19 @@ func _input(event):
 		if touchHolding:
 			var pos = get_viewport().get_mouse_position()
 			var dist = dragStart.distance_to(pos)
-			if dist > deadzone * 0.6:
-				joystickShow()
+			
+			if dist > deadzone * 0.5:
+				if !GameManager.joystick.visible:
+					joystickShow()
+					
+			var direction : Vector2 = pos - dragStart
 			if dist > deadzone:
-				var direction : Vector2 = pos - dragStart
 				moveDir = direction.normalized()
+				#-31 offset to center in the inner circle
+				GameManager.innerStick.global_position = dragStart + moveDir * deadzone - Vector2(31, 31)
 			else:
+				#-31 offset to center in the inner circle
+				GameManager.innerStick.global_position = pos - Vector2(31, 31)
 				moveDir = Vector2(0, 0)
 
 #This is called at every frame the game renders, detal is time between each frame
@@ -69,9 +75,9 @@ func _physics_process(delta):
 			$Timer.start(0.3)
 
 func joystickShow():
-	var stick = GameManager.joyStick
+	var stick = GameManager.joystick
 	stick.visible = true
 	stick.position = dragStart
 	
 func joystickHide():
-	GameManager.joyStick.visible = false
+	GameManager.joystick.visible = false
