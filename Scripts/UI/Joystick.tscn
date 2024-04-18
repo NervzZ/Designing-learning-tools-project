@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dts2fypuhn6sr"]
+
+[node name="Joystick" type="Node2D"]

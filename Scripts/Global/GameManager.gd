@@ -4,13 +4,17 @@ var dialogueScene : PackedScene = preload("res://UI/Dialogue.tscn")
 var currentPrompt : Control
 var click = preload("res://Assets/Sounds/SFX/click.wav")
 var muted = false
+
 @onready var hud : CanvasLayer = preload("res://UI/HUD.tscn").instantiate()
 @onready var pauseMenu : Control = preload("res://UI/PauseMenu.tscn").instantiate()
-
+@onready var joyStick : Control = preload("res://UI/Joystick.tscn").instantiate()
 @onready var root = get_tree().get_root()
 
 func _ready():
 	root.add_child.call_deferred(hud)
+	root.add_child.call_deferred(joyStick)
+	joyStick.visible = false
+	joyStick.scale = Vector2(0.78, 0.78)
 	hud.add_child(pauseMenu)
 	hud.visible = false
 
