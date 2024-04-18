@@ -1,9 +1,6 @@
 extends Node2D
 
 
-
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Area2D.body_entered.connect(Callable(self, "_on_body_entered"))
@@ -25,8 +22,7 @@ var destination_coords = Vector2(0,0)
 @export
 var destination_scene:PackedScene
 
-@export 
-var destination_node:NodePath
+
 
 
 
@@ -43,10 +39,9 @@ func teleportToCoordinates(body:Node2D):
 	body.global_transform.origin = destination_coords
 
 func teleportToNewScene(body:Node2D):
-	if destination_node:
-		var nd = get_tree().root.get_node(destination_node)
-		nd.add_child(body)
-		body.queue_free()
+	if destination_scene:
+		print("well, wouldn't it be great if this were implementead ahahhahah sorry")
+
 
 #not sure about the levelloader stuff,
 #also, can i use the levelloader to
