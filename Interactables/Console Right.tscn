@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://3vxpktkogsv"]
+
+[ext_resource type="Texture2D" uid="uid://ndeswpbelq85" path="res://Assets/Sprites/Objects/console_w.png" id="1_sp2wu"]
+
+[node name="ConsoleRight" type="Node2D"]
+scale = Vector2(4, 4)
+
+[node name="ConsoleW" type="Sprite2D" parent="."]
+texture = ExtResource("1_sp2wu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-22, 1, 5, 5, 6, 22, 33, 22, 33, -1, 23, -12, -8, -16)
