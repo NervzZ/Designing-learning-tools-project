@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8kavy2asq1j7"]
+
+[ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="1_kf8vm"]
+[ext_resource type="PackedScene" uid="uid://06kaxfqyqf67" path="res://Actors/Player.tscn" id="2_knx8h"]
+
+[node name="HouseLevel" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_kf8vm")]
+
+[node name="Player" parent="." instance=ExtResource("2_knx8h")]
+position = Vector2(235, 876)
