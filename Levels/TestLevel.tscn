@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bd37ld3qljsej"]
+[gd_scene load_steps=4 format=3 uid="uid://bd37ld3qljsej"]
 
 [ext_resource type="PackedScene" uid="uid://06kaxfqyqf67" path="res://Actors/Player.tscn" id="1_dfmdp"]
 [ext_resource type="Script" path="res://Scripts/Levels/TestLevel.gd" id="1_phlu1"]
+[ext_resource type="PackedScene" uid="uid://bvvcojb6c41i6" path="res://Actors/test_npc.tscn" id="3_m1b3u"]
 
 [node name="TestLevel" type="Node2D"]
 script = ExtResource("1_phlu1")
 
 [node name="Player" parent="." instance=ExtResource("1_dfmdp")]
+position = Vector2(196, 160)
+
+[node name="test-npc" parent="." instance=ExtResource("3_m1b3u")]
+position = Vector2(2452, 524)
