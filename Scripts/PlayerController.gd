@@ -57,6 +57,10 @@ func _input(event):
 #This is called at every frame the game renders, detal is time between each frame
 func _process(delta):
 	velocity = moveDir * speed
+	if velocity.is_zero_approx():
+		$AnimatedSprite2D.play("idle")
+	else:
+		$AnimatedSprite2D.play("walk")
 	
 #This is called at every physical process tick (independent of game's framerate)
 #Therefore you can expect delta to be constant
@@ -66,6 +70,13 @@ func _physics_process(delta):
 		move_and_slide()
 	
 	if !velocity.is_zero_approx():
+		
+		# Sprite animation
+		if moveDir.x > 0:
+			$AnimatedSprite2D.flip_h = false
+		elif moveDir.x < 0:
+			$AnimatedSprite2D.flip_h = true
+			
 		
 		# Time loop for footstep
 		if $Timer.is_stopped():
