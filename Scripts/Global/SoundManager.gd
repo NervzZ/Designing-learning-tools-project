@@ -8,6 +8,7 @@ var ambient_player = AudioStreamPlayer.new()
 
 # Used for the sounds of the main character such as footstep
 var character_sound_player = AudioStreamPlayer.new() 
+var npc_sound_player = AudioStreamPlayer.new()
 
 func _ready():
 	# Initialize players
@@ -16,6 +17,7 @@ func _ready():
 	add_child(ui_player)
 	add_child(ambient_player)
 	add_child(character_sound_player)
+	add_child(npc_sound_player)
 	
 func play_music(stream: AudioStream):
 	music_player.stream = stream
@@ -38,3 +40,9 @@ func play_character_sound(stream: AudioStream, pitch: float, volume: float):
 	character_sound_player.pitch_scale = pitch
 	character_sound_player.volume_db = volume
 	character_sound_player.play()
+
+func play_npc_sound(stream: AudioStream, pitch: float, volume: float):
+	npc_sound_player.stream = stream
+	npc_sound_player.pitch_scale = pitch
+	npc_sound_player.volume_db = volume
+	npc_sound_player.play()

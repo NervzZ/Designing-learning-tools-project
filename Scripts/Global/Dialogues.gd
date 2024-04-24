@@ -28,3 +28,14 @@ var welcomePrompt = Prompt.new(
 
 func welcomePrompt_a():
 	GameManager.closePrompt()
+	
+var talkToTestNPCPrompt = Prompt.new(
+	"Hello, this is a test dialog !",
+	[
+		{"text": "Ok!", "method": self.talkToTestNPCPrompt_ok}
+	]
+)
+
+func talkToTestNPCPrompt_ok():
+	print("Close dialog with NPC")
+	GameManager.closePrompt()
