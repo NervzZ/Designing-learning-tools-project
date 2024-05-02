@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4mwa7ldd7fh"]
+
+[ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_jneki"]
+[ext_resource type="PackedScene" uid="uid://06kaxfqyqf67" path="res://Actors/Player.tscn" id="2_8ebky"]
+[ext_resource type="PackedScene" uid="uid://crcs5w5no5ovh" path="res://Interactables/Console Left.tscn" id="3_na43q"]
+[ext_resource type="PackedScene" uid="uid://3vxpktkogsv" path="res://Interactables/Console Right.tscn" id="4_s0ccs"]
+
+[node name="LabLevel" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_jneki")]
+
+[node name="Console Left" parent="." instance=ExtResource("3_na43q")]
+position = Vector2(1049, 660)
+
+[node name="ConsoleRight" parent="." instance=ExtResource("4_s0ccs")]
+position = Vector2(1483, 702)
+
+[node name="Player" parent="." instance=ExtResource("2_8ebky")]
+position = Vector2(237, 584)
