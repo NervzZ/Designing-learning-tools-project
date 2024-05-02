@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://d4mwa7ldd7fh"]
+[gd_scene load_steps=8 format=3 uid="uid://d4mwa7ldd7fh"]
 
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_jneki"]
-[ext_resource type="PackedScene" uid="uid://06kaxfqyqf67" path="res://Actors/Player.tscn" id="2_8ebky"]
 [ext_resource type="PackedScene" uid="uid://crcs5w5no5ovh" path="res://Interactables/Console Left.tscn" id="3_na43q"]
 [ext_resource type="PackedScene" uid="uid://3vxpktkogsv" path="res://Interactables/Console Right.tscn" id="4_s0ccs"]
+[ext_resource type="PackedScene" uid="uid://cg1nlk8ogjgja" path="res://Actors/Scientist2.tscn" id="5_sw8or"]
+[ext_resource type="PackedScene" uid="uid://cr14yabefsvyr" path="res://Actors/Scientist3.tscn" id="6_208ym"]
+[ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="6_g2w0s"]
+[ext_resource type="PackedScene" uid="uid://c0xnfapixxwff" path="res://Actors/Merchant.tscn" id="7_jl7yg"]
 
 [node name="LabLevel" type="Node2D"]
 
@@ -15,5 +18,17 @@ position = Vector2(1049, 660)
 [node name="ConsoleRight" parent="." instance=ExtResource("4_s0ccs")]
 position = Vector2(1483, 702)
 
-[node name="Player" parent="." instance=ExtResource("2_8ebky")]
-position = Vector2(237, 584)
+[node name="Scientist" parent="." instance=ExtResource("5_sw8or")]
+position = Vector2(1077, 707)
+scale = Vector2(4, 4)
+
+[node name="Scientist2" parent="." instance=ExtResource("6_208ym")]
+position = Vector2(1704, 904)
+scale = Vector2(4, 4)
+
+[node name="Player" parent="." instance=ExtResource("6_g2w0s")]
+position = Vector2(212, 536)
+
+[node name="Merchant" parent="." instance=ExtResource("7_jl7yg")]
+position = Vector2(-1090, 682)
+scale = Vector2(4, 4)
