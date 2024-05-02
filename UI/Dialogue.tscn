@@ -1,9 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://7eenebxelmcw"]
+[gd_scene load_steps=4 format=3 uid="uid://7eenebxelmcw"]
+
+[ext_resource type="Texture2D" uid="uid://c232yx4es23m5" path="res://icon.svg" id="1_una84"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eg3yu"]
+bg_color = Color(0, 0, 0, 0.443137)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p8yyl"]
 bg_color = Color(0.172549, 0.172549, 0.172549, 0.941176)
 
 [node name="Dialog" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,13 +40,36 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/margin_bottom = 40
 
-[node name="Panel" type="PanelContainer" parent="OuterMargin"]
+[node name="VBoxContainer" type="VBoxContainer" parent="OuterMargin"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Talker" type="PanelContainer" parent="OuterMargin/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_eg3yu")
+
+[node name="InnerMargin" type="MarginContainer" parent="OuterMargin/VBoxContainer/Talker"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="OuterMargin/VBoxContainer/Talker/InnerMargin"]
+custom_minimum_size = Vector2(0, 380)
+layout_mode = 2
+texture = ExtResource("1_una84")
+expand_mode = 3
+
+[node name="Panel" type="PanelContainer" parent="OuterMargin/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_styles/panel = SubResource("StyleBoxFlat_p8yyl")
 
-[node name="InnerMargin" type="MarginContainer" parent="OuterMargin/Panel"]
+[node name="InnerMargin" type="MarginContainer" parent="OuterMargin/VBoxContainer/Panel"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -40,27 +78,28 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="OuterMargin/Panel/InnerMargin"]
+[node name="VBoxContainer" type="VBoxContainer" parent="OuterMargin/VBoxContainer/Panel/InnerMargin"]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 35
 
-[node name="Text" type="RichTextLabel" parent="OuterMargin/Panel/InnerMargin/VBoxContainer"]
+[node name="Text" type="RichTextLabel" parent="OuterMargin/VBoxContainer/Panel/InnerMargin/VBoxContainer"]
 custom_minimum_size = Vector2(2440, 0)
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus urna ornare lorem pellentesque, in finibus felis sollicitudin. Maecenas purus est, luctus mollis erat at, malesuada ullamcorper velit. Aenean elit ante, posuere nec lacus eu, fringilla lobortis dui. Sed at finibus dui, ac tristique diam. Vivamus id neque nec lectus egestas congue a eget lacus. Aliquam erat volutpat.
 
 Test test"
 fit_content = true
 
-[node name="Choice1" type="Button" parent="OuterMargin/Panel/InnerMargin/VBoxContainer"]
+[node name="Choice1" type="Button" parent="OuterMargin/VBoxContainer/Panel/InnerMargin/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 70
 text = "Choice 1"
 alignment = 0
 
-[node name="Choice2" type="Button" parent="OuterMargin/Panel/InnerMargin/VBoxContainer"]
+[node name="Choice2" type="Button" parent="OuterMargin/VBoxContainer/Panel/InnerMargin/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 70
 text = "Choice 2"

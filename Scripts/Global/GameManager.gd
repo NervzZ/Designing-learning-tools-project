@@ -27,12 +27,14 @@ func on_player_touched():
 func displayPrompt(prompt: Prompt):
 	#overrides current prompt if present
 	closePrompt()
+	pause()
 	
 	hud.visible = false
 	currentPrompt = dialogueScene.instantiate()
-	var choiceBox: VBoxContainer = currentPrompt.get_node("OuterMargin/Panel/InnerMargin/VBoxContainer") 
+	var choiceBox: VBoxContainer = currentPrompt.get_node("OuterMargin/VBoxContainer/Panel/InnerMargin/VBoxContainer") 
 	var text: RichTextLabel = choiceBox.get_node("Text") 
 	var button: Button = choiceBox.get_node("Choice1").duplicate()
+	var talker: TextureRect = currentPrompt.get_node("OuterMargin/VBoxContainer/Talker/InnerMargin/TextureRect")
 	
 	#remove placeholder buttons
 	choiceBox.get_node("Choice1").queue_free()
@@ -42,13 +44,33 @@ func displayPrompt(prompt: Prompt):
 	text.clear()
 	text.add_text(prompt.text)
 	
+	#set talker texture
+	talker.set_texture(prompt.talker)
+	
 	#add choices
 	for choice in prompt.choices:
-		var btn: Button = button.duplicate()
-		btn.text = choice["text"]
-		btn.connect("pressed", choice["method"])
-		btn.connect("pressed", _playClick)
-		choiceBox.add_child(btn)
+		var display = true
+		var inverse = false
+		
+		if 'display' in choice:
+			display = GameState.boolStates[choice['display']]
+		if 'inverse' in choice:
+			inverse = choice['inverse']
+			
+		if inverse:
+			if !display:
+				var btn: Button = button.duplicate()
+				btn.text = choice["text"]
+				btn.connect("pressed", choice["method"])
+				btn.connect("pressed", _playClick)
+				choiceBox.add_child(btn)
+		else:
+			if display:
+				var btn: Button = button.duplicate()
+				btn.text = choice["text"]
+				btn.connect("pressed", choice["method"])
+				btn.connect("pressed", _playClick)
+				choiceBox.add_child(btn)
 		
 	root.add_child(currentPrompt)
 	
@@ -56,6 +78,7 @@ func closePrompt():
 	if currentPrompt != null:
 		currentPrompt.queue_free()
 		hud.visible = true
+		unPause()
 	
 func _playClick():
 	SoundManager.play_ui(click)
