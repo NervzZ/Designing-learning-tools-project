@@ -118,3 +118,48 @@ var armyGuyDialogueAfterRefuse = Prompt.new(
 ],
 PromptSprites.armyguytalker
 )
+
+
+
+
+
+
+################################################################################
+# Talk to the lab
+################################################################################
+#positive guy
+func discuss_entry_army_lab_positive(): # <- Entry for discussing with the yes man
+	GameManager.displayPrompt(armyLabStartPositive)
+func discussArmyWithLabPositiveAnswer():
+	GameManager.closePrompt()
+	GameManager.displayPrompt(armyLabAnswerPositive)
+var armyLabStartPositive = Prompt.new(
+	"I've just talked with the army, they want to buy our prototype!",
+[{"text":"Next","method":discussArmyWithLabPositiveAnswer}],
+PromptSprites.playerTalker
+)
+var armyLabAnswerPositive = Prompt.new(
+	"That's crazy! Imagine the amount of money we could get! We could make "+
+	"history! Imagine what this could mean for our research, our careers! We have to
+go for it!",
+[{"text":"Leave","method":GameManager.closePrompt}],
+PromptSprites.scientist01Talker
+)
+#negative guy
+func discuss_entry_army_lab_negative(): # <- Entry for discussing with the yes man
+	GameState.boolStates["discussedArmyGuyWithLab"] = true
+	GameManager.displayPrompt(armyLabStartNegative)
+func discussArmyWithLabNegativeAnswer():
+	GameManager.closePrompt()
+	GameManager.displayPrompt(armyLabAnswerNegative)
+var armyLabStartNegative = Prompt.new(
+	"I've just talked with the army, they want to buy our prototype!",
+[{"text":"Next","method":discussArmyWithLabNegativeAnswer}],
+PromptSprites.playerTalker
+)
+var armyLabAnswerNegative = Prompt.new(
+	"Are you out of your mind? They're just gonna kill people with no further thought of helping advance humanity! "
+	+"I can't believe you'd even consider it.",
+[{"text":"Leave","method":GameManager.closePrompt}],
+PromptSprites.scientist01Talker
+)
