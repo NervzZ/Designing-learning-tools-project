@@ -25,6 +25,7 @@ LevelLoader="*res://Scripts/Global/LevelLoader.gd"
 SoundManager="*res://Scripts/Global/SoundManager.gd"
 InteractionManager="*res://Interaction/InteractionManager.tscn"
 DialogueDay01Lab="*res://Scripts/Global/DialogueDay01Lab.gd"
+DialogueDay02Home="*res://Scripts/Global/DialogueDay02Home.gd"
 
 [display]
 
