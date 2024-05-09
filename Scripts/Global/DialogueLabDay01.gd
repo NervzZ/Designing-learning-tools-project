@@ -7,7 +7,10 @@ func welcomeToLabDialogue(): # <- Call this for welcome message
 	GameManager.displayPrompt(DialogueLabDay01.welcomeToLab)
 	
 var welcomeToLab = Prompt.new(  # said by you (or narrator?)
-	"We are about to make a breakthrough in Teleportation.",
+	"WeThis idea... it's huge. It's like nothing I've ever worked on before.
+This could shape the future! It has so much potential...
+But this comes with great responsibilities. Imaging we could teleport anywhwere
+anytime!",
 	[
 		{"text":"Ok", "method" : self.welcomeToLab_ok}
 	],
@@ -30,7 +33,7 @@ func welcomeToLab_ok():
 # First discussion with NPC (info about time limits and others getting close)
 # Discussion with `scientist01Talker`
 ################################################################################
-func dicussTechRace():  # <- CALL this for dialogue
+func discuss_entry_tech():  # <- CALL this for dialogue
 	if GameState.boolStates["TalkedAboutTechnologyRace"]:
 		GameManager.displayPrompt(firstDiscussionWithNPC_after)
 	else:
@@ -38,25 +41,31 @@ func dicussTechRace():  # <- CALL this for dialogue
 
 func firstDiscussionWithNPC_ok():
 	GameManager.closePrompt()
-	GameState.boolStates["TalkedAboutTechnologyRace"] = true
 	GameManager.displayPrompt(firstDiscussionWithNPC_techRace)
+func firstDiscussionWithNPC_end():
+	GameManager.closePrompt()
+	GameState.boolStates["TalkedAboutTechnologyRace"] = true
+	GameManager.displayPrompt(firstDiscussionWithNPC_after)
 var firstDiscussionWithNPC = Prompt.new( # said by scientist friend
-	"Hey! Glad you stopped by, we really need to hurry up our development,
-	 otherwise the other teams are gonna beat us to the first functional teleporter!",
+	"Hey, got a sec? I've been thinking about your project. You've got something
+special here, but you know how tech is. It's a race. If you don't secure funding
+soon, someone else will beat you to it.",
 	[
-		{"text":"I know, but we're super close now","method": self.firstDiscussionWithNPC_ok}
+		{"text":"I know, but funding isn't easy to come by.","method": self.firstDiscussionWithNPC_ok}
 	],
 	PromptSprites.scientist01Talker
 )
 var firstDiscussionWithNPC_techRace = Prompt.new(  # said by scientist friend
-	"I sure hope so, this is turning into a real technology race...",
+	"True, but you've got to start somewhere. Ever though about pitching to
+investors or applying for grants? It's a risk, but worth it. You'll have what
+you need to make your vision a reality.",
 	[
-		{"text":"I know, but we're super close now","method": GameManager.closePrompt}
+		{"text":"You're right. I need to be proactive.","method": firstDiscussionWithNPC_end}
 	],
 	PromptSprites.scientist01Talker
 )
 var firstDiscussionWithNPC_after= Prompt.new( 
-	"Glad we talked about that.",
+	"Glad we talke about that. We're in this together you know.",
 	[
 		{"text":"Leave","method": GameManager.closePrompt}
 	],
@@ -68,7 +77,7 @@ var firstDiscussionWithNPC_after= Prompt.new(
 # Optional discussion on safety
 # Discussion with `scientist02Talker`
 ################################################################################
-func discuss_safety_optional(): # <- CALL this for dialogue
+func discuss_entry_safety_optional(): # <- CALL this for dialogue
 	if GameState.boolStates["TalkedAboutRisks"]:
 		if not GameState.boolStates["InvestigatedRisks"]:
 			GameManager.displayPrompt(optionalSafetyDiscussion_NotInvestigated)
@@ -127,7 +136,6 @@ var optionalSafetyDiscussion_AfterInvestigated = Prompt.new(
 	],
 	PromptSprites.scientist01Talker
 )
-
 ##########
 # kinda related, technically, could have this part after actually testing the teleporter
 ##########
