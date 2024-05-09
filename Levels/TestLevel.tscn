@@ -11,4 +11,4 @@ script = ExtResource("1_phlu1")
 position = Vector2(196, 160)
 
 [node name="test-npc" parent="." instance=ExtResource("3_m1b3u")]
-position = Vector2(2452, 524)
+position = Vector2(404, 292)

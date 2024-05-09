@@ -24,4 +24,4 @@ func _physics_process(delta):
 		$Timer.start(3)
 		
 func _on_interact():
-	GameManager.displayPrompt(Dialogues.talkToTestNPCPrompt)
+	DialogueLabDay01.discuss_entry_safety_optional()
