@@ -17,7 +17,7 @@ extends Node
 # Welcome message
 ################################################################################
 func welcomeToLabDialogue(): # <- Call this for welcome message
-	GameManager.displayPrompt(DialogueLabDay01.welcomeToLab)
+	GameManager.displayPrompt(welcomeToLab)
 	
 var welcomeToLab = Prompt.new(  # said by you (or narrator?)
 	"WeThis idea... it's huge. It's like nothing I've ever worked on before.
