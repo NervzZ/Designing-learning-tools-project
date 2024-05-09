@@ -8,6 +8,12 @@ var boolStates = {
 	"InvestigatedRisks" : false, #optional stuff
 	"KilledAnimals" : false,#optinal stuff, when testing the teleporter prematurely
 	"PhonedWithArmy" : false,
+	"startedTalingWithArmyguy" : false,
+	"finishedTalkingWithArmyguy" : false,
+	"soldToArmyGuyNoRestrictions": false,
+	"soldToArmyGuyWithRestrictions": false,
+	"refusedArmyGuy" : false,
+	"discussedArmyGuyWithLab" : false,
 }
 
 var mistakes_made=0

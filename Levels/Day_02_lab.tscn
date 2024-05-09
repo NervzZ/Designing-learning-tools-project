@@ -1,0 +1,36 @@
+[gd_scene load_steps=9 format=3 uid="uid://md1sj0qpvroi"]
+
+[ext_resource type="Script" path="res://Scripts/Levels/Day_02_lab.gd" id="1_68umm"]
+[ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_lc5kx"]
+[ext_resource type="PackedScene" uid="uid://crcs5w5no5ovh" path="res://Interactables/Console Left.tscn" id="2_dp215"]
+[ext_resource type="PackedScene" uid="uid://3vxpktkogsv" path="res://Interactables/Console Right.tscn" id="3_yypsm"]
+[ext_resource type="PackedScene" uid="uid://cg1nlk8ogjgja" path="res://Actors/Scientist2.tscn" id="4_s6cx0"]
+[ext_resource type="PackedScene" uid="uid://cr14yabefsvyr" path="res://Actors/Scientist3.tscn" id="5_vl0hd"]
+[ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="6_1egol"]
+[ext_resource type="PackedScene" uid="uid://c0xnfapixxwff" path="res://Actors/Merchant.tscn" id="7_1gt6a"]
+
+[node name="Day_02_lab" type="Node2D"]
+script = ExtResource("1_68umm")
+
+[node name="TileMap" parent="." instance=ExtResource("1_lc5kx")]
+
+[node name="Console Left" parent="." instance=ExtResource("2_dp215")]
+position = Vector2(1049, 660)
+
+[node name="ConsoleRight" parent="." instance=ExtResource("3_yypsm")]
+position = Vector2(1483, 702)
+
+[node name="Scientist" parent="." instance=ExtResource("4_s6cx0")]
+position = Vector2(1077, 707)
+scale = Vector2(4, 4)
+
+[node name="Scientist2" parent="." instance=ExtResource("5_vl0hd")]
+position = Vector2(1704, 904)
+scale = Vector2(4, 4)
+
+[node name="Player" parent="." instance=ExtResource("6_1egol")]
+position = Vector2(212, 536)
+
+[node name="ArmyDude" parent="." instance=ExtResource("7_1gt6a")]
+position = Vector2(-1090, 682)
+scale = Vector2(4, 4)
