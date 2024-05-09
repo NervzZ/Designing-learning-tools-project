@@ -1,6 +1,19 @@
 extends Node
 
 ################################################################################
+# Dialogues for Day 1 at the lab:
+# Dialogues:
+# 1. Welcome message
+# 2. NPC talk about money and grants `discuss_entry_tech()`
+# 3. NPC (optional) talk about safety `discuss_entry_safety_optional()`
+#    a. Monologe after a failed experiment (either directly from dialogue 3,
+#       or if we have time after a real experiment with teleporter)
+################################################################################
+
+
+
+
+################################################################################
 # Welcome message
 ################################################################################
 func welcomeToLabDialogue(): # <- Call this for welcome message
@@ -30,7 +43,7 @@ func welcomeToLab_ok():
 
 
 ################################################################################
-# First discussion with NPC (info about time limits and others getting close)
+# First discussion with NPC (tech races and money problems)
 # Discussion with `scientist01Talker`
 ################################################################################
 func discuss_entry_tech():  # <- CALL this for dialogue
