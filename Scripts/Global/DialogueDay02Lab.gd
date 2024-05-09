@@ -1,5 +1,13 @@
 extends Node
 
+################################################################################
+# Dialogues for Day 2 at the lab:
+# Dialogues:
+# 1. Army guy wants to buy prototype `discuss_entry_armyguy()`
+# 2. Discuss with lab (guy likes the army) `discuss_entry_army_lab_positive()`
+# 3. Discuss with lab (hates likes the army) `discuss_entry_army_lab_negative()`
+################################################################################
+
 
 
 ################################################################################
