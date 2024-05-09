@@ -22,12 +22,12 @@ func discuss_entry_armyguy(): # <- call this when interacting with army guy
 		GameManager.displayPrompt(armyGuyDialoguePitch)
 
 var armyGuyDialoguePitch = Prompt.new(
-	"Hello. I assume you've been informed of my visit today? I am [Army Guy],
-head of the military procurement department.
-I wanted to discuss the future of your teleporter prototype in person. We're
-very impressed with what we've seen so far. We believe this could be a
-game-changer and would like to discuss the possibility of acquiring it for
-military use.",
+	"Hello. I assume you've been informed of my visit today? I am [Army Guy], "+
+	"head of the military procurement department. "+
+	"I wanted to discuss the future of your teleporter prototype in person. We're "+
+	"very impressed with what we've seen so far. We believe this could be a "+
+	"game-changer and would like to discuss the possibility of acquiring it for "+
+	"military use.",
 [
 	{"text":"Accept","method":accept_army_guy},
 	{"text":"Accept, with restrictions.","method":accept_army_conditions,"display":"discussedArmyGuyWithLab"},
@@ -68,15 +68,15 @@ func after_accept_conditionally():
 	GameManager.closePrompt()
 	GameManager.displayPrompt(armyGuyDialogueAfterCondition)
 var armyGuyDialogueAcceptConditions = Prompt.new(
-	"I'm open to the idea of selling it, but I have some conditions. I want
-strict limitations on how the technology can be used, particularly to ensure
-it's not used for anything harmful",
+	"I'm open to the idea of selling it, but I have some conditions. I want "+
+	"strict limitations on how the technology can be used, particularly to ensure "+
+	"it's not used for anything harmful",
 [{"text":"Next","method":self.after_accept_conditionally}],
 PromptSprites.playerTalker
 )
 var armyGuyDialogueAfterCondition = Prompt.new(
-	"We understand your concerns. We're willing to negotiate terms that prioritize safety and
-ethical use of the technology. I'm sure we can hash out a deal that's in everyone's best interest.",
+	"We understand your concerns. We're willing to negotiate terms that prioritize safety and "+
+	"ethical use of the technology. I'm sure we can hash out a deal that's in everyone's best interest. ",
 [{"text":"Leave","method":GameManager.closePrompt}],
 PromptSprites.armyguytalker
 )
@@ -103,10 +103,9 @@ You could become famous.",
 PromptSprites.armyguytalker
 )
 var armyGuyDialogueAcceptConditionsFame = Prompt.new(
-	"You are right. I want people to know of my achievements. I will sell you
-the prototype. But I have some conditions. I want strict limitations on how the
-technology can be used, particularly to ensure it's not used for anything
-harmful",
+	"You are right. I want people to know of my achievements. I will sell you "+
+	"the prototype. But I have some conditions. I want strict limitations on how the "+
+	"technology can be used, particularly to ensure it's not used for anything harmful",
 [{"text":"Next","method":after_accept_conditionally}],
 PromptSprites.playerTalker
 )
