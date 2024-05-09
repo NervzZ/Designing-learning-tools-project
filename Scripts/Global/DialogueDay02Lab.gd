@@ -6,16 +6,17 @@ extends Node
 # Talk to the army guy
 ################################################################################
 func discuss_entry_armyguy(): # <- call this when interacting with army guy
-	if GameState.boolStates["startedTalingWithArmyguy"]:
-		pass #ask what the answer is now
-	elif GameState.boolStates["finishedTalkingWithArmyguy"]:
+	if GameState.boolStates["finishedTalkingWithArmyguy"]:
 		if GameState.boolStates["refusedArmyGuy"]:
-			pass
+			GameManager.displayPrompt(armyGuyDialogueAfterRefuse)
 		elif (GameState.boolStates["soldToArmyGuyNoRestrictions"] or 
-				GameState.boolStates["soldToArmyGuyNoRestrictions"]):
+				GameState.boolStates["soldToArmyGuyWithRestrictions"]):
 			GameManager.displayPrompt(armyGuyDialogueAfterAccept)
 		else:
-			print("dafaq happend?")
+			print("Something went wrong...")
+	elif GameState.boolStates["startedTalingWithArmyguy"]:
+		GameManager.displayPrompt(armyGuyAskForDecision)
+
 	else:
 		GameState.boolStates["startedTalingWithArmyguy"]=true
 		GameManager.displayPrompt(armyGuyDialoguePitch)
@@ -27,6 +28,17 @@ I wanted to discuss the future of your teleporter prototype in person. We're
 very impressed with what we've seen so far. We believe this could be a
 game-changer and would like to discuss the possibility of acquiring it for
 military use.",
+[
+	{"text":"Accept","method":accept_army_guy},
+	{"text":"Accept, with restrictions.","method":accept_army_conditions,"display":"discussedArmyGuyWithLab"},
+	{"text":"Refuse","method":refuse_army_guy},
+	{"text":"Discuss with the others","method":GameManager.closePrompt},
+],
+PromptSprites.armyguytalker
+)
+var armyGuyAskForDecision = Prompt.new(
+	"What is your answer young man ? Think of the possibilities, the advancement
+in national security. You could become famous",
 [
 	{"text":"Accept","method":self.accept_army_guy},
 	{"text":"Accept, with restrictions.","method":GameManager.closePrompt,"display":"discussedArmyGuyWithLab"},
@@ -65,7 +77,7 @@ PromptSprites.playerTalker
 var armyGuyDialogueAfterCondition = Prompt.new(
 	"We understand your concerns. We're willing to negotiate terms that prioritize safety and
 ethical use of the technology. I'm sure we can hash out a deal that's in everyone's best interest.",
-[{"text":"Next","method":GameManager.closePrompt}],
+[{"text":"Leave","method":GameManager.closePrompt}],
 PromptSprites.armyguytalker
 )
 #case refuse:
@@ -85,7 +97,7 @@ var armyGuyDialogueRefuse = Prompt.new(
 	"Are you sure young man ? Think of the possibilities, the advancement in national security.
 You could become famous.",
 [
-	{"text":"Conditionally agree","method":self.accept_for_fame},
+	{"text":"I do want to be famous","method":self.accept_for_fame},
 	{"text":"Decline", "method" : self.refuse_army_guy_final}
 ],
 PromptSprites.armyguytalker
