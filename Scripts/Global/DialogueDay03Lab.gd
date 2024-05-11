@@ -1,6 +1,11 @@
 extends Node
 
-
+################################################################################
+# Dialogues for Day 3 at the lab:
+# Dialogues:
+# 1. Corporation wants to buy prototype and hire you `discuss_entry_merchant()`
+# 2. Your friends misuse invention `discuss_entry_optional_dumb_friends()`
+################################################################################
 
 
 ################################################################################
