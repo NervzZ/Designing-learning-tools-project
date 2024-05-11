@@ -17,6 +17,8 @@ var boolStates = {
 	"talkedToCoproration" : false,
 	"soldToCorporation" : false,
 	"refusedToSellToCorporation":false,
+	"talkedToFriendsOptionalStealing":false,
+	"misusedForPersonalGain":false,
 }
 
 var mistakes_made=0

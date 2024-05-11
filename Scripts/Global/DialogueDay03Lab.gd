@@ -93,3 +93,80 @@ var corpo_after_refusing = Prompt.new(
 	"Sorry to hear you are not interested. It's a huge loss for everyone, especially you.",
 	[{"text":"Leave","method":GameManager.closePrompt}]
 )
+
+
+
+
+################################################################################
+# Optional, Talk to friends and maybe misuse invention
+###############################################################################
+func discuss_entry_optional_dumb_friends():
+	if not GameState.boolStates["talkedToFriendsOptionalStealing"]:
+		GameManager.displayPrompt(dumb_friend_prompt1)
+		GameState.boolStates["talkedToFriendsOptionalStealing"]=true
+	else:
+		if GameState.boolStates["misusedForPersonalGain"]:
+			GameManager.displayPrompt(reaction_afer_stealing)
+		else:
+			GameManager.displayPrompt(reaction_after_not_stealing)
+
+func show_2nd_prompt():
+	GameManager.closePrompt()
+	GameManager.displayPrompt(dumb_friend_prompt2)
+func show_3rd_prompt():
+	GameManager.closePrompt()
+	GameManager.displayPrompt(dumb_friend_prompt3)
+func show_4th_prompt():
+	GameManager.closePrompt()
+	GameManager.displayPrompt(dumb_friend_prompt4)
+func show_after_stealing():
+	GameState.boolStates["misusedForPersonalGain"] = true
+	GameManager.closePrompt()
+	GameManager.displayPrompt(reaction_afer_stealing)
+func show_after_not_stealing():
+	GameManager.closePrompt()
+	GameManager.displayPrompt(reaction_after_not_stealing)
+var dumb_friend_prompt1 = Prompt.new(
+	"Hey, have you heard about that new project [Player Character] is working on? It's getting a lot of attention.",
+	[{"text":"Next","method":show_2nd_prompt}],
+	PromptSprites.scientist01Talker
+)
+var dumb_friend_prompt2 = Prompt.new(
+	"Yeah, I heard about it. Do you think there's any way we could benefit from it ?",
+	[{"text":"What's going on?","method":show_3rd_prompt}],
+	PromptSprites.scientist02Talker
+)
+var dumb_friend_prompt3  = Prompt.new(
+	"We were just talking about your project. It's really taking off.",
+	[{"text":"Next","method":show_4th_prompt}],
+	PromptSprites.scientist01Talker
+)
+var dumb_friend_prompt4  = Prompt.new(
+	"We were just talking about your project. It's really taking off."+
+	" We also figured, since we can actually teleport anywhere, why not use it to "+
+	" 'Acquire' some money?",
+	[{"text":"Steal with them","method":show_after_stealing},
+	{"text":"Remind them of the archimedian oath","method":show_after_not_stealing}],
+	PromptSprites.scientist02Talker
+)
+
+var reaction_afer_stealing = Prompt.new(
+	"That was way easier than expected haha, never have to worry about money"+
+	" ever again!",
+	[{"text":"Leave","method":GameManager.closePrompt}],
+	PromptSprites.scientist01Talker
+)
+var reaction_after_not_stealing = Prompt.new(
+	"We were just joking around...
+We know we have a responsibility to use our talents for the greater good and not just for personal gain.",
+	[{"text":"Leave","method":GameManager.closePrompt}],
+	PromptSprites.scientist01Talker
+)
+
+
+
+
+
+
+
+
