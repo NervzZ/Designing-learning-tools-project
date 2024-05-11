@@ -14,6 +14,11 @@ var boolStates = {
 	"soldToArmyGuyWithRestrictions": false,
 	"refusedArmyGuy" : false,
 	"discussedArmyGuyWithLab" : false,
+	"talkedToCoproration" : false,
+	"soldToCorporation" : false,
+	"refusedToSellToCorporation":false,
+	"talkedToFriendsOptionalStealing":false,
+	"misusedForPersonalGain":false,
 }
 
 var mistakes_made=0
