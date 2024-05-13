@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bd37ld3qljsej"]
+[gd_scene load_steps=8 format=3 uid="uid://bd37ld3qljsej"]
 
 [ext_resource type="PackedScene" uid="uid://06kaxfqyqf67" path="res://Actors/Player.tscn" id="1_dfmdp"]
 [ext_resource type="Script" path="res://Scripts/Levels/TestLevel.gd" id="1_phlu1"]
 [ext_resource type="PackedScene" uid="uid://bvvcojb6c41i6" path="res://Actors/test_npc.tscn" id="3_m1b3u"]
 [ext_resource type="PackedScene" uid="uid://dqmclcomp35nh" path="res://Interactables/Phone.tscn" id="4_8gho0"]
-[ext_resource type="Script" path="res://Interactables/Phone.gd" id="5_53f5w"]
+[ext_resource type="Script" path="res://Scripts/Actors/Phone.gd" id="5_2prex"]
+[ext_resource type="PackedScene" uid="uid://cg1nlk8ogjgja" path="res://Actors/Scientist2.tscn" id="6_bxp2a"]
+[ext_resource type="Script" path="res://Scripts/Actors/TestScientist.gd" id="7_qe1hb"]
 
 [node name="TestLevel" type="Node2D"]
 script = ExtResource("1_phlu1")
@@ -17,4 +19,11 @@ position = Vector2(2452, 524)
 
 [node name="Phone" parent="." instance=ExtResource("4_8gho0")]
 position = Vector2(865, 846)
-script = ExtResource("5_53f5w")
+script = ExtResource("5_2prex")
+
+[node name="Scientist" parent="." instance=ExtResource("6_bxp2a")]
+position = Vector2(1041, 689)
+rotation = -0.00179431
+scale = Vector2(4, 4)
+script = ExtResource("7_qe1hb")
+highlight_thickness = 0.7

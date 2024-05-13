@@ -74,3 +74,14 @@ var testPhonePrompt = Prompt.new(
 
 func testPhonePrompt_a():
 	GameManager.closePrompt()
+	
+var testScientistPrompt = Prompt.new(
+	"Hey, need anything?",
+	[
+		{"text": "No", "method": self.testScientistPrompt_a}
+	],
+	PromptSprites.scientist02Talker
+)
+
+func testScientistPrompt_a():
+	GameManager.closePrompt()

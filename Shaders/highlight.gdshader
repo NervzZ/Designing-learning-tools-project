@@ -1,31 +1,22 @@
 shader_type canvas_item;
 
-void fragment() {
-    vec2 uv = UV;
-    vec4 tex_color = texture(TEXTURE, uv);
-    float alpha = tex_color.a;
-    vec3 color = tex_color.rgb;
-	
-    // Outline color
-    vec4 outlineColor = vec4(1.0, 0.8, 0.0, 1.0); // Yellow
-	
-	float outlineSize = 0.02;
+const vec4 line_color = vec4(1.0, 0.8, 0.0, 1.0); // Yellow
+uniform float line_thickness = 1.0;
 
-    float maxAlpha = 0.0;
-    for(int x = -1; x <= 1; x++) {
-        for(int y = -1; y <= 1; y++) {
-            vec2 step = vec2(float(x), float(y)) * outlineSize;
-            maxAlpha = max(maxAlpha, texture(TEXTURE, uv + step).a);
-        }
-    }
+const vec2 OFFSETS[8] = {
+	vec2(-1, -1), vec2(-1, 0), vec2(-1, 1), vec2(0, -1), vec2(0, 1), 
+	vec2(1, -1), vec2(1, 0), vec2(1, 1)
+};
+
+void fragment() {
+	vec2 size = TEXTURE_PIXEL_SIZE * line_thickness;
+	float outline = 0.0;
 	
-	if(maxAlpha > alpha) {
-	    COLOR = vec4(outlineColor.rgb, maxAlpha);
-	} else {
-		if(uv.x < outlineSize || uv.x > 1.0 - outlineSize || uv.y < outlineSize || uv.y > 1.0 - outlineSize) {
-	        COLOR = vec4(outlineColor.rgb, maxAlpha);
-	    } else {
-	       	COLOR = vec4(color, alpha);
-		}
+	for (int i = 0; i < OFFSETS.length(); i++) {
+		outline += texture(TEXTURE, UV + size * OFFSETS[i]).a;
 	}
+	outline = min(outline, 1.0);
+	
+	vec4 color = texture(TEXTURE, UV);
+	COLOR = mix(color, line_color, outline - color.a);
 }
