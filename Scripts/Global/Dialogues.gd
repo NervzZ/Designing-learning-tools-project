@@ -63,3 +63,14 @@ var talkToTestNPCPrompt = Prompt.new(
 func talkToTestNPCPrompt_ok():
 	print("Close dialog with NPC")
 	GameManager.closePrompt()
+	
+var testPhonePrompt = Prompt.new(
+	"Hello?",
+	[
+		{"text": "Bye bye", "method": self.testPhonePrompt_a}
+	],
+	PromptSprites.phone
+)
+
+func testPhonePrompt_a():
+	GameManager.closePrompt()
