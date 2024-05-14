@@ -26,7 +26,8 @@ var start_government_dialogue = Prompt.new(
 		{"text":"Admit to dangers","method":func():GameManager.displayPrompt(admit_to_dangers),"display":"didntSellToArmyAndFoundOutAboutStability"},#only visible if found
 		{"text":"Not in my control","method":func():GameManager.displayPrompt(not_in_my_control),"display":"soldToArmyGuyNoRestrictions"}, #sold to army no restriction
 		{"text":"Don't want government control","method":func():GameManager.displayPrompt(dont_want_to_be_monitored),"display":"soldToArmyGuyNoRestrictions","inverse":true},
-	]
+	],
+	PromptSprites.government
 )
 
 var admit_to_dangers = Prompt.new(
@@ -40,13 +41,13 @@ var admit_to_dangers = Prompt.new(
 var after_admit_to_dangers = Prompt.new(
 	"Thank you for bringing this to our attention. "+
 	"We'll investigate further and work with you to address any issues before proceeding.",
-	[{"text":"Leave","method":GameManager.closePrompt}]
+	[{"text":"Leave","method":GameManager.closePrompt}],PromptSprites.government
 )
 
 var no_issues_response = Prompt.new(
 	"I believe my prototype is safe and ready to be used. I don’t want to lose more time. "+
 	"My device is already of high quality and is really safe.",
-	[{"text":"Leave","method":GameManager.closePrompt}]
+	[{"text":"Leave","method":GameManager.closePrompt}],PromptSprites.playerTalker
 )
 
 func after_admit():
@@ -54,19 +55,16 @@ func after_admit():
 	GameState.boolStates["admittedIssuesToAuthority"] = true
 	GameManager.displayPrompt(after_admit_to_dangers)
 
-
-
-
 var not_in_my_control = Prompt.new(
 	" I'm sorry, but I've already sold the technology to the military without "
 	+"any restrictions. I can't comply with your demands.",
-	[{"text":"Next","method":func():GameManager.displayPrompt(after_explain_army)}]
+	[{"text":"Next","method":func():GameManager.displayPrompt(after_explain_army)}],PromptSprites.playerTalker
 )
 
 var after_explain_army = Prompt.new(
 	"That's unfortunate... We'll have to take appropriate action to ensure the safety and security "+
 	"of the public, maybe disallow it completely",
-	[{"text":"Leave","method":GameManager.closePrompt}]
+	[{"text":"Leave","method":GameManager.closePrompt}],PromptSprites.government
 )
 
 
