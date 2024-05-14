@@ -30,6 +30,7 @@ DialogueDay02Lab="*res://Scripts/Global/DialogueDay02Lab.gd"
 DialogueDay03Lab="*res://Scripts/Global/DialogueDay03Lab.gd"
 DialogueDay04Lab="*res://Scripts/Global/DialogueDay04Lab.gd"
 DialogueDay05Lab="*res://Scripts/Global/DialogueDay05Lab.gd"
+DialogugeFamily="*res://Scripts/Global/DialogugeFamily.gd"
 
 [display]
 

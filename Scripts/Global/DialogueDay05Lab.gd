@@ -1,6 +1,15 @@
 extends Node
 
+################################################################################
+# Dialogues for Day 5 at the lab:
+# Dialogues:
+# 1. Friend is concerned discuss_entry_sustainability()`
+################################################################################
 
+
+################################################################################
+# Talk to coworker about sustainability
+################################################################################
 func discuss_entry_sustainability():
 	if not GameState.boolStates["talkedAboutSustainability"]:
 		GameState.boolStates["talkedAboutSustainability"] = true
