@@ -17,8 +17,8 @@ var sustainability_dialogue_start = Prompt.new(
 	"it takes care of the environment as well. We need to make an effort here.",
 	[
 		{"text":"Agree","method":func():GameManager.displayPrompt(agree_sustainability)},
-		{"text":"Out of my control", "method":GameManager.closePrompt},
-		{"text":"Disagree","method":GameManager.closePrompt}
+		{"text":"Out of my control", "method":func():GameManager.displayPrompt(cant_agree)},
+		{"text":"Disagree","method":func():GameManager.displayPrompt(who_cares)}
 	],PromptSprites.scientist01Talker
 )
 
@@ -41,7 +41,7 @@ var agree_sustainability_ans_frnd = Prompt.new(
 var cant_agree = Prompt.new(
 	"I understand and believe the importance of sustainability, but I'm afraid my hands are tied. "+
 	"I sold the project to a corporation, and I'm no longer in control of the decision-making process.",
-	[{"text":"next","method":GameManager.displayPrompt(response_to_cant_agree)}],PromptSprites.playerTalker
+	[{"text":"next","method":func():GameManager.displayPrompt(response_to_cant_agree)}],PromptSprites.playerTalker
 )
 
 var response_to_cant_agree = Prompt.new(
@@ -53,7 +53,7 @@ var response_to_cant_agree = Prompt.new(
 var not_so_inner_monologue = Prompt.new(
 	"It's frustrating to see the project I've worked so hard on being steered "+
 	"in a direction that doesn't prioritize sustainability at all…",
-	[{"text":"Leave","method":func():pass}],PromptSprites.playerTalker
+	[{"text":"Leave","method":GameManager.closePrompt}],PromptSprites.playerTalker
 )
 
 var who_cares = Prompt.new(
