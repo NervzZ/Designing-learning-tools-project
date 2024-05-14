@@ -16,8 +16,8 @@ var sustainability_dialogue_start = Prompt.new(
 	"Have you considered the sustainability aspect of your invention? It's crucial to ensure that "+
 	"it takes care of the environment as well. We need to make an effort here.",
 	[
-		{"text":"Agree","method":func():GameManager.displayPrompt(agree_sustainability)},
-		{"text":"Out of my control", "method":func():GameManager.displayPrompt(cant_agree)},
+		{"text":"Agree","method":func():GameManager.displayPrompt(agree_sustainability),"display":"soldToCorporation","inverse":true},
+		{"text":"Out of my control", "method":func():GameManager.displayPrompt(cant_agree),"display":"soldToCorporation"},
 		{"text":"Disagree","method":func():GameManager.displayPrompt(who_cares)}
 	],PromptSprites.scientist01Talker
 )
