@@ -1,7 +1,7 @@
 extends Node
 
 ################################################################################
-# Dialogues for Day 3 at the lab:
+# Dialogues for Day 4 at the lab:
 # Dialogues:
 # 1. Government wants regulations `discuss_entry_government()`
 ################################################################################

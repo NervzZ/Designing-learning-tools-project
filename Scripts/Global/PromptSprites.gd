@@ -13,3 +13,7 @@ var armyguytalker: Texture2D = preload("res://Assets/Sprites/Character/Military.
 var merchant: Texture2D = preload("res://Assets/Sprites/Character/Merchant.png")#TODO Use correct img
 #day 4 in lab
 var government: Texture2D = preload("res://Assets/Sprites/Character/Agent.png") #TODO Use correct img
+#wife
+var wife: Texture2D = preload("res://Assets/Sprites/Character/Wife.png") #TODO use correct img
+#kid
+var kid:Texture2D = preload("res://Assets/Sprites/Character/Kid.png")#TODO use correct img
