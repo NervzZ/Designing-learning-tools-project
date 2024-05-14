@@ -19,6 +19,10 @@ var boolStates = {
 	"refusedToSellToCorporation":false,
 	"talkedToFriendsOptionalStealing":false,
 	"misusedForPersonalGain":false,
+	"admittedIssuesToAuthority":false,
+	"talkedToAuthority":false,
+	
+	"didntSellToArmyAndFoundOutAboutStability":false, #<-workaround for boolean logic
 }
 
 var mistakes_made=0
