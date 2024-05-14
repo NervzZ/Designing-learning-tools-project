@@ -1,9 +1,15 @@
 extends Node
 
+################################################################################
+# Dialogues for Day 3 at the lab:
+# Dialogues:
+# 1. Government wants regulations `discuss_entry_government()`
+################################################################################
 
 
-
-
+################################################################################
+# Talk to authority
+################################################################################
 func discuss_entry_government():
 	GameState.boolStates["didntSellToArmyAndFoundOutAboutStability"] = (
 					GameState.boolStates["InvestigatedRisks"] 
