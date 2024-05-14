@@ -21,7 +21,8 @@ var boolStates = {
 	"misusedForPersonalGain":false,
 	"admittedIssuesToAuthority":false,
 	"talkedToAuthority":false,
-	
+	"agreeToSustainability":false,
+	"talkedAboutSustainability":false,
 	"didntSellToArmyAndFoundOutAboutStability":false, #<-workaround for boolean logic
 }
 
