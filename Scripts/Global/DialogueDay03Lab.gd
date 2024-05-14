@@ -130,6 +130,7 @@ func show_after_stealing():
 	GameManager.displayPrompt(reaction_afer_stealing)
 func show_after_not_stealing():
 	GameManager.closePrompt()
+	GameState.boolStates["didNotMisuseForPersonalGain"] = true
 	GameManager.displayPrompt(reaction_after_not_stealing)
 var dumb_friend_prompt1 = Prompt.new(
 	"Hey, have you heard about that new project [Player Character] is working on? It's getting a lot of attention.",

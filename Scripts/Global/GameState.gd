@@ -19,6 +19,7 @@ var boolStates = {
 	"refusedToSellToCorporation":false,
 	"talkedToFriendsOptionalStealing":false,
 	"misusedForPersonalGain":false,
+	"didNotMisuseForPersonalGain":false,
 	"admittedIssuesToAuthority":false,
 	"talkedToAuthority":false,
 	"agreeToSustainability":false,
