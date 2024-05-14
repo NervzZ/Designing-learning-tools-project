@@ -11,3 +11,5 @@ var phone: Texture2D = preload("res://Assets/Sprites/Objects/Phone.png")# img se
 var armyguytalker: Texture2D = preload("res://Assets/Sprites/Character/Military.png")#TODO use correct img 
 #day 3 in lab
 var merchant: Texture2D = preload("res://Assets/Sprites/Character/Merchant.png")#TODO Use correct img
+#day 4 in lab
+var government: Texture2D = preload("res://Assets/Sprites/Character/Agent.png") #TODO Use correct img
