@@ -30,15 +30,17 @@ var wife_kk = Prompt.new(
 ################################################################################
 # Talk to Kiddo
 ################################################################################
+func discuss_entry_kiddo():
+	GameManager.displayPrompt(kid_begin)
 var kid_begin = Prompt.new(
 	"Daddy, how was work today? Did you learn something cool?",
 	[
-		{"text":"I'm tired","method":GameManager.displayPrompt(kid_dont_talk)},
-		{"text":"Be mindful of future consequenes","method":GameManager.displayPrompt(kid_frst_hidden_option),"display":"InvestigatedRisks"},
-		{"text":"Keep to your principles","method":GameManager.displayPrompt(kid_army_option),"display":"refusedArmyGuy"},
-		{"text":"Keep to your principles","method":GameManager.displayPrompt(kid_corporation_option),"display":"refusedToSellToCorporation"},
-		{"text":"Work for the greater good","method":GameManager.displayPrompt(kid_personal_gain_option),"display":"didNotMisuseForPersonalGain"},
-		{"text":"Nothing is selfcontained","method":GameManager.displayPrompt(kid_sustainability),"display":"agreeToSustainability"},
+		{"text":"I'm tired","method":func():GameManager.displayPrompt(kid_dont_talk)},
+		{"text":"Be mindful of future consequenes","method":func():GameManager.displayPrompt(kid_frst_hidden_option),"display":"InvestigatedRisks"},
+		{"text":"Keep to your principles","method":func():GameManager.displayPrompt(kid_army_option),"display":"refusedArmyGuy"},
+		{"text":"Keep to your principles","method":func():GameManager.displayPrompt(kid_corporation_option),"display":"refusedToSellToCorporation"},
+		{"text":"Work for the greater good","method":func():GameManager.displayPrompt(kid_personal_gain_option),"display":"didNotMisuseForPersonalGain"},
+		{"text":"Nothing is selfcontained","method":func():GameManager.displayPrompt(kid_sustainability),"display":"agreeToSustainability"},
 	],PromptSprites.kid
 )
 var kid_dont_talk = Prompt.new(
