@@ -5,7 +5,7 @@
 [node name="ConsoleRight" type="Node2D"]
 scale = Vector2(4, 4)
 
-[node name="ConsoleW" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_sp2wu")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

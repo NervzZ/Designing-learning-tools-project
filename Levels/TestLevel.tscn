@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bd37ld3qljsej"]
+[gd_scene load_steps=10 format=3 uid="uid://bd37ld3qljsej"]
 
 [ext_resource type="PackedScene" uid="uid://06kaxfqyqf67" path="res://Actors/Player.tscn" id="1_dfmdp"]
 [ext_resource type="Script" path="res://Scripts/Levels/TestLevel.gd" id="1_phlu1"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://Scripts/Actors/Phone.gd" id="5_2prex"]
 [ext_resource type="PackedScene" uid="uid://cg1nlk8ogjgja" path="res://Actors/Scientist2.tscn" id="6_bxp2a"]
 [ext_resource type="Script" path="res://Scripts/Actors/TestScientist.gd" id="7_qe1hb"]
+[ext_resource type="PackedScene" uid="uid://3vxpktkogsv" path="res://Interactables/Console Right.tscn" id="8_ssa6o"]
+[ext_resource type="Script" path="res://Scripts/Actors/GameOverTest.gd" id="9_dhped"]
 
 [node name="TestLevel" type="Node2D"]
 script = ExtResource("1_phlu1")
@@ -27,3 +29,8 @@ rotation = -0.00179431
 scale = Vector2(4, 4)
 script = ExtResource("7_qe1hb")
 highlight_thickness = 0.7
+
+[node name="ConsoleRight" parent="." instance=ExtResource("8_ssa6o")]
+position = Vector2(314, 860)
+script = ExtResource("9_dhped")
+radius = 40.0

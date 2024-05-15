@@ -25,5 +25,5 @@ func _resume_pressed():
 	visible = false
 
 func _quit_pressed():
-	LevelLoader.changeLevel(LevelLoader.mainMenu)
+	GameManager.returnToMainMenu()
 	_resume_pressed()

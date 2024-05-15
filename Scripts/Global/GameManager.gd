@@ -1,7 +1,9 @@
 extends Node
 
 var dialogueScene : PackedScene = preload("res://UI/Dialogue.tscn")
+var endingScene : PackedScene = preload("res://UI/GameOver.tscn")
 var currentPrompt : Control
+var currentGameOver : Control
 var click = preload("res://Assets/Sounds/SFX/click.wav")
 var muted = false
 var innerStick : Node
@@ -19,6 +21,9 @@ func _ready():
 	joystick.scale = Vector2(0.78, 0.78)
 	hud.add_child(pauseMenu)
 	hud.visible = false
+	
+func returnToMainMenu():
+	LevelLoader.changeLevel(LevelLoader.mainMenu)
 
 func on_player_touched():
 	displayPrompt(Dialogues.greenObstacleHit)
@@ -74,9 +79,38 @@ func displayPrompt(prompt: Prompt):
 		
 	root.add_child(currentPrompt)
 	
+func displayGameOver(ending: Ending):
+	#overrides current prompt if present
+	closeGameOver()
+	pause()
+	
+	hud.visible = false
+	currentGameOver = endingScene.instantiate()
+	var vbox: VBoxContainer = currentGameOver.get_node("PanelContainer/MarginContainer/VBoxContainer")
+	var title: RichTextLabel = vbox.get_node("Title")
+	var text: RichTextLabel = vbox.get_node("Text")
+	var button: Button = currentGameOver.get_node("PanelContainer/MarginContainer/Button")
+	
+	#Set text
+	title.clear()
+	title.add_text(ending.title)
+	text.clear()
+	text.add_text(ending.text)
+	
+	#Connect action
+	button.connect("pressed", ending.action)
+		
+	root.add_child(currentGameOver)
+	
 func closePrompt():
 	if currentPrompt != null:
 		currentPrompt.queue_free()
+		hud.visible = true
+		unPause()
+		
+func closeGameOver():
+	if currentGameOver != null:
+		currentGameOver.queue_free()
 		hud.visible = true
 		unPause()
 	
