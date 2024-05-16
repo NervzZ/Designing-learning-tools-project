@@ -71,19 +71,19 @@ func _process(delta):
 	
 	#Camera edge detection
 	var viewport : Viewport = get_viewport()
-	var viewport_width = viewport.size.x
+	var increment = viewport.size.x / 2.
 	
 	#Move right
 	if position.x > limitRight:
-		limitRight += viewport_width
-		limitLeft += viewport_width
-		viewport.canvas_transform.origin = viewport.canvas_transform.origin - Vector2(viewport_width, 0)
+		limitRight += increment
+		limitLeft += increment
+		viewport.canvas_transform.origin = viewport.canvas_transform.origin - Vector2(increment, 0)
 		
 	#Move left	
 	if position.x < limitLeft:
-		limitRight -= viewport_width
-		limitLeft -= viewport_width
-		viewport.canvas_transform.origin = viewport.canvas_transform.origin + Vector2(viewport_width, 0)
+		limitRight -= increment
+		limitLeft -= increment
+		viewport.canvas_transform.origin = viewport.canvas_transform.origin + Vector2(increment, 0)
 	
 #This is called at every physical process tick (independent of game's framerate)
 #Therefore you can expect delta to be constant
