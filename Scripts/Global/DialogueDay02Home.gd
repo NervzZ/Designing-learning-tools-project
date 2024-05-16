@@ -3,26 +3,12 @@ extends Node
 ################################################################################
 # Dialogues for Day 2 at home:
 # Dialogues:
-# 1. Wake-up message `wake_up()` (TODO with dreams or thoughts)
-# 2. The phone call with the army `discuss_entry_army_phonecall()`
+# 1. The phone call with the army `discuss_entry_army_phonecall()`
 ################################################################################
 
 
 
-################################################################################
-# Wake up message (after dream or sth)
-################################################################################
-func wake_up(): # <- Call this for welcome message
-	GameManager.displayPrompt(DreamPrompt)
-	
-var DreamPrompt = Prompt.new(  # said by you (or narrator?)
-	"You wake up, feeling anxious... You had a strange dream but you don't
-remember it.",
-	[
-		{"text":"Ok", "method" : GameManager.closePrompt}
-	],
-	PromptSprites.playerTalker
-)
+
 
 
 ################################################################################
