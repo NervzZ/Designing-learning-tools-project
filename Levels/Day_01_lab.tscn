@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cs2w2nf216vet"]
+[gd_scene load_steps=12 format=3 uid="uid://cs2w2nf216vet"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day_01_lab.gd" id="1_07pmr"]
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_pidfj"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="6_bxpun"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day01/scientist1_day01.gd" id="6_ejs7s"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day01/scientist2_day01.gd" id="8_7dquw"]
+[ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="10_4e6rd"]
+[ext_resource type="Script" path="res://Scripts/Doors/day_01_01_lab_to_home.gd" id="11_8p8qx"]
 
 [node name="LabLevel_D01" type="Node2D"]
 script = ExtResource("1_07pmr")
@@ -33,3 +35,7 @@ script = ExtResource("8_7dquw")
 
 [node name="Player" parent="." instance=ExtResource("6_bxpun")]
 position = Vector2(212, 536)
+
+[node name="Door" parent="." instance=ExtResource("10_4e6rd")]
+position = Vector2(57, 945)
+script = ExtResource("11_8p8qx")

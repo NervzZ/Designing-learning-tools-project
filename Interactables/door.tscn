@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://s23chrm5fnf7"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_l48pw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6fgm"]
+size = Vector2(90, 92)
+
+[node name="Door" type="Node2D"]
+modulate = Color(0.266667, 1, 1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.5, 0.499998)
+scale = Vector2(91, 93)
+texture = SubResource("CanvasTexture_l48pw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.35525e-20, -5.96046e-08)
+shape = SubResource("RectangleShape2D_e6fgm")
