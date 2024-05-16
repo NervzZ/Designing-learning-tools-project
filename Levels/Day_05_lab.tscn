@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://5onrifrqspab"]
+[gd_scene load_steps=8 format=3 uid="uid://5onrifrqspab"]
 
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_03v1f"]
 [ext_resource type="PackedScene" uid="uid://crcs5w5no5ovh" path="res://Interactables/Console Left.tscn" id="2_dhulb"]
 [ext_resource type="PackedScene" uid="uid://3vxpktkogsv" path="res://Interactables/Console Right.tscn" id="3_jdwlp"]
 [ext_resource type="PackedScene" uid="uid://cg1nlk8ogjgja" path="res://Actors/Scientist2.tscn" id="4_fmf5t"]
+[ext_resource type="Script" path="res://Scripts/Actors/Day05/scientist1_day05.gd" id="5_0e75t"]
 [ext_resource type="PackedScene" uid="uid://cr14yabefsvyr" path="res://Actors/Scientist3.tscn" id="5_perdg"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="6_12dqo"]
 
@@ -20,6 +21,7 @@ position = Vector2(1483, 702)
 [node name="Scientist" parent="." instance=ExtResource("4_fmf5t")]
 position = Vector2(1077, 707)
 scale = Vector2(4, 4)
+script = ExtResource("5_0e75t")
 
 [node name="Scientist2" parent="." instance=ExtResource("5_perdg")]
 position = Vector2(1704, 904)
