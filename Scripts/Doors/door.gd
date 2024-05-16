@@ -7,21 +7,17 @@ var destination_scene:PackedScene
 
 @export 
 var allow="always"
-@export
-var continue_text = "Continue?"
-@export
-var cant_continue_text = "Not done yet"
 
 var not_finished_yet = Prompt.new(
-	cant_continue_text,
+	"Not done yet",
 	[{"text":"Ok","method":GameManager.closePrompt}],PromptSprites.playerTalker
 )
 
 var go_home = Prompt.new(
-	continue_text,
+	"Read to continue?",
 	[
 		{"text":"yes","method":change_scene},
-		{"text":"No","method":GameManager.closePrompt}
+		{"text":"Not yet","method":GameManager.closePrompt}
 	],PromptSprites.playerTalker
 )
 

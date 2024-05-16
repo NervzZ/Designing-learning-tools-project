@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cs2w2nf216vet"]
+[gd_scene load_steps=13 format=3 uid="uid://cs2w2nf216vet"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day_01_lab.gd" id="1_07pmr"]
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_pidfj"]
@@ -10,7 +10,8 @@
 [ext_resource type="Script" path="res://Scripts/Actors/Day01/scientist1_day01.gd" id="6_ejs7s"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day01/scientist2_day01.gd" id="8_7dquw"]
 [ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="10_4e6rd"]
-[ext_resource type="PackedScene" uid="uid://di0or3wlxv6ky" path="res://Levels/Day_01_House.tscn" id="11_rd2jd"]
+[ext_resource type="Script" path="res://Scripts/Doors/door.gd" id="11_oanbn"]
+[ext_resource type="PackedScene" uid="uid://bhlfnpoi7wh42" path="res://Levels/Day_02_House.tscn" id="12_lpuey"]
 
 [node name="LabLevel_D01" type="Node2D"]
 script = ExtResource("1_07pmr")
@@ -38,5 +39,6 @@ position = Vector2(212, 536)
 
 [node name="Door" parent="." instance=ExtResource("10_4e6rd")]
 position = Vector2(57, 945)
-destination_scene = ExtResource("11_rd2jd")
+script = ExtResource("11_oanbn")
+destination_scene = ExtResource("12_lpuey")
 allow = "TalkedAboutTechnologyRace"

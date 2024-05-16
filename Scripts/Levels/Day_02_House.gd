@@ -1,5 +1,5 @@
 extends Node2D
 
 func _ready():
-	pass
+	DialogueWakeUpHome.wake_up_day02()
 

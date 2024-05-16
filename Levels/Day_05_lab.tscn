@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://5onrifrqspab"]
+[gd_scene load_steps=8 format=3 uid="uid://5onrifrqspab"]
 
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_03v1f"]
 [ext_resource type="PackedScene" uid="uid://crcs5w5no5ovh" path="res://Interactables/Console Left.tscn" id="2_dhulb"]
@@ -7,8 +7,6 @@
 [ext_resource type="Script" path="res://Scripts/Actors/Day05/scientist1_day05.gd" id="5_0e75t"]
 [ext_resource type="PackedScene" uid="uid://cr14yabefsvyr" path="res://Actors/Scientist3.tscn" id="5_perdg"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="6_12dqo"]
-[ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="8_yqfnl"]
-[ext_resource type="PackedScene" uid="uid://oaqb7il3lure" path="res://Levels/Day_05_House.tscn" id="9_qmcdk"]
 
 [node name="Day_05_lab" type="Node2D"]
 
@@ -31,8 +29,3 @@ scale = Vector2(4, 4)
 
 [node name="Player" parent="." instance=ExtResource("6_12dqo")]
 position = Vector2(212, 536)
-
-[node name="Door" parent="." instance=ExtResource("8_yqfnl")]
-position = Vector2(279, 974)
-destination_scene = ExtResource("9_qmcdk")
-allow = "talkedAboutSustainability"

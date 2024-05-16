@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://vh60ymqo7fng"]
+[gd_scene load_steps=10 format=3 uid="uid://vh60ymqo7fng"]
 
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_2gtpj"]
 [ext_resource type="PackedScene" uid="uid://crcs5w5no5ovh" path="res://Interactables/Console Left.tscn" id="2_fxloc"]
@@ -9,8 +9,6 @@
 [ext_resource type="Script" path="res://Scripts/Actors/Day03/scientist2_day03.gd" id="6_xpouj"]
 [ext_resource type="PackedScene" uid="uid://c0xnfapixxwff" path="res://Actors/Merchant.tscn" id="7_8qnuf"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day03/merchant_day03.gd" id="9_0lo0t"]
-[ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="10_1dj0y"]
-[ext_resource type="PackedScene" uid="uid://cc0erhonu84h3" path="res://Levels/Day_03_House.tscn" id="11_ilnk7"]
 
 [node name="Day_03_lab" type="Node2D"]
 
@@ -35,11 +33,6 @@ script = ExtResource("6_xpouj")
 position = Vector2(212, 536)
 
 [node name="Merchant" parent="." instance=ExtResource("7_8qnuf")]
-position = Vector2(605, 558)
+position = Vector2(-1090, 682)
 scale = Vector2(4, 4)
 script = ExtResource("9_0lo0t")
-
-[node name="Door" parent="." instance=ExtResource("10_1dj0y")]
-position = Vector2(159, 957)
-destination_scene = ExtResource("11_ilnk7")
-allow = "talkedToCoproration"
