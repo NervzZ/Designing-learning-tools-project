@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d4mwa7ldd7fh"]
+[gd_scene load_steps=9 format=3 uid="uid://d4mwa7ldd7fh"]
 
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_jneki"]
 [ext_resource type="PackedScene" uid="uid://crcs5w5no5ovh" path="res://Interactables/Console Left.tscn" id="3_na43q"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cr14yabefsvyr" path="res://Actors/Scientist3.tscn" id="6_208ym"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="6_g2w0s"]
 [ext_resource type="PackedScene" uid="uid://c0xnfapixxwff" path="res://Actors/Merchant.tscn" id="7_jl7yg"]
+[ext_resource type="PackedScene" uid="uid://bam22saqioo01" path="res://Interactables/DoorLab.tscn" id="8_44xkg"]
 
 [node name="LabLevel" type="Node2D"]
 
@@ -32,3 +33,6 @@ position = Vector2(212, 536)
 [node name="Merchant" parent="." instance=ExtResource("7_jl7yg")]
 position = Vector2(-1090, 682)
 scale = Vector2(4, 4)
+
+[node name="Door" parent="." instance=ExtResource("8_44xkg")]
+position = Vector2(3317, 540)
