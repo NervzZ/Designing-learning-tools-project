@@ -1,0 +1,46 @@
+[gd_scene load_steps=13 format=3 uid="uid://di0or3wlxv6ky"]
+
+[ext_resource type="Script" path="res://Scripts/Levels/Day_02_House.gd" id="1_wis77"]
+[ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="2_td82c"]
+[ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="3_uthwg"]
+[ext_resource type="Texture2D" uid="uid://dad6bnxoav7dw" path="res://Assets/Sprites/Objects/Phone.png" id="4_kftpy"]
+[ext_resource type="Script" path="res://Scripts/Actors/Day02/phone_day02.gd" id="5_d3uwt"]
+[ext_resource type="PackedScene" uid="uid://dw2k5q3pjw22u" path="res://Actors/Wife.tscn" id="6_0xu8h"]
+[ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/wife_at_home.gd" id="7_bthm1"]
+[ext_resource type="PackedScene" uid="uid://nqumrbxfdthe" path="res://Actors/Kid.tscn" id="8_scwdr"]
+[ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/kid_at_home.gd" id="9_xeyof"]
+[ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="10_wbrum"]
+[ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="11_ucnov"]
+[ext_resource type="PackedScene" uid="uid://nlxjyxdivlf" path="res://Levels/Day_02_House_Morning.tscn" id="12_qh066"]
+
+[node name="Day_01_House" type="Node2D"]
+script = ExtResource("1_wis77")
+
+[node name="TileMap" parent="." instance=ExtResource("2_td82c")]
+
+[node name="Player" parent="." instance=ExtResource("3_uthwg")]
+position = Vector2(212, 830)
+
+[node name="Phone" type="Sprite2D" parent="."]
+position = Vector2(-95, 517)
+scale = Vector2(3, 3)
+texture = ExtResource("4_kftpy")
+script = ExtResource("5_d3uwt")
+
+[node name="Wife" parent="." instance=ExtResource("6_0xu8h")]
+position = Vector2(1954, 1145)
+scale = Vector2(4, 4)
+script = ExtResource("7_bthm1")
+
+[node name="Kid" parent="." instance=ExtResource("8_scwdr")]
+position = Vector2(1902, 678)
+scale = Vector2(4, 4)
+script = ExtResource("9_xeyof")
+
+[node name="Newspaper" parent="." instance=ExtResource("10_wbrum")]
+position = Vector2(2759, 947)
+scale = Vector2(4, 4)
+
+[node name="Bed" parent="." instance=ExtResource("11_ucnov")]
+position = Vector2(1186, 972)
+destination_scene = ExtResource("12_qh066")
