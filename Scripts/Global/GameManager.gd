@@ -8,6 +8,7 @@ var click = preload("res://Assets/Sounds/SFX/click.wav")
 var muted = false
 var innerStick : Node
 
+@onready var canvasLayer: CanvasLayer = CanvasLayer.new()
 @onready var hud : CanvasLayer = preload("res://UI/HUD.tscn").instantiate()
 @onready var pauseMenu : Control = preload("res://UI/PauseMenu.tscn").instantiate()
 @onready var joystick : Control = preload("res://UI/Joystick.tscn").instantiate()
@@ -15,6 +16,7 @@ var innerStick : Node
 
 func _ready():
 	root.add_child.call_deferred(hud)
+	root.add_child.call_deferred(canvasLayer)
 	hud.add_child(joystick)
 	innerStick = joystick.get_child(1)
 	joystick.visible = false
@@ -77,7 +79,7 @@ func displayPrompt(prompt: Prompt):
 				btn.connect("pressed", _playClick)
 				choiceBox.add_child(btn)
 		
-	root.add_child(currentPrompt)
+	canvasLayer.add_child(currentPrompt)
 	
 func displayGameOver(ending: Ending):
 	#overrides current prompt if present
@@ -100,7 +102,7 @@ func displayGameOver(ending: Ending):
 	#Connect action
 	button.connect("pressed", ending.action)
 		
-	root.add_child(currentGameOver)
+	canvasLayer.add_child(currentGameOver)
 	
 func closePrompt():
 	if currentPrompt != null:
