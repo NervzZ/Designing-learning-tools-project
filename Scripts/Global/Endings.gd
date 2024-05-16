@@ -9,7 +9,30 @@ Mauris aliquet, magna vitae rutrum vehicula, enim lacus lobortis quam, nec volut
 _testEndingAction
 )
 
+
+
+var soldToArmyNoConditionsEnding = Ending.new( #instant
+	"The End",
+	"The military has acquired your teleporter, and after a few months of secrecy, discovered"+
+	" that not only can it be used for logistics,"+
+	"but can deliver explosives, or agents anywhere in the world in an instant.\n\n"+
+	"Also, every now and again, an entire platoon disappears inside the teleporter and no one knows why...",
+	restartGame
+)
+
+
+
+
+
+func restartGame():
+	for key in GameState.boolStates:
+		GameState.boolStates[key]=false
+	GameManager.closeGameOver()
+	GameManager.returnToMainMenu()
+
 #No switch cases in GDScript so it was cleaner and easier to read like this
 func _testEndingAction():
 	GameManager.closeGameOver()
 	GameManager.returnToMainMenu()
+
+

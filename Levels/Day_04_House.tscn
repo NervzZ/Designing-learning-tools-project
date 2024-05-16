@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3 uid="uid://c8m3ddtaimmuy"]
+
+[ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="1_8ym01"]
+[ext_resource type="Script" path="res://Scripts/Levels/Day_04_House.gd" id="1_abfwc"]
+[ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="2_gcfa6"]
+[ext_resource type="Texture2D" uid="uid://dad6bnxoav7dw" path="res://Assets/Sprites/Objects/Phone.png" id="3_q02gm"]
+[ext_resource type="PackedScene" uid="uid://dw2k5q3pjw22u" path="res://Actors/Wife.tscn" id="4_3i2ob"]
+[ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/wife_at_home.gd" id="5_gjxrw"]
+[ext_resource type="PackedScene" uid="uid://nqumrbxfdthe" path="res://Actors/Kid.tscn" id="6_clxbv"]
+[ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/kid_at_home.gd" id="7_5teet"]
+[ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="8_fb7xq"]
+
+[node name="Day_04_House" type="Node2D"]
+script = ExtResource("1_abfwc")
+
+[node name="TileMap" parent="." instance=ExtResource("1_8ym01")]
+
+[node name="Player" parent="." instance=ExtResource("2_gcfa6")]
+position = Vector2(212, 830)
+
+[node name="Phone" type="Sprite2D" parent="."]
+position = Vector2(-95, 517)
+scale = Vector2(3, 3)
+texture = ExtResource("3_q02gm")
+
+[node name="Wife" parent="." instance=ExtResource("4_3i2ob")]
+position = Vector2(2742, 526)
+scale = Vector2(4, 4)
+script = ExtResource("5_gjxrw")
+
+[node name="Kid" parent="." instance=ExtResource("6_clxbv")]
+position = Vector2(1902, 678)
+scale = Vector2(4, 4)
+script = ExtResource("7_5teet")
+
+[node name="Newspaper" parent="." instance=ExtResource("8_fb7xq")]
+position = Vector2(2759, 947)
+scale = Vector2(4, 4)

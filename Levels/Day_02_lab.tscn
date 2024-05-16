@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://md1sj0qpvroi"]
+[gd_scene load_steps=12 format=3 uid="uid://md1sj0qpvroi"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day_02_lab.gd" id="1_68umm"]
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_lc5kx"]
@@ -7,7 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cg1nlk8ogjgja" path="res://Actors/Scientist2.tscn" id="4_s6cx0"]
 [ext_resource type="PackedScene" uid="uid://cr14yabefsvyr" path="res://Actors/Scientist3.tscn" id="5_vl0hd"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="6_1egol"]
+[ext_resource type="Script" path="res://Scripts/Actors/Day02/scientist1_day02.gd" id="6_6b2ir"]
 [ext_resource type="PackedScene" uid="uid://c0xnfapixxwff" path="res://Actors/Merchant.tscn" id="7_1gt6a"]
+[ext_resource type="Script" path="res://Scripts/Actors/Day02/scientist2_day02.gd" id="8_788fh"]
+[ext_resource type="Script" path="res://Scripts/Actors/Day02/army_day02.gd" id="11_1b47r"]
 
 [node name="Day_02_lab" type="Node2D"]
 script = ExtResource("1_68umm")
@@ -23,10 +26,12 @@ position = Vector2(1483, 702)
 [node name="Scientist" parent="." instance=ExtResource("4_s6cx0")]
 position = Vector2(1077, 707)
 scale = Vector2(4, 4)
+script = ExtResource("6_6b2ir")
 
 [node name="Scientist2" parent="." instance=ExtResource("5_vl0hd")]
 position = Vector2(1704, 904)
 scale = Vector2(4, 4)
+script = ExtResource("8_788fh")
 
 [node name="Player" parent="." instance=ExtResource("6_1egol")]
 position = Vector2(212, 536)
@@ -34,3 +39,4 @@ position = Vector2(212, 536)
 [node name="ArmyDude" parent="." instance=ExtResource("7_1gt6a")]
 position = Vector2(-1090, 682)
 scale = Vector2(4, 4)
+script = ExtResource("11_1b47r")

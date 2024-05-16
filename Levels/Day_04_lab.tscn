@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxp5jphk531s"]
+[gd_scene load_steps=9 format=3 uid="uid://dxp5jphk531s"]
 
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_bc3nc"]
 [ext_resource type="PackedScene" uid="uid://crcs5w5no5ovh" path="res://Interactables/Console Left.tscn" id="2_j5y7d"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cr14yabefsvyr" path="res://Actors/Scientist3.tscn" id="5_epelj"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="6_qltu7"]
 [ext_resource type="PackedScene" uid="uid://k7d6d3w4omvq" path="res://Actors/Agent.tscn" id="7_xf4a4"]
+[ext_resource type="Script" path="res://Scripts/Actors/Day04/governementRep_day04.gd" id="8_udgoi"]
 
 [node name="Day_04_lab" type="Node2D"]
 
@@ -32,3 +33,4 @@ position = Vector2(212, 536)
 [node name="GovernmentRep" parent="." instance=ExtResource("7_xf4a4")]
 position = Vector2(-909, 674)
 scale = Vector2(4.11, 4.11)
+script = ExtResource("8_udgoi")
