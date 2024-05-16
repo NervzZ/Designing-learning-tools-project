@@ -27,6 +27,7 @@ var soldToArmyNoConditionsEnding = Ending.new( #instant
 func restartGame():
 	for key in GameState.boolStates:
 		GameState.boolStates[key]=false
+	GameState.boolStates["always"]=true
 	GameManager.closeGameOver()
 	GameManager.returnToMainMenu()
 
