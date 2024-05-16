@@ -5,14 +5,7 @@ var mainMenu = preload("res://UI/MainMenu.tscn")
 var firstLevel = preload("res://Levels/FirstLevel.tscn");
 var testLevel = preload("res://Levels/TestLevel.tscn");
 var day_01_lab = preload("res://Levels/Day_01_lab.tscn")
-var day_02_home = preload("res://Levels/Day_02_House.tscn")
-var day_02_lab = preload("res://Levels/Day_02_lab.tscn")
-var day_03_home = preload("res://Levels/Day_03_House.tscn")
-var day_03_lab = preload("res://Levels/Day_03_lab.tscn")
-var day_04_home = preload("res://Levels/Day_04_House.tscn")
-var day_04_lab = preload("res://Levels/Day_04_lab.tscn")
-var day_05_home = preload("res://Levels/Day_05_House.tscn")
-var day_05_lab = preload("res://Levels/Day_05_lab.tscn")
+
 
 
 func changeLevel(level: PackedScene):
