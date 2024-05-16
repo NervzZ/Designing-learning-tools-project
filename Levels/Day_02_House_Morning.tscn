@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://nlxjyxdivlf"]
+[gd_scene load_steps=8 format=3 uid="uid://byje5ewvb5464"]
 
 [ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="2_34sie"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="3_wxk5y"]
