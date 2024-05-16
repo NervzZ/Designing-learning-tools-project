@@ -57,7 +57,7 @@ func _input(event):
 			else:
 				rectangle = getCurrentFrameRect()
 			print(rectangle.position)
-			if rectangle.has_point(sprite.to_local(event.position)):
+			if rectangle.has_point(sprite.to_local(event.position - get_viewport().canvas_transform.origin)):
 				_trigger_action()
 
 func _trigger_action():
