@@ -325,8 +325,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiyqm"]
-size = Vector2(32, 16)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bl46y"]
+radius = 7.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
@@ -335,5 +335,6 @@ sprite_frames = SubResource("SpriteFrames_1a1tl")
 animation = &"IdleDown"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 20)
-shape = SubResource("RectangleShape2D_oiyqm")
+position = Vector2(0, 21)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_bl46y")
