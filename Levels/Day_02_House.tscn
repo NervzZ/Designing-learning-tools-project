@@ -1,12 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bhlfnpoi7wh42"]
+[gd_scene load_steps=9 format=3 uid="uid://bhlfnpoi7wh42"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day_02_House.gd" id="1_074mh"]
 [ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="1_odbnv"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="2_npe7g"]
-[ext_resource type="Texture2D" uid="uid://dad6bnxoav7dw" path="res://Assets/Sprites/Objects/Phone.png" id="3_swm1c"]
 [ext_resource type="PackedScene" uid="uid://dw2k5q3pjw22u" path="res://Actors/Wife.tscn" id="4_gb7ya"]
 [ext_resource type="PackedScene" uid="uid://nqumrbxfdthe" path="res://Actors/Kid.tscn" id="5_5i3i5"]
-[ext_resource type="Script" path="res://Scripts/Actors/Day02/phone_day02.gd" id="5_nurbx"]
 [ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="6_32yii"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/wife_at_home.gd" id="7_ekm70"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/kid_at_home.gd" id="8_uj3tk"]
@@ -18,12 +16,6 @@ script = ExtResource("1_074mh")
 
 [node name="Player" parent="." instance=ExtResource("2_npe7g")]
 position = Vector2(212, 830)
-
-[node name="Phone" type="Sprite2D" parent="."]
-position = Vector2(-95, 517)
-scale = Vector2(3, 3)
-texture = ExtResource("3_swm1c")
-script = ExtResource("5_nurbx")
 
 [node name="Wife" parent="." instance=ExtResource("4_gb7ya")]
 position = Vector2(2742, 526)
