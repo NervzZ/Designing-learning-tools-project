@@ -8,6 +8,9 @@ var dragStart : Vector2
 var moveDir : Vector2 = Vector2(0, 0)
 var deadzone = 75 #base for 1440p resolution
 var footstepSound = preload("res://Assets/Sounds/SFX/footstep_concrete.ogg")
+var viewport : Transform2D
+var limitRight
+var limitLeft
 
 #Called when first loaded in memory
 func _init():
@@ -16,7 +19,11 @@ func _init():
 
 #Called when the object has been added to the scene
 func _ready():
-	print("Player spawned!")
+	viewport = get_viewport_transform()
+	limitLeft = 0
+	limitRight = get_viewport().size.x
+	var viewport : Viewport = get_viewport()
+	viewport.canvas_transform.origin = Vector2(0, 0)
 	
 func _input(event):
 	if event is InputEventMouseButton:
@@ -61,6 +68,22 @@ func _process(delta):
 		$AnimatedSprite2D.play("idle")
 	else:
 		$AnimatedSprite2D.play("walk")
+	
+	#Camera edge detection
+	var viewport : Viewport = get_viewport()
+	var viewport_width = viewport.size.x
+	
+	#Move right
+	if position.x > limitRight:
+		limitRight += viewport_width
+		limitLeft += viewport_width
+		viewport.canvas_transform.origin = viewport.canvas_transform.origin - Vector2(viewport_width, 0)
+		
+	#Move left	
+	if position.x < limitLeft:
+		limitRight -= viewport_width
+		limitLeft -= viewport_width
+		viewport.canvas_transform.origin = viewport.canvas_transform.origin + Vector2(viewport_width, 0)
 	
 #This is called at every physical process tick (independent of game's framerate)
 #Therefore you can expect delta to be constant
