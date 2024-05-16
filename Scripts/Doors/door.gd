@@ -12,12 +12,14 @@ var continue_text = "Continue?"
 @export
 var cant_continue_text = "Not done yet"
 
-var not_finished_yet = Prompt.new(
+func not_finished_yet():
+	return Prompt.new(
 	cant_continue_text,
 	[{"text":"Ok","method":GameManager.closePrompt}],PromptSprites.playerTalker
 )
 
-var go_home = Prompt.new(
+func go_home():
+	return Prompt.new(
 	continue_text,
 	[
 		{"text":"yes","method":change_scene},
@@ -31,6 +33,6 @@ func change_scene():
 
 func _trigger_action():
 	if GameState.boolStates[allow]:
-		GameManager.displayPrompt(go_home)
+		GameManager.displayPrompt(go_home())
 	else:
-		GameManager.displayPrompt(not_finished_yet)
+		GameManager.displayPrompt(not_finished_yet())
