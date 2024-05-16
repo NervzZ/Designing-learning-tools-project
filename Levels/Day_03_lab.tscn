@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://vh60ymqo7fng"]
+[gd_scene load_steps=10 format=3 uid="uid://vh60ymqo7fng"]
 
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_2gtpj"]
 [ext_resource type="PackedScene" uid="uid://crcs5w5no5ovh" path="res://Interactables/Console Left.tscn" id="2_fxloc"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cg1nlk8ogjgja" path="res://Actors/Scientist2.tscn" id="4_n8i2r"]
 [ext_resource type="PackedScene" uid="uid://cr14yabefsvyr" path="res://Actors/Scientist3.tscn" id="5_cmdbm"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="6_saffw"]
+[ext_resource type="Script" path="res://Scripts/Actors/Day03/scientist2_day03.gd" id="6_xpouj"]
 [ext_resource type="PackedScene" uid="uid://c0xnfapixxwff" path="res://Actors/Merchant.tscn" id="7_8qnuf"]
+[ext_resource type="Script" path="res://Scripts/Actors/Day03/merchant_day03.gd" id="9_0lo0t"]
 
 [node name="Day_03_lab" type="Node2D"]
 
@@ -25,6 +27,7 @@ scale = Vector2(4, 4)
 [node name="Scientist2" parent="." instance=ExtResource("5_cmdbm")]
 position = Vector2(1704, 904)
 scale = Vector2(4, 4)
+script = ExtResource("6_xpouj")
 
 [node name="Player" parent="." instance=ExtResource("6_saffw")]
 position = Vector2(212, 536)
@@ -32,3 +35,4 @@ position = Vector2(212, 536)
 [node name="Merchant" parent="." instance=ExtResource("7_8qnuf")]
 position = Vector2(-1090, 682)
 scale = Vector2(4, 4)
+script = ExtResource("9_0lo0t")
