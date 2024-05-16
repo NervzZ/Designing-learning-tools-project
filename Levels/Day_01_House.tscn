@@ -42,3 +42,4 @@ scale = Vector2(4, 4)
 [node name="Door" parent="." instance=ExtResource("10_wbb68")]
 position = Vector2(185, 1046)
 destination_scene = ExtResource("11_sq4x5")
+continue_text = "Go to bed?"
