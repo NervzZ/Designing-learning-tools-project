@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4o4lgobshswf"]
+
+[ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="2_hvi6j"]
+[ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="3_k24tk"]
+[ext_resource type="Script" path="res://Scripts/Actors/Day02/phone_day02.gd" id="5_1m58f"]
+[ext_resource type="PackedScene" uid="uid://dqmclcomp35nh" path="res://Interactables/Phone.tscn" id="6_snnwf"]
+[ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="6_tbwde"]
+[ext_resource type="PackedScene" uid="uid://md1sj0qpvroi" path="res://Levels/Day_02_lab.tscn" id="7_31sqq"]
+[ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="10_ptwoj"]
+
+[node name="Day_02_House_morning" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("2_hvi6j")]
+
+[node name="Player" parent="." instance=ExtResource("3_k24tk")]
+position = Vector2(212, 830)
+
+[node name="Newspaper" parent="." instance=ExtResource("10_ptwoj")]
+position = Vector2(2759, 947)
+scale = Vector2(4, 4)
+
+[node name="Phone" parent="." instance=ExtResource("6_snnwf")]
+position = Vector2(430, 640)
+script = ExtResource("5_1m58f")
+
+[node name="Door" parent="." instance=ExtResource("6_tbwde")]
+position = Vector2(131, 1145)
+destination_scene = ExtResource("7_31sqq")
+allow = "PhonedWithArmy"
+cant_continue_text = "I should pick up the phone"

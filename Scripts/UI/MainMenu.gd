@@ -12,7 +12,7 @@ func _ready():
 	testLevelButton.pressed.connect(self._test_level_pressed)
 	
 func _start_pressed():
-	LevelLoader.changeLevel(LevelLoader.firstLevel)
+	LevelLoader.changeLevel(LevelLoader.day_01_lab)
 	SoundManager.play_ui(click)
 	GameManager.hud.visible = true
 

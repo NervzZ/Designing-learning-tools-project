@@ -25,6 +25,8 @@ var boolStates = {
 	"agreeToSustainability":false,
 	"talkedAboutSustainability":false,
 	"didntSellToArmyAndFoundOutAboutStability":false, #<-workaround for boolean logic
+	
+	"always":true,
 }
 
 var mistakes_made=0

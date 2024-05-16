@@ -24,7 +24,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("3_pl7wn")
 
 [node name="Wife" parent="." instance=ExtResource("4_ny8q4")]
-position = Vector2(2742, 526)
+position = Vector2(1968, 1103)
 scale = Vector2(4, 4)
 script = ExtResource("5_cmjgp")
 
