@@ -1,32 +1,38 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8kavy2asq1j7"]
+[gd_scene load_steps=9 format=3 uid="uid://c8kavy2asq1j7"]
 
 [ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="1_kf8vm"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="2_hb1xb"]
-[ext_resource type="Texture2D" uid="uid://dad6bnxoav7dw" path="res://Assets/Sprites/Objects/Phone.png" id="3_2ma5u"]
 [ext_resource type="PackedScene" uid="uid://dw2k5q3pjw22u" path="res://Actors/Wife.tscn" id="4_x0k5k"]
 [ext_resource type="PackedScene" uid="uid://nqumrbxfdthe" path="res://Actors/Kid.tscn" id="5_37hhn"]
 [ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="6_724a5"]
+[ext_resource type="PackedScene" uid="uid://dqmclcomp35nh" path="res://Interactables/Phone.tscn" id="6_ono1v"]
+[ext_resource type="PackedScene" uid="uid://gi0p8r40uj4s" path="res://Interactables/Bed.tscn" id="7_35um6"]
+[ext_resource type="PackedScene" uid="uid://08pj72a5p8fm" path="res://Interactables/DoorHome.tscn" id="8_gbtsh"]
 
 [node name="HouseLevel" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("1_kf8vm")]
 
 [node name="Player" parent="." instance=ExtResource("2_hb1xb")]
-position = Vector2(212, 830)
-
-[node name="Phone" type="Sprite2D" parent="."]
-position = Vector2(-95, 517)
-scale = Vector2(3, 3)
-texture = ExtResource("3_2ma5u")
+position = Vector2(1150, 782)
 
 [node name="Wife" parent="." instance=ExtResource("4_x0k5k")]
-position = Vector2(2742, 526)
+position = Vector2(3581, 562)
 scale = Vector2(4, 4)
 
 [node name="Kid" parent="." instance=ExtResource("5_37hhn")]
-position = Vector2(1902, 678)
+position = Vector2(2759, 762)
 scale = Vector2(4, 4)
 
 [node name="Newspaper" parent="." instance=ExtResource("6_724a5")]
-position = Vector2(2759, 947)
+position = Vector2(3591, 897)
 scale = Vector2(4, 4)
+
+[node name="Phone" parent="." instance=ExtResource("6_ono1v")]
+position = Vector2(740, 515)
+
+[node name="Bed" parent="." instance=ExtResource("7_35um6")]
+position = Vector2(4450, 572)
+
+[node name="Door" parent="." instance=ExtResource("8_gbtsh")]
+position = Vector2(46, 706)

@@ -326,8 +326,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oiyqm"]
-size = Vector2(32, 16)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fv0b0"]
+radius = 7.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(4, 4)
@@ -339,8 +339,9 @@ sprite_frames = SubResource("SpriteFrames_8qtex")
 animation = &"IdleDown"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 18.25)
-shape = SubResource("RectangleShape2D_oiyqm")
+position = Vector2(0, 18)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_fv0b0")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
