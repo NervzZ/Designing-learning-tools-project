@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://md1sj0qpvroi"]
+[gd_scene load_steps=14 format=3 uid="uid://md1sj0qpvroi"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day_02_lab.gd" id="1_68umm"]
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_lc5kx"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://c0xnfapixxwff" path="res://Actors/Merchant.tscn" id="7_1gt6a"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day02/scientist2_day02.gd" id="8_788fh"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day02/army_day02.gd" id="11_1b47r"]
+[ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="12_ifqj4"]
+[ext_resource type="PackedScene" uid="uid://bhlfnpoi7wh42" path="res://Levels/Day_02_House.tscn" id="13_yjp8s"]
 
 [node name="Day_02_lab" type="Node2D"]
 script = ExtResource("1_68umm")
@@ -40,3 +42,7 @@ position = Vector2(212, 536)
 position = Vector2(-1090, 682)
 scale = Vector2(4, 4)
 script = ExtResource("11_1b47r")
+
+[node name="Door" parent="." instance=ExtResource("12_ifqj4")]
+position = Vector2(162, 971)
+destination_scene = ExtResource("13_yjp8s")
