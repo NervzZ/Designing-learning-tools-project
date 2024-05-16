@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqmclcomp35nh"]
+[gd_scene load_steps=3 format=3 uid="uid://dqmclcomp35nh"]
 
 [ext_resource type="Texture2D" uid="uid://dad6bnxoav7dw" path="res://Assets/Sprites/Objects/Phone.png" id="1_hcn2r"]
+[ext_resource type="Script" path="res://Scripts/Mechanics/Interactable.gd" id="1_iqy8n"]
 
 [node name="Phone" type="Node2D"]
+script = ExtResource("1_iqy8n")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, 0)
