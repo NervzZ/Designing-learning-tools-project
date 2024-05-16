@@ -9,7 +9,11 @@ var day_02_home = preload("res://Levels/Day_02_House.tscn")
 
 func changeLevel(level: PackedScene):
 	get_tree().change_scene_to_packed.call_deferred(level)
+	var viewport : Viewport = get_viewport()
+	viewport.canvas_transform.origin = Vector2(0, 0)
 
 #Only use this in specific cases such as cyclic dependencies with PackedScene
 func changeLevelFromPath(path):
 	get_tree().change_scene_to_file.call_deferred(path)
+	var viewport : Viewport = get_viewport()
+	viewport.canvas_transform.origin = Vector2(0, 0)
