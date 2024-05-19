@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bd37ld3qljsej"]
+[gd_scene load_steps=11 format=3 uid="uid://bd37ld3qljsej"]
 
 [ext_resource type="PackedScene" uid="uid://06kaxfqyqf67" path="res://Actors/Player.tscn" id="1_dfmdp"]
 [ext_resource type="Script" path="res://Scripts/Levels/TestLevel.gd" id="1_phlu1"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dqmclcomp35nh" path="res://Interactables/Phone.tscn" id="4_8gho0"]
 [ext_resource type="Script" path="res://Scripts/Actors/Phone.gd" id="5_2prex"]
 [ext_resource type="PackedScene" uid="uid://cg1nlk8ogjgja" path="res://Actors/Scientist2.tscn" id="6_bxp2a"]
+[ext_resource type="AudioStream" uid="uid://c4me6faqbqi0l" path="res://Assets/Sounds/SFX/phone_hang.mp3" id="6_uliay"]
 [ext_resource type="Script" path="res://Scripts/Actors/TestScientist.gd" id="7_qe1hb"]
 [ext_resource type="PackedScene" uid="uid://3vxpktkogsv" path="res://Interactables/Console Right.tscn" id="8_ssa6o"]
 [ext_resource type="Script" path="res://Scripts/Actors/GameOverTest.gd" id="9_dhped"]
@@ -22,6 +23,7 @@ position = Vector2(2452, 524)
 [node name="Phone" parent="." instance=ExtResource("4_8gho0")]
 position = Vector2(865, 846)
 script = ExtResource("5_2prex")
+sfx = ExtResource("6_uliay")
 
 [node name="Scientist" parent="." instance=ExtResource("6_bxp2a")]
 position = Vector2(1041, 689)
