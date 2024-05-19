@@ -19,11 +19,7 @@ func _init():
 	deadzone = deadzone * (float(width) / 2560)
 
 func _ready():
-	viewport = get_viewport_transform()
-	limitLeft = 0
-	limitRight = get_viewport().size.x
-	var viewport : Viewport = get_viewport()
-	viewport.canvas_transform.origin = Vector2(0, 0)
+	GameManager.resetCamera()
 	
 func _input(event):
 	if event is InputEventMouseButton:
