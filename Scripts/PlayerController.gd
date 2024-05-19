@@ -8,7 +8,10 @@ var dragStart : Vector2
 var moveDir : Vector2 = Vector2(0, 0)
 var deadzone = 75 #base for 1440p resolution
 var footstepSound = preload("res://Assets/Sounds/SFX/footstep_concrete.ogg")
-var edgeThreshold = 500.
+var viewport : Transform2D
+var limitRight
+var limitLeft
+var edgeThreshold = 525.
 
 #Called when first loaded in memory
 func _init():
@@ -16,7 +19,11 @@ func _init():
 	deadzone = deadzone * (float(width) / 2560)
 
 func _ready():
-	GameManager.resetCamera()
+	viewport = get_viewport_transform()
+	limitLeft = 0
+	limitRight = get_viewport().size.x
+	var viewport : Viewport = get_viewport()
+	viewport.canvas_transform.origin = Vector2(0, 0)
 	
 func _input(event):
 	if event is InputEventMouseButton:
@@ -63,17 +70,21 @@ func _process(delta):
 		$AnimatedSprite2D.play("walk")
 	
 	#Camera edge detection
-	var cameraPos = GameManager.camera.position
-	var halfWidth = get_viewport().size.x / 2.
-	var softLimitRight = cameraPos.x + halfWidth - edgeThreshold
-	var softLimitLeft = cameraPos.x - halfWidth + edgeThreshold
-	var targetPos = cameraPos
-	var camSpeed = 0.5
-	
-	if global_position.x > softLimitRight or global_position.x < softLimitLeft:
-		targetPos.x = global_position.x
-		
-	GameManager.camera.position.x = lerp(cameraPos.x, targetPos.x, camSpeed * delta)
+	var viewport : Viewport = get_viewport()
+
+	#Move right
+	if position.x > limitRight - edgeThreshold:
+		var increment = abs(position.x - (limitRight - edgeThreshold))
+		limitRight += increment
+		limitLeft += increment
+		viewport.canvas_transform.origin = viewport.canvas_transform.origin - Vector2(increment, 0)
+
+	#Move left
+	if position.x < limitLeft + edgeThreshold:
+		var increment = abs(position.x - (limitLeft + edgeThreshold))
+		limitRight -= increment
+		limitLeft -= increment
+		viewport.canvas_transform.origin = viewport.canvas_transform.origin + Vector2(increment, 0)
 
 #This is called at every physical process tick (independent of game's framerate)
 #Therefore you can expect delta to be constant
