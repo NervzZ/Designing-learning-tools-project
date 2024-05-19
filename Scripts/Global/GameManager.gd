@@ -28,10 +28,6 @@ func _ready():
 	hud.add_child(pauseMenu)
 	hud.visible = false
 
-func resetCamera():
-	var offset = get_viewport().size / 2.
-	camera.position = offset
-
 func returnToMainMenu():
 	LevelLoader.changeLevel(LevelLoader.mainMenu)
 
