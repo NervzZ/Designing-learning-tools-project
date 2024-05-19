@@ -8,6 +8,7 @@ var click = preload("res://Assets/Sounds/SFX/click.wav")
 var muted = false
 var innerStick : Node
 
+@onready var camera: Camera2D = Camera2D.new()
 @onready var canvasLayer: CanvasLayer = CanvasLayer.new()
 @onready var hud : CanvasLayer = preload("res://UI/HUD.tscn").instantiate()
 @onready var pauseMenu : Control = preload("res://UI/PauseMenu.tscn").instantiate()
@@ -15,6 +16,9 @@ var innerStick : Node
 @onready var root = get_tree().get_root()
 
 func _ready():
+	root.add_child.call_deferred(camera)
+	camera.make_current()
+	resetCamera()
 	root.add_child.call_deferred(hud)
 	root.add_child.call_deferred(canvasLayer)
 	hud.add_child(joystick)
@@ -23,7 +27,11 @@ func _ready():
 	joystick.scale = Vector2(0.78, 0.78)
 	hud.add_child(pauseMenu)
 	hud.visible = false
-	
+
+func resetCamera():
+	var offset = get_viewport().size / 2.
+	camera.position = offset
+
 func returnToMainMenu():
 	LevelLoader.changeLevel(LevelLoader.mainMenu)
 
