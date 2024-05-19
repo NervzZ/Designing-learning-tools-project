@@ -4,10 +4,12 @@ class_name Interactable
 
 @export var radius: float = 85
 @export var highlight_thickness: float = 1.0
+@export var sfx: AudioStream
 
 @onready var area = Area2D.new()
 @onready var collision_shape = CollisionShape2D.new()
 @onready var sprite: Node2D
+@onready var audioPlayer: AudioStreamPlayer = AudioStreamPlayer.new()
 
 var shader = preload("res://Shaders/highlight.gdshader")
 var highlight: ShaderMaterial
@@ -15,6 +17,9 @@ var isPlayerIn = false
 
 func _ready():
 	_ready_additional()
+	audioPlayer.process_mode = Node.PROCESS_MODE_ALWAYS
+	audioPlayer.stream = sfx
+	add_child(audioPlayer)
 	sprite = find_child("Sprite2D", true, false)
 	if !sprite:
 		sprite = find_child("AnimatedSprite2D", true, false)
@@ -58,6 +63,7 @@ func _input(event):
 				rectangle = getCurrentFrameRect()
 			print(rectangle.position)
 			if rectangle.has_point(sprite.to_local(event.position - get_viewport().canvas_transform.origin)):
+				audioPlayer.play()
 				_trigger_action()
 
 func _trigger_action():
