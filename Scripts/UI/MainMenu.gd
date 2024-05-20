@@ -1,15 +1,18 @@
 extends Control
 
 @onready var startButton : Button = get_node("MarginContainer/VBoxContainer/StartButton")
-@onready var exitButton : Button = get_node("MarginContainer/VBoxContainer/ExitButton")
-@onready var testLevelButton : Button = get_node("MarginContainer/VBoxContainer/TestLevelButton")
+@onready var creditsButton: Button = get_node("MarginContainer/VBoxContainer/Credits")
 var click = preload("res://Assets/Sounds/SFX/click.wav")
 
 func _ready():
 	GameManager.hud.visible = false
 	startButton.pressed.connect(self._start_pressed)
-	exitButton.pressed.connect(self._exit_pressed)
-	testLevelButton.pressed.connect(self._test_level_pressed)
+	
+func _process(delta):
+	if Input.is_action_just_pressed("Quit"):
+		_exit_pressed()
+	if Input.is_action_just_pressed("StartTestLevel"):
+		_test_level_pressed()
 	
 func _start_pressed():
 	LevelLoader.changeLevel(LevelLoader.intro)

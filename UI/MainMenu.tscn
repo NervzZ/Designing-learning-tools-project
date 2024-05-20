@@ -1,6 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddlk75edmuyig"]
+[gd_scene load_steps=5 format=3 uid="uid://ddlk75edmuyig"]
 
 [ext_resource type="Script" path="res://Scripts/UI/MainMenu.gd" id="1_rlqq1"]
+[ext_resource type="Texture2D" uid="uid://d01bw04sijqgf" path="res://Assets/Images/background.png" id="2_08kge"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14jrb"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_il4kx"]
+content_margin_left = 15.0
+content_margin_right = 15.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -10,6 +29,16 @@ offset_bottom = 1440.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_rlqq1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.262745, 0.262745, 0.262745, 1)
+custom_minimum_size = Vector2(2560, 1440)
+layout_mode = 1
+offset_right = 1526.0
+offset_bottom = 858.0
+texture = ExtResource("2_08kge")
+expand_mode = 3
+stretch_mode = 4
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -27,21 +56,36 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
 theme_override_constants/separation = 50
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(1440, 0)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0.968627, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 153
+text = "Perils of Innovation"
+fit_content = true
+scroll_active = false
+tab_size = 5
 
 [node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(527, 0)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 145
+theme_override_styles/normal = SubResource("StyleBoxFlat_14jrb")
 text = " Start "
 
-[node name="TestLevelButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 145
-text = "Test Level"
-
-[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 145
-text = "Exit
-"
+theme_override_styles/normal = SubResource("StyleBoxFlat_il4kx")
+text = "Credits"
