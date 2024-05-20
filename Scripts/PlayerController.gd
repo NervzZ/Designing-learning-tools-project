@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 15000
+var speed = 27000
 var canMove = true
 var isMoving = false
 var touchHolding = false
@@ -12,6 +12,14 @@ var viewport : Transform2D
 var limitRight
 var limitLeft
 var edgeThreshold = 525.
+var lastDir = Direction.DOWN
+
+enum Direction {
+	UP,
+	DOWN,
+	LEFT,
+	RIGHT
+}
 
 #Called when first loaded in memory
 func _init():
@@ -64,10 +72,29 @@ func _input(event):
 #This is called at every frame the game renders, detal is time between each frame
 func _process(delta):
 	velocity = moveDir * speed
+	if moveDir != Vector2.ZERO:
+		lastDir = getDir(moveDir)
+			
 	if velocity.is_zero_approx():
-		$AnimatedSprite2D.play("idle")
+		match lastDir:
+			Direction.UP:
+				$AnimatedSprite2D.play("IdleUp")
+			Direction.RIGHT:
+				$AnimatedSprite2D.play("IdleRight")
+			Direction.DOWN:
+				$AnimatedSprite2D.play("IdleDown")
+			Direction.LEFT:
+				$AnimatedSprite2D.play("IdleLeft")
 	else:
-		$AnimatedSprite2D.play("walk")
+		match lastDir:
+			Direction.UP:
+				$AnimatedSprite2D.play("WalkUp")
+			Direction.RIGHT:
+				$AnimatedSprite2D.play("WalkRight")
+			Direction.DOWN:
+				$AnimatedSprite2D.play("WalkDown")
+			Direction.LEFT:
+				$AnimatedSprite2D.play("WalkLeft")
 	
 	#Camera edge detection
 	var viewport : Viewport = get_viewport()
@@ -95,19 +122,32 @@ func _physics_process(delta):
 	
 	if !velocity.is_zero_approx():
 		
-		# Sprite animation
-		if moveDir.x > 0:
-			$AnimatedSprite2D.flip_h = false
-		elif moveDir.x < 0:
-			$AnimatedSprite2D.flip_h = true
-			
-		
 		# Time loop for footstep
 		if $Timer.is_stopped():
-			SoundManager.play_character_sound(footstepSound, 
-											randf_range(0.8, 1.2), 
-											-20) # footstep needs to be low in volume
-			$Timer.start(0.3)
+			SoundManager.play_character_sound(
+				footstepSound, 
+				randf_range(0.8, 1.2), 
+				-15) # footstep needs to be low in volume
+			$Timer.start(0.33)
+			
+#Aproximates the given vector into its closest up, down, left, right direction
+func getDir(dir: Vector2):
+	# Normalize the vector to ignore its magnitude
+	var normalized_vector = dir.normalized()
+
+	# Compare the vector's direction
+	if abs(normalized_vector.x) > abs(normalized_vector.y):
+		# Closer to horizontal direction
+		if normalized_vector.x > 0:
+			return Direction.RIGHT
+		else:
+			return Direction.LEFT
+	else:
+		# Closer to vertical direction
+		if normalized_vector.y > 0:
+			return Direction.DOWN
+		else:
+			return Direction.UP
 
 func joystickShow():
 	var stick = GameManager.joystick
