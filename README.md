@@ -1,6 +1,6 @@
 # **Designing Learning Tools : Team M project**
 A teaching story based game about science and engineering ethics.<br>
-[Web game on itch.io](https://nervzz.itch.io/m-project?secret=aznAbt396Oww4zFNlqgNQLGDOMI)
+[Web game on itch.io](https://nervzz.itch.io/perils-of-innovation)
 
 ## **Authors**
 Dominik Helbing [@Neroxsis](https://github.com/Neroxsis)<br>
