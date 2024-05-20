@@ -236,7 +236,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"WalkDown",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -265,7 +265,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"WalkLeft",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -294,7 +294,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"WalkRight",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -323,7 +323,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"WalkUp",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fv0b0"]
@@ -336,7 +336,7 @@ script = ExtResource("1_qew6w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8qtex")
-animation = &"IdleDown"
+animation = &"WalkUp"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 18)

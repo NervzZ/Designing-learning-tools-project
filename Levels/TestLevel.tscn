@@ -1,6 +1,5 @@
 [gd_scene load_steps=11 format=3 uid="uid://bd37ld3qljsej"]
 
-[ext_resource type="PackedScene" uid="uid://06kaxfqyqf67" path="res://Actors/Player.tscn" id="1_dfmdp"]
 [ext_resource type="Script" path="res://Scripts/Levels/TestLevel.gd" id="1_phlu1"]
 [ext_resource type="PackedScene" uid="uid://bvvcojb6c41i6" path="res://Actors/test_npc.tscn" id="3_m1b3u"]
 [ext_resource type="PackedScene" uid="uid://dqmclcomp35nh" path="res://Interactables/Phone.tscn" id="4_8gho0"]
@@ -10,12 +9,10 @@
 [ext_resource type="Script" path="res://Scripts/Actors/TestScientist.gd" id="7_qe1hb"]
 [ext_resource type="PackedScene" uid="uid://3vxpktkogsv" path="res://Interactables/Console Right.tscn" id="8_ssa6o"]
 [ext_resource type="Script" path="res://Scripts/Actors/GameOverTest.gd" id="9_dhped"]
+[ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="10_54rv4"]
 
 [node name="TestLevel" type="Node2D"]
 script = ExtResource("1_phlu1")
-
-[node name="Player" parent="." instance=ExtResource("1_dfmdp")]
-position = Vector2(196, 160)
 
 [node name="test-npc" parent="." instance=ExtResource("3_m1b3u")]
 position = Vector2(2452, 524)
@@ -30,9 +27,13 @@ position = Vector2(1041, 689)
 rotation = -0.00179431
 scale = Vector2(4, 4)
 script = ExtResource("7_qe1hb")
+direction = 2
 highlight_thickness = 0.7
 
 [node name="ConsoleRight" parent="." instance=ExtResource("8_ssa6o")]
 position = Vector2(314, 860)
 script = ExtResource("9_dhped")
 radius = 40.0
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("10_54rv4")]
+position = Vector2(175, 253)
