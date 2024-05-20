@@ -1,4 +1,4 @@
-extends Interactable #Extend the Interactable like so, you now inherits the methods of Interactable
+extends NPC #Extend the Interactable like so, you now inherits the methods of Interactable
 
 #do not override the _ready() function, instead, override _ready_additional():
 func _ready_additional():
