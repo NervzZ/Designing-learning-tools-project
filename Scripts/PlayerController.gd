@@ -23,13 +23,13 @@ enum Direction {
 
 #Called when first loaded in memory
 func _init():
-	var width = DisplayServer.window_get_size().x
+	var width = 2560
 	deadzone = deadzone * (float(width) / 2560)
 
 func _ready():
 	viewport = get_viewport_transform()
 	limitLeft = 0
-	limitRight = get_viewport().size.x
+	limitRight = 2560
 	var viewport : Viewport = get_viewport()
 	viewport.canvas_transform.origin = Vector2(0, 0)
 	
@@ -41,12 +41,10 @@ func _input(event):
 					touchHolding = true
 					dragStart = get_viewport().get_mouse_position()
 					GameManager.joystick.position = dragStart
-					print("Left mouse button pressed")
 					
 			if event.is_released():
 				touchHolding = false
 				moveDir = Vector2(0, 0)
-				print("Left mouse button released")
 				joystickHide()
 
 

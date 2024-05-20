@@ -78,7 +78,7 @@ you need to make your vision a reality.",
 	PromptSprites.scientist01Talker
 )
 var firstDiscussionWithNPC_after= Prompt.new( 
-	"Glad we talke about that. We're in this together you know.",
+	"Glad we talked about that. We're in this together you know.",
 	[
 		{"text":"Leave","method": GameManager.closePrompt}
 	],
