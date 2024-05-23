@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://gi0p8r40uj4s"]
 
-[ext_resource type="Script" path="res://Scripts/Mechanics/Interactable.gd" id="1_xtvy7"]
+[ext_resource type="Script" path="res://Scripts/Doors/door.gd" id="1_d37ow"]
 [ext_resource type="Texture2D" uid="uid://cdxrhoe7u14i" path="res://Assets/Sprites/Objects/Bed.png" id="2_4kaf4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgalt"]
 size = Vector2(249, 320)
 
 [node name="Bed" type="Node2D"]
-script = ExtResource("1_xtvy7")
+script = ExtResource("1_d37ow")
 
 [node name="Bed" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)

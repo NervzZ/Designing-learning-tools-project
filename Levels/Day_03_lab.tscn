@@ -9,8 +9,8 @@
 [ext_resource type="Script" path="res://Scripts/Actors/Day03/scientist2_day03.gd" id="6_xpouj"]
 [ext_resource type="PackedScene" uid="uid://c0xnfapixxwff" path="res://Actors/Merchant.tscn" id="7_8qnuf"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day03/merchant_day03.gd" id="9_0lo0t"]
-[ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="10_1dj0y"]
 [ext_resource type="PackedScene" uid="uid://cc0erhonu84h3" path="res://Levels/Day_03_House.tscn" id="11_ilnk7"]
+[ext_resource type="PackedScene" uid="uid://cpcw83qsi12gp" path="res://Interactables/DoorLab.tscn" id="12_6uxni"]
 
 [node name="Day_03_lab" type="Node2D"]
 
@@ -32,14 +32,15 @@ scale = Vector2(4, 4)
 script = ExtResource("6_xpouj")
 
 [node name="Player" parent="." instance=ExtResource("6_saffw")]
-position = Vector2(212, 536)
+position = Vector2(3088, 574)
 
 [node name="Merchant" parent="." instance=ExtResource("7_8qnuf")]
 position = Vector2(605, 558)
 scale = Vector2(4, 4)
 script = ExtResource("9_0lo0t")
 
-[node name="Door" parent="." instance=ExtResource("10_1dj0y")]
-position = Vector2(159, 957)
+[node name="Door2" parent="." instance=ExtResource("12_6uxni")]
+position = Vector2(3308, 487)
 destination_scene = ExtResource("11_ilnk7")
 allow = "talkedToCoproration"
+continue_text = "Go Home?"

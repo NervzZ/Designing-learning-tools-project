@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="6_qltu7"]
 [ext_resource type="PackedScene" uid="uid://k7d6d3w4omvq" path="res://Actors/Agent.tscn" id="7_xf4a4"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day04/governementRep_day04.gd" id="8_udgoi"]
-[ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="9_dtudt"]
 [ext_resource type="PackedScene" uid="uid://c8m3ddtaimmuy" path="res://Levels/Day_04_House.tscn" id="10_of06c"]
+[ext_resource type="PackedScene" uid="uid://cpcw83qsi12gp" path="res://Interactables/DoorLab.tscn" id="11_am1jj"]
 
 [node name="Day_04_lab" type="Node2D"]
 
@@ -30,14 +30,15 @@ position = Vector2(1704, 904)
 scale = Vector2(4, 4)
 
 [node name="Player" parent="." instance=ExtResource("6_qltu7")]
-position = Vector2(212, 536)
+position = Vector2(3111, 561)
 
 [node name="GovernmentRep" parent="." instance=ExtResource("7_xf4a4")]
 position = Vector2(644, 869)
 scale = Vector2(4.11, 4.11)
 script = ExtResource("8_udgoi")
 
-[node name="Door" parent="." instance=ExtResource("9_dtudt")]
-position = Vector2(195, 961)
+[node name="Door2" parent="." instance=ExtResource("11_am1jj")]
+position = Vector2(3296, 516)
 destination_scene = ExtResource("10_of06c")
 allow = "talkedToAuthority"
+continue_text = "Go home?"

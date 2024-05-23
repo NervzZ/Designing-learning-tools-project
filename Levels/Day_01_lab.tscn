@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cs2w2nf216vet"]
+[gd_scene load_steps=13 format=3 uid="uid://cs2w2nf216vet"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day_01_lab.gd" id="1_07pmr"]
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_pidfj"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Scripts/Actors/Day01/scientist2_day01.gd" id="8_7dquw"]
 [ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="10_4e6rd"]
 [ext_resource type="PackedScene" uid="uid://bt77vuqp570ls" path="res://Levels/Day_01_House.tscn" id="11_yibks"]
+[ext_resource type="PackedScene" uid="uid://cpcw83qsi12gp" path="res://Interactables/DoorLab.tscn" id="12_bepme"]
 
 [node name="LabLevel_D01" type="Node2D"]
 script = ExtResource("1_07pmr")
@@ -34,9 +35,16 @@ scale = Vector2(4, 4)
 script = ExtResource("8_7dquw")
 
 [node name="Player" parent="." instance=ExtResource("6_bxpun")]
-position = Vector2(212, 536)
+position = Vector2(3049, 591)
 
-[node name="Door" parent="." instance=ExtResource("10_4e6rd")]
-position = Vector2(57, 945)
+[node name="Door2" parent="." instance=ExtResource("12_bepme")]
+position = Vector2(3146, 633)
 destination_scene = ExtResource("11_yibks")
 allow = "TalkedAboutTechnologyRace"
+continue_text = "Go Home?"
+cant_continue_text = "I should at least say hi to my colleagues."
+radius = 500.0
+
+[node name="Door" parent="." instance=ExtResource("10_4e6rd")]
+position = Vector2(2789, 490)
+allow = "never"

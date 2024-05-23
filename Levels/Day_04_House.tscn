@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://dad6bnxoav7dw" path="res://Assets/Sprites/Objects/Phone.png" id="3_q02gm"]
 [ext_resource type="PackedScene" uid="uid://dw2k5q3pjw22u" path="res://Actors/Wife.tscn" id="4_3i2ob"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/wife_at_home.gd" id="5_gjxrw"]
-[ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="6_806k5"]
 [ext_resource type="PackedScene" uid="uid://nqumrbxfdthe" path="res://Actors/Kid.tscn" id="6_clxbv"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/kid_at_home.gd" id="7_5teet"]
 [ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="8_fb7xq"]
+[ext_resource type="PackedScene" uid="uid://gi0p8r40uj4s" path="res://Interactables/Bed.tscn" id="10_2gl7s"]
 [ext_resource type="PackedScene" uid="uid://b8wtgkcow0qil" path="res://Levels/Day_05_House_Morning.tscn" id="11_36j81"]
 
 [node name="Day_04_House" type="Node2D"]
@@ -39,7 +39,7 @@ script = ExtResource("7_5teet")
 position = Vector2(2759, 947)
 scale = Vector2(4, 4)
 
-[node name="Door" parent="." instance=ExtResource("6_806k5")]
-position = Vector2(112, 1192)
+[node name="Bed" parent="." instance=ExtResource("10_2gl7s")]
+position = Vector2(5160, 554)
 destination_scene = ExtResource("11_36j81")
 continue_text = "Go to bed?"
