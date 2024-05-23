@@ -27,6 +27,7 @@ var boolStates = {
 	"didntSellToArmyAndFoundOutAboutStability":false, #<-workaround for boolean logic
 	
 	"always":true,
+	"never":false,
 }
 
 var mistakes_made=0

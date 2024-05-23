@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dad6bnxoav7dw" path="res://Assets/Sprites/Objects/Phone.png" id="4_t30hd"]
 [ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="5_flb62"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day02/phone_day02.gd" id="5_s5bgu"]
-[ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="7_xfhhi"]
+[ext_resource type="PackedScene" uid="uid://08pj72a5p8fm" path="res://Interactables/DoorHome.tscn" id="7_xfdfd"]
 [ext_resource type="PackedScene" uid="uid://vh60ymqo7fng" path="res://Levels/Day_03_lab.tscn" id="8_jmwq4"]
 
 [node name="Day_03_House_morning" type="Node2D"]
@@ -15,7 +15,7 @@ script = ExtResource("1_rhq3r")
 [node name="TileMap" parent="." instance=ExtResource("2_yxkui")]
 
 [node name="Player" parent="." instance=ExtResource("3_4mo6b")]
-position = Vector2(212, 830)
+position = Vector2(4974, 607)
 
 [node name="Phone" type="Sprite2D" parent="."]
 position = Vector2(-95, 517)
@@ -27,6 +27,6 @@ script = ExtResource("5_s5bgu")
 position = Vector2(2759, 947)
 scale = Vector2(4, 4)
 
-[node name="Door" parent="." instance=ExtResource("7_xfhhi")]
-position = Vector2(684, 844)
+[node name="Door2" parent="." instance=ExtResource("7_xfdfd")]
+position = Vector2(59, 727)
 destination_scene = ExtResource("8_jmwq4")

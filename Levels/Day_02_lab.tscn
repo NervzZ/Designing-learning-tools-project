@@ -11,8 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://c0xnfapixxwff" path="res://Actors/Merchant.tscn" id="7_1gt6a"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day02/scientist2_day02.gd" id="8_788fh"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day02/army_day02.gd" id="11_1b47r"]
-[ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="12_ifqj4"]
 [ext_resource type="PackedScene" uid="uid://bhlfnpoi7wh42" path="res://Levels/Day_02_House.tscn" id="13_yjp8s"]
+[ext_resource type="PackedScene" uid="uid://cpcw83qsi12gp" path="res://Interactables/DoorLab.tscn" id="14_2do8f"]
 
 [node name="Day_02_lab" type="Node2D"]
 script = ExtResource("1_68umm")
@@ -36,13 +36,16 @@ scale = Vector2(4, 4)
 script = ExtResource("8_788fh")
 
 [node name="Player" parent="." instance=ExtResource("6_1egol")]
-position = Vector2(212, 536)
+position = Vector2(3160, 530)
 
 [node name="ArmyDude" parent="." instance=ExtResource("7_1gt6a")]
 position = Vector2(-1090, 682)
 scale = Vector2(4, 4)
 script = ExtResource("11_1b47r")
 
-[node name="Door" parent="." instance=ExtResource("12_ifqj4")]
-position = Vector2(162, 971)
+[node name="Door2" parent="." instance=ExtResource("14_2do8f")]
+position = Vector2(3303, 549)
 destination_scene = ExtResource("13_yjp8s")
+allow = "finishedTalkingWithArmyguy"
+continue_text = "Go Home?"
+cant_continue_text = "I should talk to the army guy."

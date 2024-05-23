@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://nqumrbxfdthe" path="res://Actors/Kid.tscn" id="8_d2ts0"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/kid_at_home.gd" id="9_ay5pf"]
 [ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="10_l0noa"]
-[ext_resource type="PackedScene" uid="uid://s23chrm5fnf7" path="res://Interactables/door.tscn" id="11_2omkf"]
 [ext_resource type="PackedScene" uid="uid://7t5uy3qqiy1w" path="res://Levels/Day_04_House_Morning.tscn" id="12_c1yni"]
+[ext_resource type="PackedScene" uid="uid://gi0p8r40uj4s" path="res://Interactables/Bed.tscn" id="13_qb3h2"]
 
 [node name="Day_03_House" type="Node2D"]
 script = ExtResource("1_yqpy0")
@@ -41,7 +41,8 @@ script = ExtResource("9_ay5pf")
 position = Vector2(2759, 947)
 scale = Vector2(4, 4)
 
-[node name="Bed" parent="." instance=ExtResource("11_2omkf")]
-position = Vector2(209, 1008)
+[node name="Bed2" parent="." instance=ExtResource("13_qb3h2")]
+position = Vector2(5169, 546)
 destination_scene = ExtResource("12_c1yni")
 continue_text = "Go to bed?"
+radius = 200.0
