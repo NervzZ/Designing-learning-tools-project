@@ -40,7 +40,7 @@ scale = Vector2(4, 4)
 script = ExtResource("9_0lo0t")
 
 [node name="Door2" parent="." instance=ExtResource("12_6uxni")]
-position = Vector2(3308, 487)
+position = Vector2(3310, 531)
 destination_scene = ExtResource("11_ilnk7")
 allow = "talkedToCoproration"
 continue_text = "Go Home?"

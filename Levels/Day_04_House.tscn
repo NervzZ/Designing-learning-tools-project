@@ -43,3 +43,4 @@ scale = Vector2(4, 4)
 position = Vector2(5160, 554)
 destination_scene = ExtResource("11_36j81")
 continue_text = "Go to bed?"
+radius = 200.0
