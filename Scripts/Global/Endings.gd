@@ -16,6 +16,7 @@ var soldToArmyNoConditionsEnding = Ending.new( #instant
 	"The military has acquired your teleporter, and after a few months of secrecy, discovered"+
 	" that not only can it be used for logistics,"+
 	"but can deliver explosives, or agents anywhere in the world in an instant.\n\n"+
+	"Unfortunately, no government regulations were put in place to stop this.\n\n"+
 	"Also, every now and again, an entire platoon disappears inside the teleporter and no one knows why...",
 	restartGame
 )
