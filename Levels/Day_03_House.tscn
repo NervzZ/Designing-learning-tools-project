@@ -18,6 +18,12 @@ script = ExtResource("1_yqpy0")
 
 [node name="TileMap" parent="." instance=ExtResource("2_jrfek")]
 
+[node name="Bed2" parent="." instance=ExtResource("13_qb3h2")]
+position = Vector2(5169, 546)
+destination_scene = ExtResource("12_c1yni")
+continue_text = "Go to bed?"
+radius = 200.0
+
 [node name="Player" parent="." instance=ExtResource("3_65xpk")]
 position = Vector2(212, 830)
 
@@ -40,9 +46,3 @@ script = ExtResource("9_ay5pf")
 [node name="Newspaper" parent="." instance=ExtResource("10_l0noa")]
 position = Vector2(2759, 947)
 scale = Vector2(4, 4)
-
-[node name="Bed2" parent="." instance=ExtResource("13_qb3h2")]
-position = Vector2(5169, 546)
-destination_scene = ExtResource("12_c1yni")
-continue_text = "Go to bed?"
-radius = 200.0
