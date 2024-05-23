@@ -35,7 +35,7 @@ scale = Vector2(4, 4)
 script = ExtResource("8_7dquw")
 
 [node name="Player" parent="." instance=ExtResource("6_bxpun")]
-position = Vector2(3049, 591)
+position = Vector2(2839, 602)
 
 [node name="Door2" parent="." instance=ExtResource("12_bepme")]
 position = Vector2(3146, 633)
@@ -43,8 +43,8 @@ destination_scene = ExtResource("11_yibks")
 allow = "TalkedAboutTechnologyRace"
 continue_text = "Go Home?"
 cant_continue_text = "I should at least say hi to my colleagues."
-radius = 500.0
 
 [node name="Door" parent="." instance=ExtResource("10_4e6rd")]
 position = Vector2(2789, 490)
-allow = "never"
+destination_scene = ExtResource("11_yibks")
+allow = "TalkedAboutTechnologyRace"
