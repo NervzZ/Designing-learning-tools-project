@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://dxp5jphk531s"]
+[gd_scene load_steps=12 format=3 uid="uid://dxp5jphk531s"]
 
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_bc3nc"]
+[ext_resource type="Script" path="res://Scripts/Levels/Day_04_lab.gd" id="1_lhvfn"]
 [ext_resource type="PackedScene" uid="uid://crcs5w5no5ovh" path="res://Interactables/Console Left.tscn" id="2_j5y7d"]
 [ext_resource type="PackedScene" uid="uid://3vxpktkogsv" path="res://Interactables/Console Right.tscn" id="3_76lim"]
 [ext_resource type="PackedScene" uid="uid://cg1nlk8ogjgja" path="res://Actors/Scientist2.tscn" id="4_6pc6v"]
@@ -12,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cpcw83qsi12gp" path="res://Interactables/DoorLab.tscn" id="11_am1jj"]
 
 [node name="Day_04_lab" type="Node2D"]
+script = ExtResource("1_lhvfn")
 
 [node name="TileMap" parent="." instance=ExtResource("1_bc3nc")]
 

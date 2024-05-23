@@ -21,6 +21,12 @@ var soldToArmyNoConditionsEnding = Ending.new( #instant
 )
 
 
+var personalGainWithFriends = Ending.new( #instant
+	"The End",
+	"The police are here to arrest you for stealing large sums of money. They also have"+
+	" a few questions on how you managed to get in and out of the bank...",
+	restartGame
+)
 
 
 
