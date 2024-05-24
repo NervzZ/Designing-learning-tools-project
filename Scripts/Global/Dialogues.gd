@@ -80,7 +80,7 @@ var testScientistPrompt = Prompt.new(
 	[
 		{"text": "No", "method": self.testScientistPrompt_a}
 	],
-	PromptSprites.scientist02Talker
+	PromptSprites.scientistBlondeTalker
 )
 
 func testScientistPrompt_a():

@@ -150,7 +150,7 @@ var armyLabAnswerPositive = Prompt.new(
 	"history! Imagine what this could mean for our research, our careers! We have to
 go for it!",
 [{"text":"Leave","method":GameManager.closePrompt}],
-PromptSprites.scientist01Talker
+PromptSprites.scientistBrownTalker
 )
 #negative guy
 func discuss_entry_army_lab_negative(): # <- Entry for discussing with the yes man
@@ -168,5 +168,5 @@ var armyLabAnswerNegative = Prompt.new(
 	"Are you out of your mind? They're just gonna kill people with no further thought of helping advance humanity! "
 	+"I can't believe you'd even consider it.",
 [{"text":"Leave","method":GameManager.closePrompt}],
-PromptSprites.scientist01Talker
+PromptSprites.scientistBrownTalker
 )

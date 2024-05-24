@@ -66,7 +66,7 @@ soon, someone else will beat you to it.",
 	[
 		{"text":"I know, but funding isn't easy to come by.","method": self.firstDiscussionWithNPC_ok}
 	],
-	PromptSprites.scientist01Talker
+	PromptSprites.scientistBrownTalker
 )
 var firstDiscussionWithNPC_techRace = Prompt.new(  # said by scientist friend
 	"True, but you've got to start somewhere. Ever though about pitching to
@@ -75,14 +75,14 @@ you need to make your vision a reality.",
 	[
 		{"text":"You're right. I need to be proactive.","method": firstDiscussionWithNPC_end}
 	],
-	PromptSprites.scientist01Talker
+	PromptSprites.scientistBrownTalker
 )
 var firstDiscussionWithNPC_after= Prompt.new( 
 	"Glad we talked about that. We're in this together you know.",
 	[
 		{"text":"Leave","method": GameManager.closePrompt}
 	],
-	PromptSprites.scientist01Talker
+	PromptSprites.scientistBrownTalker
 )
 
 
@@ -117,7 +117,7 @@ We should proceed with caution.",
 		{"text":"Listen to his concerns", "method":self.discuss_safety_investigate},
 		{"text":"You've seen the data, his concerns are unfounded","method":self.discuss_safety_dontcare}
 	],
-	PromptSprites.scientist01Talker
+	PromptSprites.scientistBlondeTalker
 )
 var optinalSafetyDiscussion_investigate = Prompt.new(
 	"Thank you for the warning. It's tempting to rush things,
@@ -140,14 +140,14 @@ var optionalSafetyDiscussion_NotInvestigated = Prompt.new(
 		{"text":"He might have a point","method":discuss_safety_investigate,"display":"KilledAnimals","inverse":true},
 		{"text":"Leave","method":GameManager.closePrompt,"display":"KilledAnimals"}
 	],
-	PromptSprites.scientist01Talker
+	PromptSprites.scientistBlondeTalker
 )
 var optionalSafetyDiscussion_AfterInvestigated = Prompt.new(
 	"I'm so relieved you listened to me!",
 	[
 		{"text":"Leave","method":GameManager.closePrompt}
 	],
-	PromptSprites.scientist01Talker
+	PromptSprites.scientistBlondeTalker
 )
 ##########
 # kinda related, technically, could have this part after actually testing the teleporter
