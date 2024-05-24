@@ -20,9 +20,9 @@ func welcomeToLabDialogue(): # <- Call this for welcome message
 	GameManager.displayPrompt(welcomeToLab)
 	
 var welcomeToLab = Prompt.new(  # said by you (or narrator?)
-	"WeThis idea... it's huge. It's like nothing I've ever worked on before.
+	"This idea... it's huge. It's like nothing I've ever worked on before.
 This could shape the future! It has so much potential...
-But this comes with great responsibilities. Imaging we could teleport anywhwere
+But this comes with great responsibilities. Imagine if we could teleport anywhwere
 anytime!",
 	[
 		{"text":"Ok", "method" : self.welcomeToLab_ok}
@@ -30,7 +30,7 @@ anytime!",
 	PromptSprites.playerTalker
 )
 var welcomeToLabStartWork = Prompt.new(  # said by you
-	"Allright, I have a dream. Time to work to make it a reality!",
+	"Alright, I have a dream. Time to work to make it a reality!",
 	[
 		{"text":"Ok", "method" : GameManager.closePrompt}
 	],
