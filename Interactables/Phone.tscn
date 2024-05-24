@@ -10,3 +10,6 @@ script = ExtResource("1_iqy8n")
 position = Vector2(-1, 0)
 scale = Vector2(3, 3)
 texture = ExtResource("1_hcn2r")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

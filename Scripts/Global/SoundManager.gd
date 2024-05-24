@@ -31,9 +31,13 @@ func play_ui(stream: AudioStream):
 	ui_player.stream = stream
 	ui_player.play()
 
-func play_ambient(stream: AudioStream):
+func play_ambient(stream: AudioStream, volume: float):
 	ambient_player.stream = stream
+	ambient_player.volume_db = volume
 	ambient_player.play()
+	
+func stop_ambient():
+	ambient_player.stop()
 
 func play_character_sound(stream: AudioStream, pitch: float, volume: float):
 	character_sound_player.stream = stream
