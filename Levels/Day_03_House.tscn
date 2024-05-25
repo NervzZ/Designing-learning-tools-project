@@ -32,6 +32,10 @@ position = Vector2(-95, 517)
 scale = Vector2(3, 3)
 texture = ExtResource("4_l8q7e")
 script = ExtResource("5_sbdai")
+ringin = false
+
+[node name="Timer" type="Timer" parent="Phone"]
+one_shot = true
 
 [node name="Wife" parent="." instance=ExtResource("6_lktpm")]
 position = Vector2(1898, 1164)
