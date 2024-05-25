@@ -35,7 +35,7 @@ scale = Vector2(4, 4)
 script = ExtResource("8_7dquw")
 
 [node name="Player" parent="." instance=ExtResource("6_bxpun")]
-position = Vector2(2839, 602)
+position = Vector2(3142, 562)
 
 [node name="Door2" parent="." instance=ExtResource("12_bepme")]
 position = Vector2(3310, 530)

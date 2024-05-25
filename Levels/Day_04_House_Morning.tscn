@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://7t5uy3qqiy1w"]
+[gd_scene load_steps=10 format=3 uid="uid://7t5uy3qqiy1w"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day_03_House.gd" id="1_8xt8f"]
 [ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="2_iowen"]
@@ -7,30 +7,33 @@
 [ext_resource type="Script" path="res://Scripts/Actors/Day02/phone_day02.gd" id="5_2d2s5"]
 [ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="6_dwuc7"]
 [ext_resource type="PackedScene" uid="uid://dxp5jphk531s" path="res://Levels/Day_04_lab.tscn" id="8_oreto"]
+[ext_resource type="Texture2D" uid="uid://cdxrhoe7u14i" path="res://Assets/Sprites/Objects/Bed.png" id="9_20yuy"]
 [ext_resource type="PackedScene" uid="uid://08pj72a5p8fm" path="res://Interactables/DoorHome.tscn" id="9_l8ubw"]
 
-[node name="Day_03_House_morning" type="Node2D"]
+[node name="Day_04_House_morning" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_8xt8f")
 
 [node name="TileMap" parent="." instance=ExtResource("2_iowen")]
 
 [node name="Player" parent="." instance=ExtResource("3_5pogt")]
-position = Vector2(4989, 575)
+position = Vector2(4175, 995)
 
 [node name="Phone" type="Sprite2D" parent="."]
 position = Vector2(-95, 517)
 scale = Vector2(3, 3)
 texture = ExtResource("4_ih00n")
 script = ExtResource("5_2d2s5")
-ringin = false
-
-[node name="Timer" type="Timer" parent="Phone"]
-one_shot = true
 
 [node name="Newspaper" parent="." instance=ExtResource("6_dwuc7")]
-position = Vector2(2759, 947)
+position = Vector2(3528, 881)
 scale = Vector2(4, 4)
 
 [node name="Door2" parent="." instance=ExtResource("9_l8ubw")]
 position = Vector2(61, 699)
 destination_scene = ExtResource("8_oreto")
+
+[node name="Bed" type="Sprite2D" parent="."]
+position = Vector2(4481, 615.974)
+scale = Vector2(3.87179, 3.87179)
+texture = ExtResource("9_20yuy")

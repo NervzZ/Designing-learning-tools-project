@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cpcw83qsi12gp" path="res://Interactables/DoorLab.tscn" id="10_jmbnr"]
 
 [node name="Day_05_lab" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMap" parent="." instance=ExtResource("1_03v1f")]
 
@@ -21,12 +22,12 @@ position = Vector2(1049, 660)
 position = Vector2(1483, 702)
 
 [node name="Scientist" parent="." instance=ExtResource("4_fmf5t")]
-position = Vector2(1077, 707)
+position = Vector2(1649, 1027)
 scale = Vector2(4, 4)
 script = ExtResource("5_0e75t")
 
 [node name="Scientist2" parent="." instance=ExtResource("5_perdg")]
-position = Vector2(1704, 904)
+position = Vector2(221, 962)
 scale = Vector2(4, 4)
 
 [node name="Player" parent="." instance=ExtResource("6_12dqo")]

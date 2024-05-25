@@ -1,23 +1,23 @@
-[gd_scene load_steps=11 format=3 uid="uid://bhlfnpoi7wh42"]
+[gd_scene load_steps=10 format=3 uid="uid://bhlfnpoi7wh42"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day_02_House.gd" id="1_074mh"]
 [ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="1_odbnv"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="2_npe7g"]
 [ext_resource type="PackedScene" uid="uid://dw2k5q3pjw22u" path="res://Actors/Wife.tscn" id="4_gb7ya"]
 [ext_resource type="PackedScene" uid="uid://nqumrbxfdthe" path="res://Actors/Kid.tscn" id="5_5i3i5"]
-[ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="6_32yii"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/wife_at_home.gd" id="7_ekm70"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/kid_at_home.gd" id="8_uj3tk"]
 [ext_resource type="PackedScene" uid="uid://gi0p8r40uj4s" path="res://Interactables/Bed.tscn" id="9_17vuh"]
 [ext_resource type="PackedScene" uid="uid://bkvqa3j2fa4t3" path="res://Levels/Day_03_House_Morning.tscn" id="10_trior"]
 
 [node name="Day_02_House" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_074mh")
 
 [node name="TileMap" parent="." instance=ExtResource("1_odbnv")]
 
 [node name="Bed" parent="." instance=ExtResource("9_17vuh")]
-position = Vector2(5160, 548)
+position = Vector2(4511, 548)
 destination_scene = ExtResource("10_trior")
 continue_text = "Go to bed?"
 radius = 200.0
@@ -26,15 +26,11 @@ radius = 200.0
 position = Vector2(212, 830)
 
 [node name="Wife" parent="." instance=ExtResource("4_gb7ya")]
-position = Vector2(2742, 526)
+position = Vector2(2699, 1228)
 scale = Vector2(4, 4)
 script = ExtResource("7_ekm70")
 
 [node name="Kid" parent="." instance=ExtResource("5_5i3i5")]
-position = Vector2(1902, 678)
+position = Vector2(2069, 493)
 scale = Vector2(4, 4)
 script = ExtResource("8_uj3tk")
-
-[node name="Newspaper" parent="." instance=ExtResource("6_32yii")]
-position = Vector2(2759, 947)
-scale = Vector2(4, 4)
