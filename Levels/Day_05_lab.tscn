@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cpcw83qsi12gp" path="res://Interactables/DoorLab.tscn" id="10_jmbnr"]
 
 [node name="Day_05_lab" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMap" parent="." instance=ExtResource("1_03v1f")]
 

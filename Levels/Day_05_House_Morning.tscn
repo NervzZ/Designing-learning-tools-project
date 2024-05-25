@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://08pj72a5p8fm" path="res://Interactables/DoorHome.tscn" id="9_qd8qo"]
 
 [node name="Day_05_House_morning" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_humfa")
 
 [node name="TileMap" parent="." instance=ExtResource("2_7g7tw")]
@@ -23,10 +24,6 @@ position = Vector2(-95, 517)
 scale = Vector2(3, 3)
 texture = ExtResource("4_1gjyb")
 script = ExtResource("5_y0mnl")
-ringin = false
-
-[node name="Timer" type="Timer" parent="Phone"]
-one_shot = true
 
 [node name="Newspaper" parent="." instance=ExtResource("6_wakuy")]
 position = Vector2(3636, 896)

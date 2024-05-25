@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cpcw83qsi12gp" path="res://Interactables/DoorLab.tscn" id="11_am1jj"]
 
 [node name="Day_04_lab" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_lhvfn")
 
 [node name="TileMap" parent="." instance=ExtResource("1_bc3nc")]

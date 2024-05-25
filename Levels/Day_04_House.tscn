@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b8wtgkcow0qil" path="res://Levels/Day_05_House_Morning.tscn" id="11_36j81"]
 
 [node name="Day_04_House" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_abfwc")
 
 [node name="TileMap" parent="." instance=ExtResource("1_8ym01")]
