@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8m3ddtaimmuy"]
+[gd_scene load_steps=11 format=3 uid="uid://c8m3ddtaimmuy"]
 
 [ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="1_8ym01"]
 [ext_resource type="Script" path="res://Scripts/Levels/Day_04_House.gd" id="1_abfwc"]
@@ -8,7 +8,6 @@
 [ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/wife_at_home.gd" id="5_gjxrw"]
 [ext_resource type="PackedScene" uid="uid://nqumrbxfdthe" path="res://Actors/Kid.tscn" id="6_clxbv"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/kid_at_home.gd" id="7_5teet"]
-[ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="8_fb7xq"]
 [ext_resource type="PackedScene" uid="uid://gi0p8r40uj4s" path="res://Interactables/Bed.tscn" id="10_2gl7s"]
 [ext_resource type="PackedScene" uid="uid://b8wtgkcow0qil" path="res://Levels/Day_05_House_Morning.tscn" id="11_36j81"]
 
@@ -18,7 +17,7 @@ script = ExtResource("1_abfwc")
 [node name="TileMap" parent="." instance=ExtResource("1_8ym01")]
 
 [node name="Bed" parent="." instance=ExtResource("10_2gl7s")]
-position = Vector2(5160, 554)
+position = Vector2(4505, 584)
 destination_scene = ExtResource("11_36j81")
 continue_text = "Go to bed?"
 radius = 200.0
@@ -32,15 +31,11 @@ scale = Vector2(3, 3)
 texture = ExtResource("3_q02gm")
 
 [node name="Wife" parent="." instance=ExtResource("4_3i2ob")]
-position = Vector2(1968, 1024)
+position = Vector2(2674, 1095)
 scale = Vector2(4, 4)
 script = ExtResource("5_gjxrw")
 
 [node name="Kid" parent="." instance=ExtResource("6_clxbv")]
-position = Vector2(1902, 678)
+position = Vector2(1583, 646)
 scale = Vector2(4, 4)
 script = ExtResource("7_5teet")
-
-[node name="Newspaper" parent="." instance=ExtResource("8_fb7xq")]
-position = Vector2(2759, 947)
-scale = Vector2(4, 4)

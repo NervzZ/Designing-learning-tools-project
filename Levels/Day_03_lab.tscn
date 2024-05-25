@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cpcw83qsi12gp" path="res://Interactables/DoorLab.tscn" id="12_6uxni"]
 
 [node name="Day_03_lab" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMap" parent="." instance=ExtResource("1_2gtpj")]
 
@@ -23,11 +24,11 @@ position = Vector2(1049, 660)
 position = Vector2(1483, 702)
 
 [node name="Scientist" parent="." instance=ExtResource("4_n8i2r")]
-position = Vector2(1077, 707)
+position = Vector2(879, 763)
 scale = Vector2(4, 4)
 
 [node name="Scientist2" parent="." instance=ExtResource("5_cmdbm")]
-position = Vector2(1704, 904)
+position = Vector2(1490, 1063)
 scale = Vector2(4, 4)
 script = ExtResource("6_xpouj")
 
@@ -35,7 +36,7 @@ script = ExtResource("6_xpouj")
 position = Vector2(3088, 574)
 
 [node name="Merchant" parent="." instance=ExtResource("7_8qnuf")]
-position = Vector2(605, 558)
+position = Vector2(137, 911)
 scale = Vector2(4, 4)
 script = ExtResource("9_0lo0t")
 

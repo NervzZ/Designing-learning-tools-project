@@ -28,14 +28,14 @@ position = Vector2(1077, 707)
 scale = Vector2(4, 4)
 
 [node name="Scientist2" parent="." instance=ExtResource("5_epelj")]
-position = Vector2(1704, 904)
+position = Vector2(1678, 920)
 scale = Vector2(4, 4)
 
 [node name="Player" parent="." instance=ExtResource("6_qltu7")]
 position = Vector2(3111, 561)
 
 [node name="GovernmentRep" parent="." instance=ExtResource("7_xf4a4")]
-position = Vector2(644, 869)
+position = Vector2(-79, 413)
 scale = Vector2(4.11, 4.11)
 script = ExtResource("8_udgoi")
 
