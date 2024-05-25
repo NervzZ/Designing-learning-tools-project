@@ -39,6 +39,30 @@ var didntRegulateStuff = Ending.new(
 )
 
 
+var perfectEnding = Ending.new(
+	"The End",
+	"Congratulations! After all the difficulties, you now unveil your teleporter to the public!",
+	restartGame
+)
+
+func okEnding():
+	var okEnding = Ending.new(
+		"The End",
+		"Congratulations! After all the difficulties, you now unveil your teleporter to the public!"+
+		"\nThere are however some things bothering you...\n"+
+		("You gave the teleporter to the army and you imposed restrictions, but would that really stop them or might they just do things secretly?\n"
+		if GameState.boolStates["soldToArmyGuyWithRestrictions"] else "") +
+		("You don't actually own your own invention anymore... and the corporations might 'legally' collect user data without anyone knowing...\n"
+		if GameState.boolStates["soldToCorporation"] else "") +
+		("In the end, is there really an overseight on the usage of the teleporter? If the governement cannot regulate the teleporter, what's stopping anyone from misusing it?\n"
+		 if not GameState.boolStates["admittedIssuesToAuthority"] else "")+
+		("Maybe it was too soon? The teleporter consume so much energy that it will need be powered by nuclear and fossil fuels. Did you really want that?\n"
+		 if not GameState.boolStates["agreeToSustainability"] else ""),
+		 restartGame
+	)
+	return okEnding()
+
+
 func restartGame():
 	for key in GameState.boolStates:
 		GameState.boolStates[key]=false

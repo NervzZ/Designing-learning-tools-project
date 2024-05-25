@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://oaqb7il3lure"]
+[gd_scene load_steps=12 format=3 uid="uid://oaqb7il3lure"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day_05_House.gd" id="1_7bpx6"]
 [ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="1_viabi"]
@@ -9,8 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://nqumrbxfdthe" path="res://Actors/Kid.tscn" id="6_44ky1"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/kid_at_home.gd" id="7_s8yrw"]
 [ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="8_fh30v"]
+[ext_resource type="PackedScene" uid="uid://gi0p8r40uj4s" path="res://Interactables/Bed.tscn" id="10_lp2hj"]
+[ext_resource type="PackedScene" uid="uid://b7vjgiuqjcfuw" path="res://Levels/Day_06_House_Morning_not_real_scene.tscn" id="11_x2w8h"]
 
 [node name="Day_03_House" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_7bpx6")
 
 [node name="TileMap" parent="." instance=ExtResource("1_viabi")]
@@ -36,3 +39,8 @@ script = ExtResource("7_s8yrw")
 [node name="Newspaper" parent="." instance=ExtResource("8_fh30v")]
 position = Vector2(2759, 947)
 scale = Vector2(4, 4)
+
+[node name="Bed" parent="." instance=ExtResource("10_lp2hj")]
+position = Vector2(4501, 563)
+destination_scene = ExtResource("11_x2w8h")
+continue_text = "Go to bed?"
