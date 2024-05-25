@@ -135,17 +135,17 @@ func show_after_not_stealing():
 var dumb_friend_prompt1 = Prompt.new(
 	"Hey, have you heard about that new project [Player Character] is working on? It's getting a lot of attention.",
 	[{"text":"Next","method":show_2nd_prompt}],
-	PromptSprites.scientist01Talker
+	PromptSprites.scientistBrownTalker
 )
 var dumb_friend_prompt2 = Prompt.new(
 	"Yeah, I heard about it. Do you think there's any way we could benefit from it ?",
 	[{"text":"What's going on?","method":show_3rd_prompt}],
-	PromptSprites.scientist02Talker
+	PromptSprites.scientistBlondeTalker
 )
 var dumb_friend_prompt3  = Prompt.new(
 	"We were just talking about your project. It's really taking off.",
 	[{"text":"Next","method":show_4th_prompt}],
-	PromptSprites.scientist01Talker
+	PromptSprites.scientistBrownTalker
 )
 var dumb_friend_prompt4  = Prompt.new(
 	"We were just talking about your project. It's really taking off."+
@@ -153,20 +153,20 @@ var dumb_friend_prompt4  = Prompt.new(
 	" 'Acquire' some money?",
 	[{"text":"Steal with them","method":show_after_stealing},
 	{"text":"Remind them of the archimedian oath","method":show_after_not_stealing}],
-	PromptSprites.scientist02Talker
+	PromptSprites.scientistBlondeTalker
 )
 
 var reaction_afer_stealing = Prompt.new(
 	"That was way easier than expected haha, never have to worry about money"+
 	" ever again!",
 	[{"text":"Leave","method":GameManager.closePrompt}],
-	PromptSprites.scientist01Talker
+	PromptSprites.scientistBrownTalker
 )
 var reaction_after_not_stealing = Prompt.new(
 	"We were just joking around...
 We know we have a responsibility to use our talents for the greater good and not just for personal gain.",
 	[{"text":"Leave","method":GameManager.closePrompt}],
-	PromptSprites.scientist01Talker
+	PromptSprites.scientistBlondeTalker
 )
 
 

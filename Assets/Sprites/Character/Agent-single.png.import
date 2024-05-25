@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hnb6byxbyy7y"
-path="res://.godot/imported/alchemy.png-72463d33be7af4506de7fd9b09a12e13.ctex"
+uid="uid://rk0v7vppetcd"
+path="res://.godot/imported/Agent-single.png-94e96877449ebc3a764b3779060d8e3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Objects/alchemy.png"
-dest_files=["res://.godot/imported/alchemy.png-72463d33be7af4506de7fd9b09a12e13.ctex"]
+source_file="res://Assets/Sprites/Character/Agent-single.png"
+dest_files=["res://.godot/imported/Agent-single.png-94e96877449ebc3a764b3779060d8e3a.ctex"]
 
 [params]
 

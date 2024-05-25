@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsauokn21tyt3"
-path="res://.godot/imported/Microondas.png-b55db7e618d78f8a5fc189fdb56b0e50.ctex"
+uid="uid://b2vhjhdlotgue"
+path="res://.godot/imported/Scientist2-single.png-f4afc9c24c730e2b71c8900539301df6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Objects/Microondas.png"
-dest_files=["res://.godot/imported/Microondas.png-b55db7e618d78f8a5fc189fdb56b0e50.ctex"]
+source_file="res://Assets/Sprites/Character/Scientist2-single.png"
+dest_files=["res://.godot/imported/Scientist2-single.png-f4afc9c24c730e2b71c8900539301df6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqt7dii2jpk3e"
-path="res://.godot/imported/factory_tileset.png-ede0147ab80b670ae67aeb814712ff54.ctex"
+uid="uid://sdbxhrmfl2sb"
+path="res://.godot/imported/Scientist1-single.png-1fb050ed9a122dbbe990db4560def4ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Tiles/factory_tileset.png"
-dest_files=["res://.godot/imported/factory_tileset.png-ede0147ab80b670ae67aeb814712ff54.ctex"]
+source_file="res://Assets/Sprites/Character/Scientist1-single.png"
+dest_files=["res://.godot/imported/Scientist1-single.png-1fb050ed9a122dbbe990db4560def4ee.ctex"]
 
 [params]
 

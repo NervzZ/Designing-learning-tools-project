@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7i6588r8b162"
-path="res://.godot/imported/benches.png-1d796b2546da703f0a88bb9f0c706a39.ctex"
+uid="uid://bfyaak7w43h7f"
+path="res://.godot/imported/Scientist3-single.png-13f1c664a9bbbefd012dad3e5bcaf96a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Objects/benches.png"
-dest_files=["res://.godot/imported/benches.png-1d796b2546da703f0a88bb9f0c706a39.ctex"]
+source_file="res://Assets/Sprites/Character/Scientist3-single.png"
+dest_files=["res://.godot/imported/Scientist3-single.png-13f1c664a9bbbefd012dad3e5bcaf96a.ctex"]
 
 [params]
 

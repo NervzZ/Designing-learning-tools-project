@@ -28,7 +28,7 @@ var sustainability_dialogue_start = Prompt.new(
 		{"text":"Agree","method":func():GameManager.displayPrompt(agree_sustainability),"display":"soldToCorporation","inverse":true},
 		{"text":"Out of my control", "method":func():GameManager.displayPrompt(cant_agree),"display":"soldToCorporation"},
 		{"text":"Disagree","method":func():GameManager.displayPrompt(who_cares)}
-	],PromptSprites.scientist01Talker
+	],PromptSprites.scientistBrownTalker
 )
 
 
@@ -57,7 +57,7 @@ var response_to_cant_agree = Prompt.new(
 	"That's unfortunate. It's a shame they're not prioritizing sustainability. "+
 	"But I guess that's the reality of big corporate interests",
 	[{"text":"Next","method":func():GameManager.displayPrompt(not_so_inner_monologue)}],
-	PromptSprites.scientist01Talker
+	PromptSprites.scientistBrownTalker
 )
 var not_so_inner_monologue = Prompt.new(
 	"It's frustrating to see the project I've worked so hard on being steered "+
@@ -74,7 +74,7 @@ var who_cares = Prompt.new(
 var who_cares_response = Prompt.new(
 	"But think of the long-term impact on the environment. We have a "+
 	"responsibility to minimize our ecological footprint",
-	[{"text":"Next","method":func():GameManager.displayPrompt(for_real_who_cares)}],PromptSprites.scientist01Talker
+	[{"text":"Next","method":func():GameManager.displayPrompt(for_real_who_cares)}],PromptSprites.scientistBrownTalker
 )
 var for_real_who_cares = Prompt.new(
 	"I understand, but I have to focus on the task at hand. Sustainability can be someone else's problem.",
@@ -82,10 +82,10 @@ var for_real_who_cares = Prompt.new(
 )
 
 var after_accept = Prompt.new(
-	"Good talk.",[{"text":"Leave","method":GameManager.closePrompt}],PromptSprites.scientist01Talker
+	"Good talk.",[{"text":"Leave","method":GameManager.closePrompt}],PromptSprites.scientistBrownTalker
 )
 
 var after_refuse = Prompt.new(
 	"Shame about the sustainability if you ask me...",
-	[{"text":"Leave","method":GameManager.closePrompt}],PromptSprites.scientist01Talker
+	[{"text":"Leave","method":GameManager.closePrompt}],PromptSprites.scientistBrownTalker
 )
