@@ -30,6 +30,14 @@ var personalGainWithFriends = Ending.new( #instant
 )
 
 
+var didntRegulateStuff = Ending.new(
+	"The End",
+	"There were some issues with your teleporter. Your friend tried to warn you."+
+	"The government attempted to investigate and regulate its usage.\n" +
+	"In the end it was to no avail and people were hurt.",
+	restartGame
+)
+
 
 func restartGame():
 	for key in GameState.boolStates:
