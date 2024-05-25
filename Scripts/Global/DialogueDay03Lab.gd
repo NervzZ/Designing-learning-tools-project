@@ -7,13 +7,16 @@ extends Node
 # 2. Your friends misuse invention `discuss_entry_optional_dumb_friends()`
 ################################################################################
 
-
+var corpoName= "[SomeCorporation]"
 ################################################################################
 # Talk to corporations guy
 ################################################################################
 func discuss_entry_merchant():
 	if not GameState.boolStates["talkedToCoproration"]:
-		GameManager.displayPrompt(corporationsPitch)
+		if GameState.boolStates["refusedArmyGuy"]:
+			GameManager.displayPrompt(corporationsPitch)
+		else:
+			GameManager.displayPrompt(corporationsPitchAfterArmy)
 		GameState.boolStates["talkedToCoproration"] = true
 	else:
 		if 	GameState.boolStates["soldToCorporation"]:
@@ -46,7 +49,7 @@ func after_refusing_merchant():
 	GameManager.closePrompt()
 	GameManager.displayPrompt(corpo_after_refusing)
 var corporationsPitch = Prompt.new(
-	"Hello, I work for [Corporation]. We've been following your "+
+	"Hello, I work for "+corpoName+". We've been following your "+
 	"progress closely, and we're impressed. Your prototype has the potential to "+
 	"revolutionize transportation and commerce. Would you agree to discuss the "+
 	"purchase of your prototype and work for us?",
@@ -103,6 +106,22 @@ var corpo_after_refusing = Prompt.new(
 )
 
 
+#if you cant sell cuz you sold to army:
+var corporationsPitchAfterArmy = Prompt.new(
+	"Hello, I work for "+corpoName+". We've been following your "+
+	"progress closely, and we're impressed. Your prototype has the potential to "+
+	"revolutionize transportation and commerce."+ 
+	"We would love to discuss buying your technology, but as it seems from the papers, "+
+	"you've sold to the army?",
+	[{"text":"Yes","method":func():GameManager.displayPrompt(corpo_confirm_army)}],
+	PromptSprites.merchant
+)
+var corpo_confirm_army = Prompt.new(
+	"Yes it's true. They offered a deal so good I could not refuse. "+
+	"So to answer your question, I am not interested.",
+	[{"text":"Next","method":func():GameManager.displayPrompt(corpo_after_refusing)}],
+	PromptSprites.playerTalker
+)
 
 
 ################################################################################
