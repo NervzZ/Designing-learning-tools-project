@@ -89,4 +89,5 @@ func no_monitor_pls():
 var after_no_monitor = Prompt.new(
 	"Very well. We'll have to investigate further and determine the appropriate course of action.",
 	[{"text":"leave","method":GameManager.closePrompt}]
+	,PromptSprites.government
 )

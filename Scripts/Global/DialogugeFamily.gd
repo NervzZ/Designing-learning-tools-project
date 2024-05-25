@@ -28,7 +28,7 @@ var wife_good_to_hear = Prompt.new(
 
 var wife_kk = Prompt.new(
 	"Sounds like a plan. Thanks, honey.",
-	[{"text":"Leave","method":GameManager.closePrompt}],PromptSprites.wife
+	[{"text":"Leave","method":GameManager.closePrompt}],PromptSprites.playerTalker
 )
 
 
