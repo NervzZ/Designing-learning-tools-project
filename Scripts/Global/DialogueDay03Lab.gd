@@ -80,7 +80,8 @@ var corpor_try_to_convince = Prompt.new(
 var corpo_accept_after_convincing = Prompt.new(
 	"You make a compelling argument. Alright, I'm willing to accept your offer. "+
 	"Let's discuss the details of the partnership.",
-	[{"text":"next","method":after_accept_merchant}]
+	[{"text":"next","method":after_accept_merchant}],
+	PromptSprites.playerTalker
 )
 var copro_after_accepting = Prompt.new(
 	"Fantastic! We're thrilled to have you on board. We'll work together to ensure "+
@@ -92,11 +93,13 @@ var copro_after_accepting = Prompt.new(
 var corpo_final_refusal = Prompt.new(
 	"I have to decline once again. My decision is final. Thank you for considering my prototype, "+
 	"but I believe I must guarantee its final use.",
-	[{"text":"Leave","method":GameManager.closePrompt}]
+	[{"text":"Leave","method":GameManager.closePrompt}],
+	PromptSprites.playerTalker
 )
 var corpo_after_refusing = Prompt.new(
 	"Sorry to hear you are not interested. It's a huge loss for everyone, especially you.",
-	[{"text":"Leave","method":GameManager.closePrompt}]
+	[{"text":"Leave","method":GameManager.closePrompt}],
+	PromptSprites.merchant
 )
 
 

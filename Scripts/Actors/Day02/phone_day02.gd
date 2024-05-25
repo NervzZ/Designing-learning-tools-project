@@ -11,7 +11,6 @@ func _trigger_action():
 	DialogueDay02Home.discuss_entry_army_phonecall()
 
 func _physics_process(delta):
-	print("ringing " + str(ringin))
 	if ringin:
 		var distance = global_position.distance_to(player.global_position)
 
