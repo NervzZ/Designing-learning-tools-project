@@ -46,9 +46,7 @@ var perfectEnding = Ending.new(
 )
 
 func okEnding():
-	var okEnding = Ending.new(
-		"The End",
-		"Congratulations! After all the difficulties, you now unveil your teleporter to the public!"+
+	var string_to_display =( "Congratulations! After all the difficulties, you now unveil your teleporter to the public!"+
 		"\nThere are however some things bothering you...\n"+
 		("You gave the teleporter to the army and you imposed restrictions, but would that really stop them or might they just do things secretly?\n"
 		if GameState.boolStates["soldToArmyGuyWithRestrictions"] else "") +
@@ -57,10 +55,13 @@ func okEnding():
 		("In the end, is there really an overseight on the usage of the teleporter? If the governement cannot regulate the teleporter, what's stopping anyone from misusing it?\n"
 		 if not GameState.boolStates["admittedIssuesToAuthority"] else "")+
 		("Maybe it was too soon? The teleporter consume so much energy that it will need be powered by nuclear and fossil fuels. Did you really want that?\n"
-		 if not GameState.boolStates["agreeToSustainability"] else ""),
+		 if not GameState.boolStates["agreeToSustainability"] else ""))
+	var kkending = Ending.new(
+		"The End",
+		string_to_display,
 		 restartGame
 	)
-	return okEnding()
+	return kkending
 
 
 func restartGame():

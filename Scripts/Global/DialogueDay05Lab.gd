@@ -62,7 +62,7 @@ var response_to_cant_agree = Prompt.new(
 var not_so_inner_monologue = Prompt.new(
 	"It's frustrating to see the project I've worked so hard on being steered "+
 	"in a direction that doesn't prioritize sustainability at all…",
-	[{"text":"Leave","method":GameManager.closePrompt}],PromptSprites.playerTalker
+	[{"text":"Leave","method":close_prompt_addmistake}],PromptSprites.playerTalker
 )
 
 var who_cares = Prompt.new(
@@ -78,7 +78,7 @@ var who_cares_response = Prompt.new(
 )
 var for_real_who_cares = Prompt.new(
 	"I understand, but I have to focus on the task at hand. Sustainability can be someone else's problem.",
-	[{"text":"Leave","method":GameManager.closePrompt}],PromptSprites.playerTalker
+	[{"text":"Leave","method":close_prompt_addmistake}],PromptSprites.playerTalker
 )
 
 var after_accept = Prompt.new(
@@ -89,3 +89,9 @@ var after_refuse = Prompt.new(
 	"Shame about the sustainability if you ask me...",
 	[{"text":"Leave","method":GameManager.closePrompt}],PromptSprites.scientistBrownTalker
 )
+
+
+func close_prompt_addmistake():
+	GameState.mistakes_made+=1
+	GameManager.closePrompt()
+	
