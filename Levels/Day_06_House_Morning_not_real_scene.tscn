@@ -1,16 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://b7vjgiuqjcfuw"]
+[gd_scene load_steps=7 format=3 uid="uid://cqubbjwe7ksb7"]
 
-[ext_resource type="Script" path="res://Scripts/Levels/Day_06_House_morning_ending.gd" id="1_taoxt"]
+[ext_resource type="Script" path="res://Scripts/Levels/Day_06_House_morning_ending.gd" id="1_vkpok"]
 [ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="2_8sn5b"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="3_p1pka"]
 [ext_resource type="Texture2D" uid="uid://dad6bnxoav7dw" path="res://Assets/Sprites/Objects/Phone.png" id="4_7636q"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day02/phone_day02.gd" id="5_2d7tv"]
 [ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="6_qsi2a"]
-[ext_resource type="PackedScene" uid="uid://08pj72a5p8fm" path="res://Interactables/DoorHome.tscn" id="7_dm8wh"]
-[ext_resource type="PackedScene" uid="uid://5onrifrqspab" path="res://Levels/Day_05_lab.tscn" id="8_0afd1"]
 
-[node name="Day_06_House_morning" type="Node2D"]
-script = ExtResource("1_taoxt")
+[node name="Day_06_House_morning_ending" type="Node2D"]
+script = ExtResource("1_vkpok")
 
 [node name="TileMap" parent="." instance=ExtResource("2_8sn5b")]
 
@@ -26,7 +24,3 @@ script = ExtResource("5_2d7tv")
 [node name="Newspaper" parent="." instance=ExtResource("6_qsi2a")]
 position = Vector2(2759, 947)
 scale = Vector2(4, 4)
-
-[node name="Door2" parent="." instance=ExtResource("7_dm8wh")]
-position = Vector2(67, 719)
-destination_scene = ExtResource("8_0afd1")

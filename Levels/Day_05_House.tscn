@@ -10,7 +10,7 @@
 [ext_resource type="Script" path="res://Scripts/Actors/Day_xx_home/kid_at_home.gd" id="7_s8yrw"]
 [ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="8_fh30v"]
 [ext_resource type="PackedScene" uid="uid://gi0p8r40uj4s" path="res://Interactables/Bed.tscn" id="10_lp2hj"]
-[ext_resource type="PackedScene" uid="uid://b7vjgiuqjcfuw" path="res://Levels/Day_06_House_Morning_not_real_scene.tscn" id="11_x2w8h"]
+[ext_resource type="PackedScene" uid="uid://cqubbjwe7ksb7" path="res://Levels/Day_06_House_Morning_not_real_scene.tscn" id="11_wnmiq"]
 
 [node name="Day_03_House" type="Node2D"]
 y_sort_enabled = true
@@ -42,5 +42,5 @@ scale = Vector2(4, 4)
 
 [node name="Bed" parent="." instance=ExtResource("10_lp2hj")]
 position = Vector2(4501, 563)
-destination_scene = ExtResource("11_x2w8h")
+destination_scene = ExtResource("11_wnmiq")
 continue_text = "Go to bed?"
