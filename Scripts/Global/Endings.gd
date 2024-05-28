@@ -63,8 +63,48 @@ func okEnding():
 	)
 	return kkending
 
+func kidsInTheFutureEnding():
+	var string_to_display = "Your kid is a brilliant scientist,\n"
+	if "army" in GameState.correct_teaching_to_kid.keys():
+		if GameState.correct_teaching_to_kid["army"]:
+			string_to_display += "Who sticks to his core principles\n"
+		else:
+			string_to_display += "Who never misses an opportunity, even if it goes against his principles\n"
+	if "personal_gain" in GameState.correct_teaching_to_kid:
+		if GameState.correct_teaching_to_kid["personal_gain"]:
+			string_to_display += "Who is unselfish\n"
+		else:
+			string_to_display += "Who is egoistic\n"
+	if "authority" in GameState.correct_teaching_to_kid:
+		if GameState.correct_teaching_to_kid["authority"]:
+			string_to_display += "Who is transparent\n"
+		else:
+			string_to_display += "Who is afraid of having his ideas stolen\n"
+	if "sustainability" in GameState.correct_teaching_to_kid:
+		if GameState.correct_teaching_to_kid["sustainability"]:
+			string_to_display += "Who is mindful of his impact on the environment\n"
+		else:
+			string_to_display += "Who has no issues sacrificing the environment to come first\n"
+	
+	
+	var futureEnding = Ending.new(
+		"In the future:",
+		string_to_display,
+		 restartGameForReal
+	)
+	return futureEnding
+
+
 
 func restartGame():
+	if GameState.correct_teaching_to_kid.is_empty():
+		restartGameForReal()
+	else :
+		#show the kids teachings
+		GameManager.displayGameOver(kidsInTheFutureEnding())
+		
+
+func restartGameForReal():
 	for key in GameState.boolStates:
 		GameState.boolStates[key]=false
 	GameState.boolStates["always"]=true
