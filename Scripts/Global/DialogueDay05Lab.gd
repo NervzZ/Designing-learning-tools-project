@@ -13,6 +13,7 @@ extends Node
 func discuss_entry_sustainability():
 	if not GameState.boolStates["talkedAboutSustainability"]:
 		GameState.boolStates["talkedAboutSustainability"] = true
+		GameState.boolStates["gotNewDialogueForKid"]=true
 		GameManager.displayPrompt(sustainability_dialogue_start)
 	else:
 		if GameState.boolStates["agreeToSustainability"]:

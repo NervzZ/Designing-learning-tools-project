@@ -17,6 +17,7 @@ func discuss_entry_government():
 	if not GameState.boolStates["talkedToAuthority"]:
 		GameManager.displayPrompt(start_government_dialogue)
 		GameState.boolStates["talkedToAuthority"]= true
+		GameState.boolStates["gotNewDialogueForKid"]=true
 	else:
 		if GameState.boolStates["admittedIssuesToAuthority"]:
 			GameManager.displayPrompt(after_admit_to_dangers)

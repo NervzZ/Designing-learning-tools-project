@@ -27,6 +27,7 @@ func discuss_entry_armyguy(): # <- call this when interacting with army guy
 
 	else:
 		GameState.boolStates["startedTalingWithArmyguy"]=true
+		GameState.boolStates["gotNewDialogueForKid"]=true
 		GameManager.displayPrompt(armyGuyDialoguePitch)
 
 var armyGuyDialoguePitch = Prompt.new(
