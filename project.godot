@@ -33,6 +33,7 @@ DialogueDay05Lab="*res://Scripts/Global/DialogueDay05Lab.gd"
 DialogugeFamily="*res://Scripts/Global/DialogugeFamily.gd"
 Endings="*res://Scripts/Global/Endings.gd"
 DialogueWakeUpHome="*res://Scripts/Global/DialogueWakeUpHome.gd"
+DialogueNewsPaper="*res://Scripts/Global/DialogueNewsPaper.gd"
 
 [display]
 

@@ -17,3 +17,5 @@ var government: Texture2D = preload("res://Assets/Sprites/Character/Agent-single
 var wife: Texture2D = preload("res://Assets/Sprites/Character/Wife-single.png")
 #kid
 var kid:Texture2D = preload("res://Assets/Sprites/Character/Kid-single.png")
+
+var paper:Texture2D = preload("res://Assets/Sprites/Objects/Newspaper.png")
