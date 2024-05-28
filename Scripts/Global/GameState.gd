@@ -26,8 +26,12 @@ var boolStates = {
 	"talkedAboutSustainability":false,
 	"didntSellToArmyAndFoundOutAboutStability":false, #<-workaround for boolean logic
 	
+	"gotNewDialogueForKid":false,
+	
 	"always":true,
 	"never":false,
 }
+
+var correct_teaching_to_kid={}
 
 var mistakes_made=0
