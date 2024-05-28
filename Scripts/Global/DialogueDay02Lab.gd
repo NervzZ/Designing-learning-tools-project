@@ -50,12 +50,13 @@ var armyGuyAskForDecision = Prompt.new(
 in national security. You could become famous",
 [
 	{"text":"Accept","method":self.accept_army_guy},
-	{"text":"Accept, with restrictions.","method":GameManager.closePrompt,"display":"discussedArmyGuyWithLab"},
-	{"text":"Refuse","method":GameManager.closePrompt},
+	{"text":"Accept, with restrictions.","method": armyGuyDialogueAcceptConditions,"display":"discussedArmyGuyWithLab"},
+	{"text":"Refuse","method": refuse_army_guy},
 	{"text":"Discuss with the others","method":GameManager.closePrompt},
 ],
 PromptSprites.armyguytalker
 )
+
 #case accept no conditions:
 func accept_army_guy():
 	GameManager.closePrompt()
