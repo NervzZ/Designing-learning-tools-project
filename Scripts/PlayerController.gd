@@ -69,6 +69,9 @@ func _input(event):
 
 #This is called at every frame the game renders, detal is time between each frame
 func _process(delta):
+	if !Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		touchHolding = false
+		
 	velocity = moveDir * speed
 	if moveDir != Vector2.ZERO:
 		lastDir = getDir(moveDir)
