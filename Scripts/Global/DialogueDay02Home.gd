@@ -19,7 +19,7 @@ func discuss_entry_army_phonecall():
 	GameManager.displayPrompt(armyPhoneCall)
 
 var armyPhoneCall = Prompt.new(
-	"Good day. This is [Army Representative] calling from the
+	"Good day. This is sergeant major Bill, calling from the
 military procurement department. I wanted to call you to express our interest in
 your teleporter prototype. There will be someone coming by your lab today to
 discuss possible collaborations. Good day",

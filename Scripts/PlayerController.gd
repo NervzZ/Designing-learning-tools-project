@@ -11,7 +11,7 @@ var footstepSound = preload("res://Assets/Sounds/SFX/footstep_concrete.ogg")
 var viewport : Transform2D
 var limitRight
 var limitLeft
-var edgeThreshold = 525.
+var edgeThreshold = 865.
 var lastDir = Direction.DOWN
 
 enum Direction {

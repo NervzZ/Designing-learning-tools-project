@@ -7,7 +7,7 @@ extends Node
 # 2. Your friends misuse invention `discuss_entry_optional_dumb_friends()`
 ################################################################################
 
-var corpoName= "[SomeCorporation]"
+var corpoName= "MegaCorp Tech"
 ################################################################################
 # Talk to corporations guy
 ################################################################################
@@ -155,7 +155,7 @@ func show_after_not_stealing():
 	GameState.boolStates["didNotMisuseForPersonalGain"] = true
 	GameManager.displayPrompt(reaction_after_not_stealing)
 var dumb_friend_prompt1 = Prompt.new(
-	"Hey, have you heard about that new project [Player Character] is working on? It's getting a lot of attention.",
+	"Hey, have you heard about that new project John, the head of the laboratory, is working on? It's getting a lot of attention.",
 	[{"text":"Next","method":show_2nd_prompt}],
 	PromptSprites.scientistBrownTalker
 )

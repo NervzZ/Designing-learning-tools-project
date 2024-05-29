@@ -1,0 +1,105 @@
+[gd_scene load_steps=5 format=3 uid="uid://5271xdpbuy2q"]
+
+[ext_resource type="Script" path="res://Scripts/UI/Credits.gd" id="1_1y2ng"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7ofe"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_q7sxg"]
+content_margin_bottom = 20.0
+color = Color(1, 1, 1, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4awd"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.231373, 0.231373, 0.231373, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1y2ng")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 2560.0
+offset_bottom = 1440.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h7ofe")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Title" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/table_odd_row_bg = Color(1, 1, 1, 1)
+theme_override_colors/table_even_row_bg = Color(1, 1, 1, 1)
+theme_override_colors/table_border = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 100
+text = "Credits"
+fit_content = true
+scroll_active = false
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxLine_q7sxg")
+
+[node name="Text" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/table_odd_row_bg = Color(1, 1, 1, 1)
+theme_override_colors/table_even_row_bg = Color(1, 1, 1, 1)
+theme_override_colors/table_border = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "A game powered by Godot 4 engine.
+
+Autors:
+- Dominik Helbing
+- Jehan Joachim Daniel Piaget
+- Julien Jordan
+- Quang Long Ho Ngo
+- Simon Josef Thür
+
+Used free assets created by:
+Benjamin K. Smith \"BenCreating\", MuffinElZangano, Durrani, pflat, DarkwallLKE, Tuomo Untinen \"reemax\", Carlo Enrico Victoria \"Nemisys\", Radomir Dopieralski, Luke Mehl, Lanea Zimmerman \"Sharm\", Baŝto, William Thompson, Janna \"Lilius\", HughSpectrum, Basxto, Hyptosis, FunwithPixels, The Leafy Lemur, oparaskos, NettySvit.
+"
+fit_content = true
+scroll_active = false
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_l4awd")
+text = "Next"

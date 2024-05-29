@@ -13,7 +13,7 @@ extends Node
 func discuss_entry_government():
 	GameState.boolStates["didntSellToArmyAndFoundOutAboutStability"] = (
 					GameState.boolStates["InvestigatedRisks"] 
-					and GameState.boolStates["soldToArmyGuyNoRestrictions"])
+					and GameState.boolStates["refusedArmyGuy"])
 	if not GameState.boolStates["talkedToAuthority"]:
 		GameManager.displayPrompt(start_government_dialogue)
 		GameState.boolStates["talkedToAuthority"]= true

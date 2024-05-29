@@ -7,6 +7,7 @@ var click = preload("res://Assets/Sounds/SFX/click.wav")
 func _ready():
 	GameManager.hud.visible = false
 	startButton.pressed.connect(self._start_pressed)
+	creditsButton.pressed.connect(self._credits_pressed)
 	
 func _process(delta):
 	if Input.is_action_just_pressed("Quit"):
@@ -27,3 +28,7 @@ func _test_level_pressed():
 	LevelLoader.changeLevel(LevelLoader.testLevel)
 	SoundManager.play_ui(click)
 	GameManager.hud.visible = true
+
+func _credits_pressed():
+	LevelLoader.changeLevel(LevelLoader.credits)
+	SoundManager.play_ui(click)

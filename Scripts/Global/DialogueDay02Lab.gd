@@ -31,7 +31,7 @@ func discuss_entry_armyguy(): # <- call this when interacting with army guy
 		GameManager.displayPrompt(armyGuyDialoguePitch)
 
 var armyGuyDialoguePitch = Prompt.new(
-	"Hello. I assume you've been informed of my visit today? I am [Army Guy], "+
+	"Hello. I assume you've been informed of my visit today? I am Mark, "+
 	"head of the military procurement department. "+
 	"I wanted to discuss the future of your teleporter prototype in person. We're "+
 	"very impressed with what we've seen so far. We believe this could be a "+
@@ -50,12 +50,13 @@ var armyGuyAskForDecision = Prompt.new(
 in national security. You could become famous",
 [
 	{"text":"Accept","method":self.accept_army_guy},
-	{"text":"Accept, with restrictions.","method":GameManager.closePrompt,"display":"discussedArmyGuyWithLab"},
-	{"text":"Refuse","method":GameManager.closePrompt},
+	{"text":"Accept, with restrictions.","method": armyGuyDialogueAcceptConditions,"display":"discussedArmyGuyWithLab"},
+	{"text":"Refuse","method": refuse_army_guy},
 	{"text":"Discuss with the others","method":GameManager.closePrompt},
 ],
 PromptSprites.armyguytalker
 )
+
 #case accept no conditions:
 func accept_army_guy():
 	GameManager.closePrompt()
@@ -102,6 +103,8 @@ func refuse_army_guy_final():
 	GameManager.closePrompt()
 	GameState.boolStates["finishedTalkingWithArmyguy"] = true
 	GameState.boolStates["refusedArmyGuy"] = true
+	GameState.boolStates["didntSellToArmyAndFoundOutAboutStability"] = GameState.boolStates["InvestigatedRisks"]
+	print(GameState.boolStates["didntSellToArmyAndFoundOutAboutStability"])
 var armyGuyDialogueRefuse = Prompt.new(
 	"Are you sure young man ? Think of the possibilities, the advancement in national security.
 You could become famous.",

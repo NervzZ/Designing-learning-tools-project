@@ -8,7 +8,7 @@ extends Node
 var day02Generalities = Prompt.new(  # said by you (or narrator?)
 	"BREAKING NEWS\n"+
 	"Overseas technology giant started testing 'teleportation fluid' on rats, "+
-	"killing off over 300 during initioal trials!",
+	"killing off over 300 during initial trials!",
 	[
 		{"text":"Ok", "method" : GameManager.closePrompt}
 	],
@@ -17,7 +17,7 @@ var day02Generalities = Prompt.new(  # said by you (or narrator?)
 
 var day03IfSoldArmy = Prompt.new(
 	"BREAKING NEWS\n"+
-	"Local scientist sell teleportation prototype to the army! "+
+	"Local science lab sells teleportation prototype to the army! "+
 	"Philosophers, pacifists and many others voice their concerns in an open letter.",
 	[
 		{"text":"Ok", "method" : GameManager.closePrompt}
@@ -27,8 +27,8 @@ var day03IfSoldArmy = Prompt.new(
 
 var day03IfNotArmy = Prompt.new(
 	"BREAKING NEWS\n"+
-	"Local scientist sell teleportation prototype to the army! "+
-	"Philosophers, pacifists and many others voice their concerns in an open letter.",
+	"Overseas conflict seems inevitable."+
+	" As tension arise the citizens fear the coming of a war which would hit homeland.",
 	[
 		{"text":"Ok", "method" : GameManager.closePrompt}
 	],
