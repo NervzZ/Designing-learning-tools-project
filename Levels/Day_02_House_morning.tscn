@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4o4lgobshswf"]
+[gd_scene load_steps=11 format=3 uid="uid://c4o4lgobshswf"]
 
 [ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="2_hvi6j"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="3_k24tk"]
+[ext_resource type="AudioStream" uid="uid://cex4bn5mdvuh0" path="res://Assets/Sounds/SFX/paper.wav" id="4_bkwy0"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day02/phone_day02.gd" id="5_1m58f"]
+[ext_resource type="AudioStream" uid="uid://c4me6faqbqi0l" path="res://Assets/Sounds/SFX/phone_hang.mp3" id="6_mp6xr"]
 [ext_resource type="PackedScene" uid="uid://dqmclcomp35nh" path="res://Interactables/Phone.tscn" id="6_snnwf"]
 [ext_resource type="PackedScene" uid="uid://md1sj0qpvroi" path="res://Levels/Day_02_lab.tscn" id="7_31sqq"]
 [ext_resource type="Texture2D" uid="uid://cdxrhoe7u14i" path="res://Assets/Sprites/Objects/Bed.png" id="8_mbo7w"]
@@ -20,12 +22,14 @@ position = Vector2(4221, 846)
 [node name="Newspaper" parent="." instance=ExtResource("10_ptwoj")]
 position = Vector2(3633, 881)
 scale = Vector2(4, 4)
+sfx = ExtResource("4_bkwy0")
 
 [node name="Phone" parent="." instance=ExtResource("6_snnwf")]
 position = Vector2(734, 531)
 script = ExtResource("5_1m58f")
 ringin = true
 radius = 200.0
+sfx = ExtResource("6_mp6xr")
 
 [node name="Door2" parent="." instance=ExtResource("8_mhv5o")]
 position = Vector2(57, 760)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqubbjwe7ksb7"]
+[gd_scene load_steps=8 format=3 uid="uid://cqubbjwe7ksb7"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day_06_House_morning_ending.gd" id="1_vkpok"]
 [ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="2_8sn5b"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dad6bnxoav7dw" path="res://Assets/Sprites/Objects/Phone.png" id="4_7636q"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day02/phone_day02.gd" id="5_2d7tv"]
 [ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="6_qsi2a"]
+[ext_resource type="AudioStream" uid="uid://cex4bn5mdvuh0" path="res://Assets/Sounds/SFX/paper.wav" id="7_mbx2u"]
 
 [node name="Day_06_House_morning_ending" type="Node2D"]
 script = ExtResource("1_vkpok")
@@ -24,3 +25,4 @@ script = ExtResource("5_2d7tv")
 [node name="Newspaper" parent="." instance=ExtResource("6_qsi2a")]
 position = Vector2(2759, 947)
 scale = Vector2(4, 4)
+sfx = ExtResource("7_mbx2u")

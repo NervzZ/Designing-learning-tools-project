@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bkvqa3j2fa4t3"]
+[gd_scene load_steps=11 format=3 uid="uid://bkvqa3j2fa4t3"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day_03_House.gd" id="1_rhq3r"]
 [ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="2_yxkui"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="5_flb62"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day02/phone_day02.gd" id="5_s5bgu"]
 [ext_resource type="PackedScene" uid="uid://08pj72a5p8fm" path="res://Interactables/DoorHome.tscn" id="7_xfdfd"]
+[ext_resource type="AudioStream" uid="uid://cex4bn5mdvuh0" path="res://Assets/Sounds/SFX/paper.wav" id="7_yapuu"]
 [ext_resource type="PackedScene" uid="uid://vh60ymqo7fng" path="res://Levels/Day_03_lab.tscn" id="8_jmwq4"]
 [ext_resource type="Texture2D" uid="uid://cdxrhoe7u14i" path="res://Assets/Sprites/Objects/Bed.png" id="9_jfbxq"]
 
@@ -32,6 +33,7 @@ one_shot = true
 [node name="Newspaper" parent="." instance=ExtResource("5_flb62")]
 position = Vector2(3567, 887)
 scale = Vector2(4, 4)
+sfx = ExtResource("7_yapuu")
 
 [node name="Door2" parent="." instance=ExtResource("7_xfdfd")]
 position = Vector2(59, 727)
