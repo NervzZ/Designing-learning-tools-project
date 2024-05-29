@@ -26,9 +26,10 @@ scale = Vector2(3, 3)
 texture = ExtResource("3_pl7wn")
 
 [node name="Wife" parent="." instance=ExtResource("4_ny8q4")]
-position = Vector2(1968, 1103)
+position = Vector2(1578, 480)
 scale = Vector2(4, 4)
 script = ExtResource("5_cmjgp")
+direction = 0
 
 [node name="Kid" parent="." instance=ExtResource("6_44ky1")]
 position = Vector2(2719, 705)

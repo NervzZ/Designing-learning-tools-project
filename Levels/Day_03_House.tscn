@@ -41,8 +41,10 @@ one_shot = true
 position = Vector2(3851, 508)
 scale = Vector2(4, 4)
 script = ExtResource("7_hu6nb")
+direction = 0
 
 [node name="Kid" parent="." instance=ExtResource("8_d2ts0")]
-position = Vector2(4953, 516)
+position = Vector2(5017, 504)
 scale = Vector2(4, 4)
 script = ExtResource("9_ay5pf")
+direction = 3

@@ -26,9 +26,10 @@ radius = 200.0
 position = Vector2(212, 830)
 
 [node name="Wife" parent="." instance=ExtResource("4_gb7ya")]
-position = Vector2(2699, 1228)
+position = Vector2(3775, 860)
 scale = Vector2(4, 4)
 script = ExtResource("7_ekm70")
+direction = 2
 
 [node name="Kid" parent="." instance=ExtResource("5_5i3i5")]
 position = Vector2(2069, 493)
