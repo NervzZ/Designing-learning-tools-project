@@ -47,6 +47,6 @@ continue_text = "Go Home?"
 cant_continue_text = "I should talk to the army guy."
 
 [node name="armydude4real" parent="." instance=ExtResource("12_rey2b")]
-position = Vector2(-1272, 658)
+position = Vector2(-239, 474)
 scale = Vector2(4.375, 4.375)
 script = ExtResource("11_1b47r")
