@@ -48,7 +48,6 @@ func _on_body_entered(body):
 
 func _on_body_exited(body):
 	if body.is_in_group("Player"):
-		print("exited")
 		isPlayerIn = false
 		if sprite:
 			sprite.set_material(null)
@@ -61,7 +60,6 @@ func _input(event):
 				rectangle = sprite.get_rect()
 			else:
 				rectangle = getCurrentFrameRect()
-			print(rectangle.position)
 			if rectangle.has_point(sprite.to_local(event.position - get_viewport().canvas_transform.origin)):
 				audioPlayer.play()
 				_trigger_action()
