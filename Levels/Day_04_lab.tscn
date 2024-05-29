@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dxp5jphk531s"]
+[gd_scene load_steps=13 format=3 uid="uid://dxp5jphk531s"]
 
 [ext_resource type="PackedScene" uid="uid://bbcfnccg3cnc5" path="res://Levels/TileMaps/LabMap.tscn" id="1_bc3nc"]
 [ext_resource type="Script" path="res://Scripts/Levels/Day_04_lab.gd" id="1_lhvfn"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cg1nlk8ogjgja" path="res://Actors/Scientist2.tscn" id="4_6pc6v"]
 [ext_resource type="PackedScene" uid="uid://cr14yabefsvyr" path="res://Actors/Scientist3.tscn" id="5_epelj"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="6_qltu7"]
+[ext_resource type="Script" path="res://Scripts/Mechanics/NPC.gd" id="6_qyuy7"]
 [ext_resource type="PackedScene" uid="uid://k7d6d3w4omvq" path="res://Actors/Agent.tscn" id="7_xf4a4"]
 [ext_resource type="Script" path="res://Scripts/Actors/Day04/governementRep_day04.gd" id="8_udgoi"]
 [ext_resource type="PackedScene" uid="uid://c8m3ddtaimmuy" path="res://Levels/Day_04_House.tscn" id="10_of06c"]
@@ -27,10 +28,15 @@ position = Vector2(1483, 702)
 [node name="Scientist" parent="." instance=ExtResource("4_6pc6v")]
 position = Vector2(1077, 707)
 scale = Vector2(4, 4)
+script = ExtResource("6_qyuy7")
+direction = 0
+not_interactable = true
 
 [node name="Scientist2" parent="." instance=ExtResource("5_epelj")]
 position = Vector2(1678, 920)
 scale = Vector2(4, 4)
+script = ExtResource("6_qyuy7")
+not_interactable = true
 
 [node name="Player" parent="." instance=ExtResource("6_qltu7")]
 position = Vector2(3111, 561)

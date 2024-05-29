@@ -128,7 +128,7 @@ func _physics_process(delta):
 			SoundManager.play_character_sound(
 				footstepSound, 
 				randf_range(0.8, 1.2), 
-				-15) # footstep needs to be low in volume
+				-3.) # footstep needs to be low in volume
 			$Timer.start(0.33)
 			
 #Aproximates the given vector into its closest up, down, left, right direction

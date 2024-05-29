@@ -69,7 +69,7 @@ soon, someone else will beat you to it.",
 	PromptSprites.scientistBrownTalker
 )
 var firstDiscussionWithNPC_techRace = Prompt.new(  # said by scientist friend
-	"True, but you've got to start somewhere. Ever though about pitching to
+	"True, but you've got to start somewhere. Ever thought about pitching to
 investors or applying for grants? It's a risk, but worth it. You'll have what
 you need to make your vision a reality.",
 	[

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://7t5uy3qqiy1w"]
+[gd_scene load_steps=9 format=3 uid="uid://7t5uy3qqiy1w"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Day_03_House.gd" id="1_8xt8f"]
 [ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="2_iowen"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="3_5pogt"]
+[ext_resource type="AudioStream" uid="uid://cex4bn5mdvuh0" path="res://Assets/Sounds/SFX/paper.wav" id="5_anip3"]
 [ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="6_dwuc7"]
 [ext_resource type="PackedScene" uid="uid://dxp5jphk531s" path="res://Levels/Day_04_lab.tscn" id="8_oreto"]
 [ext_resource type="Texture2D" uid="uid://cdxrhoe7u14i" path="res://Assets/Sprites/Objects/Bed.png" id="9_20yuy"]
@@ -20,6 +21,7 @@ position = Vector2(4175, 995)
 [node name="Newspaper" parent="." instance=ExtResource("6_dwuc7")]
 position = Vector2(3528, 881)
 scale = Vector2(4, 4)
+sfx = ExtResource("5_anip3")
 
 [node name="Door2" parent="." instance=ExtResource("9_l8ubw")]
 position = Vector2(61, 699)

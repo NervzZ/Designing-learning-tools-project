@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8wtgkcow0qil"]
+[gd_scene load_steps=8 format=3 uid="uid://b8wtgkcow0qil"]
 
 [ext_resource type="PackedScene" uid="uid://daikvegyh1f4" path="res://Levels/TileMaps/HouseMap.tscn" id="2_7g7tw"]
 [ext_resource type="PackedScene" uid="uid://ddm0w0th1j1qw" path="res://Actors/Scientist1.tscn" id="3_yjf2w"]
+[ext_resource type="AudioStream" uid="uid://cex4bn5mdvuh0" path="res://Assets/Sounds/SFX/paper.wav" id="4_8d1qh"]
 [ext_resource type="PackedScene" uid="uid://en8gw18cubmg" path="res://Interactables/Newspaper.tscn" id="6_wakuy"]
 [ext_resource type="PackedScene" uid="uid://5onrifrqspab" path="res://Levels/Day_05_lab.tscn" id="8_4qjy2"]
 [ext_resource type="Texture2D" uid="uid://cdxrhoe7u14i" path="res://Assets/Sprites/Objects/Bed.png" id="9_lj70a"]
@@ -18,6 +19,7 @@ position = Vector2(4036, 898)
 [node name="Newspaper" parent="." instance=ExtResource("6_wakuy")]
 position = Vector2(3636, 896)
 scale = Vector2(4, 4)
+sfx = ExtResource("4_8d1qh")
 
 [node name="Door2" parent="." instance=ExtResource("9_qd8qo")]
 position = Vector2(67, 719)

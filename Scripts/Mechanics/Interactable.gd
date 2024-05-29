@@ -2,6 +2,7 @@ extends Node2D
 
 class_name Interactable
 
+@export var not_interactable: bool = false
 @export var radius: float = 85
 @export var highlight_thickness: float = 1.0
 @export var sfx: AudioStream
@@ -41,20 +42,20 @@ func _ready():
 	area.connect("body_exited", _on_body_exited)
 
 func _on_body_entered(body):
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") and !not_interactable:
 		isPlayerIn = true
 		if sprite:
 			sprite.set_material(highlight)
 
 func _on_body_exited(body):
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") and !not_interactable:
 		isPlayerIn = false
 		if sprite:
 			sprite.set_material(null)
 			
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if sprite and isPlayerIn:
+		if sprite and isPlayerIn and !not_interactable:
 			var rectangle : Rect2
 			if sprite is Sprite2D:
 				rectangle = sprite.get_rect()
