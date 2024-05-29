@@ -7,6 +7,7 @@ var controls = preload("res://UI/IntroControls.tscn")
 var firstLevel = preload("res://Levels/FirstLevel.tscn");
 var testLevel = preload("res://Levels/TestLevel.tscn");
 var day_01_lab = preload("res://Levels/Day_01_lab.tscn")
+var credits = preload("res://UI/Credits.tscn")
 
 
 
